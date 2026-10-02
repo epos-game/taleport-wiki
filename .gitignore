@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.astro/
+
+# Rendered from diagrams/*.mmd by `npm run diagrams`, which dev and build both run.
+public/diagrams/
+
+# Measured from public/screens by `npm run sizes`, which dev and build both run.
+src/styles/screenshot-sizes.css
+
+.env
+.env.production
+.DS_Store
+*.log

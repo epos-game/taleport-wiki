@@ -1,0 +1,18 @@
+---
+import logo from '../assets/epos-logo.png';
+
+interface Props {
+  class?: string;
+  showLabel?: boolean;
+}
+
+const LABELS: Record<string, string> = { cs: 'Dokumentace', en: 'Documentation' };
+
+const { class: className, showLabel = false } = Astro.props;
+const { locale, siteTitleHref } = Astro.locals.starlightRoute;
+---
+
+<a href={siteTitleHref} class:list={['brand', className]}>
+  <img class="brand__mark" src={logo.src} width={logo.width} height={logo.height} alt="EPOS" />
+  {showLabel && <span class="brand__label">{LABELS[locale ?? 'en'] ?? LABELS.en}</span>}
+</a>

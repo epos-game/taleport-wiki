@@ -1,0 +1,32 @@
+---
+// Starlight puts every page under a locale, so the site root has no page of its own and answered
+// with a 404. This sends a reader on to a language instead. Czech is where they land, because that
+// is who writes on TalePort; a browser asking for English gets English. The paths are relative so
+// the same page works on localhost, on a staging host and in production.
+const LANDING = 'cs';
+const ALTERNATE = 'en';
+
+// Not a bare "/cs/": the site may be served from a sub-path, and this page is its entry point.
+const BASE = import.meta.env.BASE_URL;
+---
+
+<html lang={LANDING}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>TalePort</title>
+    <link rel="canonical" href={`${BASE}${LANDING}/`} />
+    <script is:inline define:vars={{ base: BASE, landing: LANDING, alternate: ALTERNATE }}>
+      const asked = (navigator.language || '').slice(0, 2);
+      location.replace(`${base}${asked === alternate ? alternate : landing}/`);
+    </script>
+    <noscript><meta http-equiv="refresh" content={`0; url=${BASE}${LANDING}/`} /></noscript>
+  </head>
+  <body>
+    <p>
+      <a href={`${BASE}${LANDING}/`}>Dokumentace TalePort</a>
+      &middot;
+      <a href={`${BASE}${ALTERNATE}/`}>TalePort documentation</a>
+    </p>
+  </body>
+</html>
