@@ -1,0 +1,12 @@
+flowchart TD
+    published["Published"]
+    pubreview["In review"]
+    revision["Published · revising"]
+
+    published -- submitted --> pubreview
+    pubreview -- approved --> published
+    pubreview -- rejected --> revision
+    revision -- resubmitted --> pubreview
+
+    classDef live fill:#2a2018,stroke:#f49c47,stroke-width:1.5px,color:#ffffff;
+    class published live;
