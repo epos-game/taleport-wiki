@@ -1,0 +1,28 @@
+---
+// Starlight ships a native <select> here. A two-option segmented control reads better and is one
+// click instead of two. The list has to match `locales` in astro.config.mjs.
+const LOCALES = [
+  { code: 'cs', label: 'CS', name: 'Čeština' },
+  { code: 'en', label: 'EN', name: 'English' },
+];
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const [current = '', ...rest] = Astro.url.pathname.slice(base.length).replace(/^\//, '').split('/');
+const page = rest.join('/');
+---
+
+<nav class="lang-toggle" aria-label="Language">
+  {
+    LOCALES.map(({ code, label, name }) => (
+      <a
+        href={`${base}/${code}/${page}`}
+        class="lang-toggle__item"
+        hreflang={code}
+        aria-current={code === current ? 'true' : undefined}
+      >
+        <span class="sr-only">{name}</span>
+        <span aria-hidden="true">{label}</span>
+      </a>
+    ))
+  }
+</nav>

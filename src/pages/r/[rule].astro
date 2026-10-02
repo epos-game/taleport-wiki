@@ -1,0 +1,39 @@
+---
+import { DEFAULT_LOCALE, buildManifest } from '../../lib/help';
+
+// A permanent citation target. Reviewers quote "CR-I.1"; this page sends the reader to the rule in
+// their own language, and survives the rule being reworded or moved to another page.
+export async function getStaticPaths() {
+  const manifest = await buildManifest();
+
+  // Two spellings per rule: the identifier as written ("CR-II.2") and its anchor form
+  // ("cr-ii-2"). These links go into review feedback and are meant to outlive the page, and a
+  // path segment containing a dot is handled inconsistently across static hosts, so both exist.
+  return Object.entries(manifest.rules).flatMap(([rule, entry]) =>
+    [...new Set([rule, entry.anchor])].map((param) => ({
+      params: { rule: param },
+      props: { rule, site: manifest.site, ...entry },
+    })),
+  );
+}
+
+const { rule, site, slug, anchor, title } = Astro.props;
+const fallback = `${site}/${DEFAULT_LOCALE}/${slug}#${anchor}`;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>{rule}: {title}</title>
+    <link rel="canonical" href={fallback} />
+    <script is:inline define:vars={{ site, slug, anchor, fallbackLocale: DEFAULT_LOCALE }}>
+      const locale = (navigator.language || '').slice(0, 2) === 'cs' ? 'cs' : fallbackLocale;
+      location.replace(`${site}/${locale}/${slug}#${anchor}`);
+    </script>
+    <noscript><meta http-equiv="refresh" content={`0; url=${fallback}`} /></noscript>
+  </head>
+  <body>
+    <p><a href={fallback}>{rule}: {title}</a></p>
+  </body>
+</html>
