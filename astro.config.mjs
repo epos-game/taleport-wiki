@@ -2,7 +2,13 @@ import { satteri } from '@astrojs/markdown-satteri';
 import starlight from '@astrojs/starlight';
 import { defineConfig } from 'astro/config';
 
+import sitemap from '@astrojs/sitemap';
+
 import { basePaths } from './src/plugins/base-paths.mjs';
+import { lazyImages } from './src/plugins/lazy-images.mjs';
+
+// The /r/ pages are noindex redirects that exist so a reviewer can cite a rule by its identifier.
+const RULE_REDIRECT = /\/r\/[^/]+\/?$/;
 
 // Set SITE_URL, and SITE_BASE when the site is served from a sub-path rather than the root of its
 // origin: a GitHub Pages project page is https://<owner>.github.io/<repo>/, so SITE_BASE is
@@ -28,10 +34,11 @@ export default defineConfig({
     // Explicit rule anchors ("{#cr-i-1}"), so a citation survives the rule being reworded.
     processor: satteri({
       features: { headingAttributes: true },
-      hastPlugins: base ? [basePaths(base)] : [],
+      hastPlugins: base ? [basePaths(base), lazyImages] : [lazyImages],
     }),
   },
   integrations: [
+    sitemap({ filter: (page) => !RULE_REDIRECT.test(page) }),
     starlight({
       title: 'TalePort',
       description: 'How to write, publish and earn from interactive stories on TalePort.',
@@ -41,7 +48,16 @@ export default defineConfig({
         en: { label: 'English', lang: 'en' },
         cs: { label: 'Čeština', lang: 'cs' },
       },
-      customCss: ['./src/styles/custom.css', './src/styles/screenshot-sizes.css'],
+      customCss: [
+        './src/styles/tokens.css',
+        './src/styles/prose.css',
+        './src/styles/content.css',
+        './src/styles/layout.css',
+        './src/styles/shell.css',
+        './src/styles/home.css',
+        './src/styles/transitions.css',
+        './src/styles/screenshot-sizes.css',
+      ],
       components: {
         // Header and Sidebar together move the wordmark out of the top bar and into the head of
         // the left column, so the sidebar runs the full height of the window. The logo is the
@@ -77,7 +93,7 @@ export default defineConfig({
       pagination: false,
       editLink: { baseUrl: 'https://github.com/epos-game/taleport-wiki/edit/main/' },
       social: [
-        { icon: 'discord', label: 'Discord', href: 'https://discord.gg/G5fVTPF9fh' },
+        { icon: 'discord', label: 'Discord', href: 'https://discord.gg/8pHFJQYBkJ' },
       ],
       sidebar: [
         section('Getting Started', 'Začínáme', 'getting-started'),

@@ -17,9 +17,11 @@ npm run build    # static site -> dist/
 ```
 
 The site is [Astro Starlight](https://starlight.astro.build). Pages are plain Markdown under
-`src/content/docs/<lang>/`. There is no custom pipeline and no Markdown plugins: everything below
-is produced by Astro routes over the `docs` content collection, so a page only has to exist to be
-picked up.
+`src/content/docs/<lang>/`. Everything below is produced by Astro routes over the `docs` content
+collection, so a page only has to exist to be picked up. The one piece of custom processing is
+`src/plugins/base-paths.mjs`, a hast plugin that puts the deployment's base path in front of the
+site-absolute links and images written by hand in Markdown, which Astro would otherwise leave
+alone. It runs only when the site is served from a subdirectory.
 
 Node 22.12 or newer is required (Astro 7).
 
@@ -49,8 +51,8 @@ sidebar:
 renaming one breaks that link. Treat a help key like a public identifier: add new ones freely, never
 rename or reuse an old one.
 
-`status: draft` marks a page that is a placeholder or an outline. The site shows it, but TalePort's
-help panel will not deep-link to it.
+`status: draft` marks a page that is a placeholder or an outline. Both surfaces show it: the site
+like any other page, and TalePort's help panel with a warning above the text.
 
 ## Rule identifiers
 
@@ -103,17 +105,18 @@ The site is static, so anything that serves files works. It is set up for **GitH
 has an order to it:
 
 1. **Enable Pages** — repository *Settings → Pages → Source: GitHub Actions*. The first push to
-   `main` publishes to `https://<org>.github.io/taleport-wiki/`. Set the repository variable
-   `SITE_BASE` to `/taleport-wiki` for that URL to work, and `SITE_URL` to the same origin.
+   `main` publishes to `https://<org>.github.io/taleport-wiki/`. Nothing else to set: the workflow
+   takes the origin and the base path from `actions/configure-pages`.
 2. **Point TalePort at it** while testing: set `Help__BaseUrl` to the Pages URL. TalePort fetches
    the manifest **server side**, so there is no CORS to configure.
 3. **Move the Academy content in**, as a section of this site.
-4. **Cut over the domain** — add the custom domain `docs.epos.games` in *Settings → Pages*, change
+4. **Cut over the domain** — set the repository variable `SITE_DOMAIN` to `docs.epos.games`, which
+   the workflow writes to `dist/CNAME`, add the same custom domain in *Settings → Pages*, and change
    the `docs` record at the DNS provider from the SiteGround A record to a `CNAME` pointing at
-   `<org>.github.io`, then clear `SITE_BASE` and set `SITE_URL` to `https://docs.epos.games`.
+   `<org>.github.io`. The base path empties itself once Pages serves from the domain root.
 
-`SITE_URL` also goes into `raw/manifest.json` and the rule redirects, so it must match the origin
-the site is actually served from.
+The origin reaches the build as `SITE_URL` and goes into the rule redirects, so a site served from
+somewhere `configure-pages` does not know about needs that variable set by hand.
 
 ### Why not the GitHub wiki
 

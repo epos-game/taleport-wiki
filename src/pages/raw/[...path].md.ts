@@ -1,6 +1,8 @@
 import type { APIRoute, GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 
+import { rawParam } from '../../lib/help';
+
 export const getStaticPaths: GetStaticPaths = async () => {
   const entries = await getCollection('docs');
 
@@ -8,7 +10,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     const [locale, ...rest] = entry.id.split('/');
 
     return {
-      params: { path: `${locale}/${rest.join('/') || 'index'}` },
+      params: { path: rawParam(locale, rest.join('/')) },
       props: { body: entry.body ?? '' },
     };
   });

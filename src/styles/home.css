@@ -1,0 +1,220 @@
+/* --- Home ------------------------------------------------------------------ */
+
+/*
+ * One bold thing on the page and the rest kept quiet. The bold thing is the route: the four
+ * stages a chapter passes through, drawn the way the editor draws a story, as nodes joined by
+ * transitions. It is a real sequence, so the line between the nodes is information and not
+ * decoration, and it doubles as the map of the whole wiki.
+ *
+ * All of it is written as ordinary Markdown inside a wrapper, never as hand-built HTML. The
+ * TalePort help panel renders the same source with HTML disabled, so anything written as markup
+ * is content it cannot show.
+ */
+.sl-markdown-content:has(.home-route) > p:first-child {
+  max-width: 36rem;
+  color: var(--tp-text);
+  font-size: var(--sl-text-lg);
+  line-height: 1.6;
+}
+
+/* The two links are one paragraph, so the row is laid out on that rather than on the wrapper. */
+.home-actions {
+  margin-block: var(--tp-space-5);
+}
+
+.home-actions p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--tp-space-3);
+  margin: 0;
+}
+
+.home-actions a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--tp-border-strong);
+  border-radius: var(--tp-radius);
+  color: var(--tp-text-high);
+  font-size: var(--sl-text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    background var(--tp-dur-fast) var(--tp-ease),
+    border-color var(--tp-dur-fast) var(--tp-ease),
+    color var(--tp-dur-fast) var(--tp-ease);
+}
+
+.home-actions a:hover {
+  border-color: var(--tp-primary);
+  background: var(--tp-hover);
+  color: var(--tp-text-high);
+}
+
+.home-actions a:first-child {
+  border-color: var(--tp-primary);
+  background: var(--tp-primary);
+  color: var(--tp-on-primary);
+}
+
+.home-actions a:first-child:hover {
+  border-color: var(--tp-primary-hover);
+  background: var(--tp-primary-hover);
+  color: var(--tp-on-primary);
+}
+
+.home-actions a:active {
+  translate: 0 1px;
+}
+
+/* Side by side they no longer fit, and two ragged buttons read worse than two matched ones. */
+@media (max-width: 30rem) {
+  .home-actions a {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+}
+
+/*
+ * The route turns on how much room the article has, not how wide the window is: between 50rem
+ * and 72rem the sidebar takes 300px out of the viewport, so a viewport query would lay four
+ * columns into a column that cannot hold them.
+ */
+.home-route {
+  container-type: inline-size;
+  margin-block: 2.5rem var(--tp-space-5);
+}
+
+.sl-markdown-content .home-route ol {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sl-markdown-content .home-route li {
+  position: relative;
+  margin: 0;
+  padding: 0 0 var(--tp-space-4) 1.6rem;
+  color: var(--tp-text-muted);
+  font-size: var(--sl-text-sm);
+  line-height: 1.5;
+}
+
+.home-route li::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 0.45rem;
+  inset-inline-start: 0;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 2px solid var(--tp-border-strong);
+  border-radius: 50%;
+  background: var(--tp-bg);
+  transition:
+    border-color var(--tp-dur-fast) var(--tp-ease),
+    background var(--tp-dur-fast) var(--tp-ease);
+}
+
+.home-route li::after {
+  content: '';
+  position: absolute;
+  inset-block: 1.25rem -0.45rem;
+  inset-inline-start: calc(0.35rem - 0.5px);
+  width: 1px;
+  background: var(--tp-border-strong);
+}
+
+/* The route starts where the buttons above it point, so the first node is the filled one. */
+.home-route li:first-child::before {
+  border-color: var(--tp-primary);
+  background: var(--tp-primary);
+}
+
+.sl-markdown-content .home-route li:last-child {
+  padding-bottom: 0;
+}
+
+.home-route li:last-child::after {
+  display: none;
+}
+
+.home-route li:hover::before {
+  border-color: var(--tp-primary);
+  background: var(--tp-primary);
+}
+
+.home-route li > strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: var(--sl-text-base);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.home-route li > strong a {
+  color: var(--tp-text-high);
+  text-decoration: none;
+  transition: color var(--tp-dur-fast) var(--tp-ease);
+}
+
+.home-route li:hover > strong a {
+  color: var(--tp-primary);
+}
+
+@container (min-width: 32rem) {
+  .sl-markdown-content .home-route ol {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--tp-space-4);
+  }
+
+  .sl-markdown-content .home-route li,
+  .sl-markdown-content .home-route li:last-child {
+    padding: 1.4rem 0 0;
+  }
+
+  .home-route li::before {
+    inset-block-start: 0;
+  }
+
+  .home-route li::after {
+    inset-block: calc(0.35rem - 0.5px) auto;
+    inset-inline: 0.7rem calc(-1 * var(--tp-space-4));
+    width: auto;
+    height: 1px;
+  }
+}
+
+/* The section index is typographic: a strong name, then what is inside it. */
+.home-sections ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-sections li {
+  padding-block: var(--tp-space-3);
+  border-top: 1px solid var(--tp-border);
+  color: var(--tp-text-muted);
+  font-size: var(--sl-text-sm);
+  line-height: 1.5;
+}
+
+.home-sections li:last-child {
+  border-bottom: 1px solid var(--tp-border);
+}
+
+.home-sections li > strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: var(--sl-text-base);
+}
+
+.home-sections li > strong a {
+  color: var(--tp-text-high);
+  text-decoration: none;
+}
+
+.home-sections li > strong a:hover {
+  color: var(--tp-primary);
+}

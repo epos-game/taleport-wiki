@@ -1,0 +1,131 @@
+/* --- Surfaces ------------------------------------------------------------- */
+
+.sl-markdown-content :is(pre, blockquote, table),
+.sl-markdown-content img,
+.starlight-aside,
+details {
+  border-radius: var(--tp-radius);
+}
+
+.sl-markdown-content pre {
+  background: var(--tp-sunken) !important;
+  border: 1px solid var(--tp-border);
+  padding: var(--tp-space-4);
+}
+
+.sl-markdown-content :not(pre) > code {
+  border: 1px solid var(--tp-border);
+  border-radius: var(--tp-radius-sm);
+  background: var(--tp-sunken);
+  padding: 0.1em 0.4em;
+  font-size: 0.85em;
+}
+
+.sl-markdown-content blockquote {
+  border: 1px solid var(--tp-border);
+  border-inline-start: 3px solid var(--tp-primary);
+  background: var(--tp-panel);
+  padding: var(--tp-space-3) var(--tp-space-4);
+}
+
+/*
+ * Starlight scrolls every table by laying it out as a block, which leaves the table inside it
+ * shrink-to-fit: a two-column table then stops a third of the way across and the heading band and
+ * rules stop with it. These tables are a few short columns, so they fill the measure instead, and
+ * the scrolling behaviour is kept for the narrow screens that actually need it.
+ */
+.sl-markdown-content table {
+  display: table;
+  width: 100%;
+  margin-block: var(--tp-space-4);
+  border: 1px solid var(--tp-border);
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.sl-markdown-content :is(th, td) {
+  padding: var(--tp-space-3) var(--tp-space-4);
+  border-bottom: 1px solid var(--tp-border);
+  text-align: start;
+  vertical-align: top;
+  /*
+   * break-word, not anywhere: `anywhere` lets a cell's minimum width fall to a single character,
+   * so the column-width algorithm squeezes a short first column and breaks "Chapter" mid-word.
+   */
+  overflow-wrap: break-word;
+}
+
+.sl-markdown-content th {
+  background: var(--tp-panel);
+  color: var(--tp-text-high);
+  font-weight: 600;
+}
+
+.sl-markdown-content thead tr:first-child th:first-child {
+  border-start-start-radius: var(--tp-radius);
+}
+
+.sl-markdown-content thead tr:first-child th:last-child {
+  border-start-end-radius: var(--tp-radius);
+}
+
+.sl-markdown-content tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.sl-markdown-content tbody tr :is(th, td) {
+  transition: background var(--tp-dur-fast) var(--tp-ease);
+}
+
+.sl-markdown-content tbody tr:hover :is(th, td) {
+  background: var(--tp-hover);
+}
+
+/*
+ * On a phone the table scrolls instead of squeezing. Scrolling alone was not enough: with no
+ * floor under a column the auto layout drives the last one down to its longest word, so the
+ * heading stacks a word per line and the table is both cramped and too wide.
+ */
+@media (max-width: 50rem) {
+  .sl-markdown-content table {
+    display: block;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--tp-scrollbar-thumb) transparent;
+  }
+
+  .sl-markdown-content :is(th, td) {
+    min-width: 7rem;
+  }
+}
+
+/*
+ * Diagrams carry their own size from the sources in /diagrams, and screenshots get theirs from
+ * screenshot-sizes.css. Both therefore sit at that size and centre in the column rather than
+ * stretching to fill it.
+ */
+.sl-markdown-content img {
+  display: block;
+  margin-inline: auto;
+}
+
+/* --- Callouts ------------------------------------------------------------ */
+
+/*
+ * The app shows an explanatory panel as a neutral surface with a hairline and a 4px radius, and
+ * carries the meaning in the icon and heading rather than in a coloured fill. Callouts here are
+ * the same object, so a page of them does not read as a page of warnings.
+ */
+.starlight-aside {
+  padding: var(--tp-space-4) var(--tp-space-5);
+  border: 1px solid var(--tp-border);
+  background: var(--tp-panel);
+}
+
+.starlight-aside__title {
+  color: var(--sl-color-asides-border);
+}
+
+.starlight-aside__content {
+  color: var(--tp-text-muted);
+}

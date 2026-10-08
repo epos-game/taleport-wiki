@@ -1,0 +1,193 @@
+/*
+ * TalePort's design tokens, mirroring `wwwroot/css/design-tokens.css` in the authoring app: the
+ * same names and scales, with the palette resolved to the values the Academy site already
+ * publishes. The wiki is therefore the same design system rather than a lookalike, and a change to
+ * the app's tokens has an obvious counterpart here.
+ *
+ * Dark only, like the app. Starlight's variables are mapped onto these once, further down, so a
+ * palette change only has to happen in this block.
+ */
+
+:root,
+:root[data-theme='light'] {
+  color-scheme: dark;
+
+  --tp-primary: #f49c47;
+  --tp-primary-hover: #f6b06b;
+  --tp-on-primary: #141b1e;
+
+  --tp-bg: #141b1e;
+  --tp-surface: #1a2428;
+  --tp-surface-2: #1e262a;
+  --tp-surface-sunken: #101518;
+
+  --tp-text-high: #ffffff;
+  --tp-text: #e0e0e0;
+  --tp-text-muted: #bbbbbb;
+  --tp-link: #f49c47;
+
+  --tp-border: #2e3d44;
+  --tp-border-strong: #3d4f58;
+
+  --tp-hover: color-mix(in srgb, var(--tp-text) 11%, transparent);
+  /*
+   * Two surface roles, and everything uses one of them. The raised one is the recipe the app's
+   * own explanatory panel uses; the recessed one is for code, which should read as inset.
+   */
+  --tp-panel: color-mix(in srgb, var(--tp-surface) 50%, var(--tp-bg));
+  --tp-sunken: var(--tp-surface-sunken);
+  --tp-primary-wash: color-mix(in srgb, var(--tp-primary) 12%, transparent);
+  --tp-primary-wash-strong: color-mix(in srgb, var(--tp-primary) 18%, transparent);
+
+  --tp-shadow-xs: 0 1px 2px rgb(0 0 0 / 0.28);
+  --tp-shadow-sm: 0 1px 3px rgb(0 0 0 / 0.35);
+  --tp-shadow-md: 0 6px 18px rgb(0 0 0 / 0.35);
+
+  --tp-radius-sm: 6px;
+  --tp-radius: 8px;
+  --tp-radius-pill: 999px;
+
+  --tp-dur-fast: 0.12s;
+  --tp-dur: 0.22s;
+  --tp-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --tp-space-2: 8px;
+  --tp-space-3: 12px;
+  --tp-space-4: 16px;
+  --tp-space-5: 24px;
+
+  --tp-scrollbar-thumb: color-mix(in srgb, var(--tp-text) 25%, transparent);
+
+  --tp-sidebar-w: 300px;
+  --tp-toc-w: 15rem;
+  --tp-font: 'Roboto', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --tp-font-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /*
+   * Starlight derives every semantic colour — asides, the untranslated-page notice, badges — from
+   * five hues, keeping its own contrast-tuned lightness per role. Shifting the hues to TalePort's
+   * is therefore the whole job.
+   */
+  --sl-hue-orange: 29;
+  --sl-hue-blue: 188;
+  --sl-hue-purple: 261;
+  --sl-hue-green: 122;
+  --sl-hue-red: 353;
+  /*
+   * Callout headings use these as text on the panel. Starlight's stock blue (100% saturation) is
+   * glaring there and does not sit with the neutral panels, so blue, purple, green and red are
+   * muted: low saturation, lightness high enough for 4.5:1 on the panel. Orange keeps its stock
+   * values.
+   */
+  --sl-color-blue-low: hsl(var(--sl-hue-blue), 18%, 20%);
+  --sl-color-blue: hsl(var(--sl-hue-blue), 28%, 68%);
+  --sl-color-blue-high: hsl(var(--sl-hue-blue), 32%, 86%);
+  --sl-color-purple-low: hsl(var(--sl-hue-purple), 16%, 22%);
+  --sl-color-purple: hsl(var(--sl-hue-purple), 30%, 78%);
+  --sl-color-purple-high: hsl(var(--sl-hue-purple), 34%, 90%);
+  --sl-color-green-low: hsl(var(--sl-hue-green), 16%, 20%);
+  --sl-color-green: hsl(var(--sl-hue-green), 26%, 68%);
+  --sl-color-green-high: hsl(var(--sl-hue-green), 30%, 84%);
+  --sl-color-red-low: hsl(var(--sl-hue-red), 18%, 22%);
+  --sl-color-red: hsl(var(--sl-hue-red), 42%, 72%);
+  --sl-color-red-high: hsl(var(--sl-hue-red), 48%, 88%);
+}
+
+/* Starlight, expressed in TalePort's tokens. */
+:root,
+:root[data-theme='light'] {
+  --sl-font: var(--tp-font);
+  --sl-font-mono: var(--tp-font-mono);
+  --sl-sidebar-width: var(--tp-sidebar-w);
+  --sl-content-width: 42rem;
+  --sl-nav-height: 3.75rem;
+  /* The mobile contents bar is overridden away, so the frame should not reserve its strip. */
+  --sl-mobile-toc-height: 0rem;
+
+  /*
+   * A phone is its own size, not a narrow desktop. The column there is about 358px, which at the
+   * stock 16px/1.75 holds only ~45 characters on a very loose line, so a page reads as mostly
+   * air. 15px on 1.65 brings the line to a normal length and the page back together.
+   */
+  --sl-text-body: 0.9375rem;
+  --sl-line-height: 1.65;
+
+  /*
+   * Starlight's own scale puts h2 at 35px against a 42px h1, so a section heading shouts almost as
+   * loudly as the page title and the levels below it are hard to tell apart. Widening the steps
+   * and dropping the absolute sizes gives a reference wiki a hierarchy you can scan.
+   */
+  --sl-text-h1: 1.5rem;
+  --sl-text-h2: 1.25rem;
+  --sl-text-h3: 1.0625rem;
+  --sl-text-h4: 0.9375rem;
+
+  --sl-color-white: var(--tp-text-high);
+  --sl-color-gray-1: var(--tp-text-high);
+  --sl-color-gray-2: var(--tp-text);
+  --sl-color-gray-3: var(--tp-text-muted);
+  --sl-color-gray-4: var(--tp-border-strong);
+  --sl-color-gray-5: var(--tp-border);
+  --sl-color-gray-6: var(--tp-surface);
+  --sl-color-gray-7: var(--tp-surface-sunken);
+  --sl-color-black: var(--tp-bg);
+
+  --sl-color-accent-low: var(--tp-primary-wash);
+  --sl-color-accent: var(--tp-primary);
+  --sl-color-accent-high: var(--tp-link);
+
+  --sl-color-bg: var(--tp-bg);
+  --sl-color-bg-nav: var(--tp-surface);
+  --sl-color-bg-sidebar: var(--tp-surface);
+  --sl-color-bg-inline-code: var(--tp-surface-2);
+
+  --sl-color-hairline: var(--tp-border);
+  --sl-color-hairline-light: var(--tp-border);
+  --sl-color-hairline-shade: var(--tp-border);
+
+  --sl-color-text: var(--tp-text);
+  --sl-color-text-accent: var(--tp-link);
+  --sl-color-text-invert: var(--tp-on-primary);
+
+  --sl-shadow-sm: var(--tp-shadow-xs);
+  --sl-shadow-md: var(--tp-shadow-sm);
+  --sl-shadow-lg: var(--tp-shadow-md);
+}
+
+/*
+ * Starlight's inline theme script still reads the OS preference and can set data-theme="light" at
+ * runtime. Its light values sit in `@layer starlight.base`, so this unlayered file already wins —
+ * these re-assertions exist so the page does not depend on that staying true across upgrades.
+ */
+:root[data-theme='light'] {
+  --sl-color-orange-low: hsl(var(--sl-hue-orange), 39%, 22%);
+  --sl-color-orange: hsl(var(--sl-hue-orange), 82%, 63%);
+  --sl-color-orange-high: hsl(var(--sl-hue-orange), 82%, 87%);
+  --sl-color-green-low: hsl(var(--sl-hue-green), 16%, 20%);
+  --sl-color-green: hsl(var(--sl-hue-green), 26%, 68%);
+  --sl-color-green-high: hsl(var(--sl-hue-green), 30%, 84%);
+  --sl-color-blue-low: hsl(var(--sl-hue-blue), 18%, 20%);
+  --sl-color-blue: hsl(var(--sl-hue-blue), 28%, 68%);
+  --sl-color-blue-high: hsl(var(--sl-hue-blue), 32%, 86%);
+  --sl-color-purple-low: hsl(var(--sl-hue-purple), 16%, 22%);
+  --sl-color-purple: hsl(var(--sl-hue-purple), 30%, 78%);
+  --sl-color-purple-high: hsl(var(--sl-hue-purple), 34%, 90%);
+  --sl-color-red-low: hsl(var(--sl-hue-red), 18%, 22%);
+  --sl-color-red: hsl(var(--sl-hue-red), 42%, 72%);
+  --sl-color-red-high: hsl(var(--sl-hue-red), 48%, 88%);
+  --sl-color-bg-accent: var(--tp-link);
+  --sl-color-backdrop-overlay: #16181da8;
+}
+
+@media (min-width: 50rem) {
+  :root,
+  :root[data-theme='light'] {
+    --sl-nav-height: 4.25rem;
+    --sl-text-body: 1rem;
+    --sl-line-height: 1.75;
+    --sl-text-h1: 2.25rem;
+    --sl-text-h2: 1.625rem;
+    --sl-text-h3: 1.25rem;
+    --sl-text-h4: 1.0625rem;
+  }
+}

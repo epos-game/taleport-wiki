@@ -1,0 +1,44 @@
+/* --- Navigation ---------------------------------------------------------- */
+
+/*
+ * Cross-document view transitions. Switching language or following a link reloads the document,
+ * which without this is a hard cut; the browser cross-fades instead. Pure CSS, no router, and
+ * browsers without support simply navigate as before.
+ */
+@view-transition {
+  navigation: auto;
+}
+
+/*
+ * Naming the article lifts it out of the page snapshot, so only it animates. The header and
+ * sidebar are identical either side of the navigation and stay put instead of flickering.
+ */
+.main-pane {
+  view-transition-name: tp-main;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: var(--tp-dur-fast);
+  animation-timing-function: var(--tp-ease);
+}
+
+::view-transition-old(tp-main),
+::view-transition-new(tp-main) {
+  animation-duration: var(--tp-dur);
+  animation-timing-function: var(--tp-ease);
+}
+
+.lang-toggle__item:active {
+  transform: scale(0.96);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+
+  .lang-toggle__item:active {
+    transform: none;
+  }
+}
