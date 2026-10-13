@@ -1,0 +1,397 @@
+/* --- Page shell ---------------------------------------------------------- */
+
+/*
+ * The left column runs the full height of the window with the wordmark at its head, and the top
+ * bar begins where the content does. It splits the two jobs cleanly: the rail answers "where am
+ * I", the bar carries the tools for the page in front of you. It is also the shape the Academy
+ * had, which is the arrangement authors already know.
+ */
+@media (min-width: 50rem) {
+  /* Only where there is a rail to start after; the 404 and any splash page have none. */
+  :root[data-has-sidebar] header.header {
+    inset-inline-start: var(--sl-sidebar-width);
+    width: calc(100% - var(--sl-sidebar-width));
+  }
+
+  #starlight__sidebar {
+    inset-block-start: 0;
+    border-inline-end: 1px solid var(--tp-border);
+  }
+}
+
+header.header {
+  border-bottom: 1px solid var(--tp-border);
+}
+
+/* --- Brand --------------------------------------------------------------- */
+
+.brand {
+  text-decoration: none;
+  min-width: 0;
+}
+
+/*
+ * Height drives the drawn size and the intrinsic ratio supplies the width, so the two places the
+ * mark appears only have to agree on how tall it is. The source is 152px tall, which is why the
+ * masthead stops at 4rem: past that a 2x screen would be upscaling it.
+ */
+.brand__mark {
+  display: block;
+  width: auto;
+}
+
+.brand__label {
+  color: var(--tp-text-muted);
+  font-size: var(--sl-text-xs);
+  line-height: 1.2;
+  transition: color var(--tp-dur-fast) var(--tp-ease);
+}
+
+.brand:hover .brand__label {
+  color: var(--tp-text-high);
+}
+
+/*
+ * The masthead: pinned to the top of the rail, centred over the column it heads, and on the
+ * rail's own surface so the section list scrolls underneath it rather than past it.
+ */
+.sidebar__brand {
+  display: none;
+}
+
+@media (min-width: 50rem) {
+  .sidebar__brand {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    margin: -1rem calc(-1 * var(--sl-sidebar-pad-x)) 0;
+    padding: var(--tp-space-5) var(--sl-sidebar-pad-x);
+    border-bottom: 1px solid var(--tp-border);
+    background: var(--tp-surface);
+    text-align: center;
+  }
+
+  .sidebar__brand .brand__mark {
+    height: 3.25rem;
+  }
+}
+
+/* Below the breakpoint the rail is a drawer, so the wordmark belongs in the bar instead. */
+.header__brand {
+  display: flex;
+  align-items: center;
+}
+
+/*
+ * Centred on its letters, not on its canvas. The flame rises 42px above the cap line of a 152px
+ * image, so centring the box alone leaves EPOS sitting 13.8% of the logo's height low against
+ * everything else in the bar. The shift is a percentage of the element, so it tracks the height.
+ */
+.header__brand .brand__mark {
+  height: 2rem;
+  translate: 0 -13.8%;
+}
+
+@media (min-width: 50rem) {
+  .header__brand {
+    display: none;
+  }
+
+  /* No rail to head, so the bar carries the wordmark instead. */
+  .header__brand--unrailed {
+    display: flex;
+  }
+}
+
+/* --- Sidebar ------------------------------------------------------------- */
+
+/*
+ * Starlight stacks the links with padding but no margin, so a hovered row's background touches
+ * its neighbour's. The gap goes inside the list item rather than on the link: the hairline down
+ * a nested group is drawn by the item's own border, and a margin on the link would collapse out
+ * of it and break the line into dashes.
+ */
+.sidebar-content li:has(> a) {
+  padding-block: 3px;
+}
+
+/* Set on the list so the group headings keep their alignment with the links beneath them. */
+.sidebar-content ul {
+  --sl-sidebar-item-padding-inline: 0.75rem;
+}
+
+.sidebar-content li a {
+  padding-block: 0.4rem;
+  transition:
+    background var(--tp-dur-fast) var(--tp-ease),
+    color var(--tp-dur-fast) var(--tp-ease);
+}
+
+.sidebar-content li a:hover {
+  background: var(--tp-hover);
+}
+
+/* A neutral wash and brand-coloured text, as the app's navigation does. */
+.sidebar-content li a[aria-current='page'] {
+  background: var(--tp-hover);
+  color: var(--tp-primary);
+  font-weight: 500;
+}
+
+/* The language and Discord controls live in the bar on desktop; in the drawer they go last. */
+.sidebar__footer {
+  margin-block-start: auto;
+}
+
+.sidebar__footer .mobile-preferences {
+  border-top-color: var(--tp-border);
+}
+
+@media (min-width: 50rem) {
+  .sidebar__footer {
+    display: none;
+  }
+}
+
+:where(a, button, summary):focus-visible {
+  outline: 2px solid var(--tp-primary);
+  outline-offset: 2px;
+  border-radius: var(--tp-radius-sm);
+}
+
+/* The app's scrollbars, so the side columns do not read as a different product. */
+#starlight__sidebar,
+.right-sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--tp-scrollbar-thumb) transparent;
+}
+
+/* Turning pagination off leaves the container behind. */
+.pagination-links:empty {
+  display: none;
+}
+
+/* --- Header ------------------------------------------------------------- */
+
+/*
+ * Two cells on every size. Below the breakpoint the wordmark leads and the search takes the rest;
+ * above it the wordmark has moved to the rail, so the search leads from the content column's own
+ * left edge and the controls close the bar off on the right.
+ */
+.tp-header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: var(--tp-space-4);
+  height: 100%;
+}
+
+@media (min-width: 50rem) {
+  .tp-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .tp-header--unrailed {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+}
+
+/* Below the breakpoint the search is an icon, and it belongs beside the menu button it shares a
+   job with rather than adrift in the middle of the bar. */
+.header__search {
+  min-width: 0;
+  justify-self: end;
+}
+
+@media (min-width: 50rem) {
+  .header__search {
+    justify-self: stretch;
+    max-width: 24rem;
+  }
+}
+
+.header__actions {
+  display: none;
+  align-items: center;
+  gap: var(--tp-space-4);
+}
+
+@media (min-width: 50rem) {
+  .header__actions {
+    display: flex;
+  }
+}
+
+.header__actions .social-icons {
+  display: flex;
+  align-items: center;
+  gap: var(--tp-space-3);
+  padding-inline-end: var(--tp-space-4);
+  border-inline-end: 1px solid var(--tp-border);
+}
+
+.header__actions .social-icons:empty {
+  display: none;
+}
+
+/* --- Mobile ------------------------------------------------------------- */
+
+/*
+ * Starlight's mobile controls are designed to stand out from any theme: a white filled circle for the
+ * menu and a second fixed strip for the contents. Against this palette the circle reads as a
+ * foreign object, so both are rebuilt from the same bordered, 8px, panel-surface language the rest
+ * of the wiki and the app use. Selectors are Starlight's stable class and element names, not the
+ * hashed scope classes, which change on every build.
+ */
+.sl-menu-button {
+  border: 1px solid var(--tp-border);
+  border-radius: var(--tp-radius);
+  background: var(--tp-panel);
+  color: var(--tp-text);
+  box-shadow: none;
+  transition:
+    background var(--tp-dur-fast) var(--tp-ease),
+    border-color var(--tp-dur-fast) var(--tp-ease),
+    color var(--tp-dur-fast) var(--tp-ease),
+    scale var(--tp-dur-fast) var(--tp-ease);
+}
+
+.sl-menu-button:hover {
+  border-color: var(--tp-primary);
+  color: var(--tp-text-high);
+}
+
+.sl-menu-button:active {
+  scale: 0.94;
+}
+
+.sl-menu-button:has(~ :popover-open) {
+  border-color: var(--tp-primary);
+  background: var(--tp-primary);
+  color: var(--tp-on-primary);
+  box-shadow: none;
+}
+
+/*
+ * The drawer is asked for, so it arrives: it drops out from under the bar it was opened from and
+ * fades back the same way. `allow-discrete` is what keeps the closing half of that visible, since
+ * a popover is display:none the instant it is dismissed.
+ */
+@media (max-width: 49.999rem) {
+  #starlight__sidebar {
+    box-shadow: var(--tp-shadow-md);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    #starlight__sidebar {
+      opacity: 0;
+      translate: 0 -0.75rem;
+      transition:
+        opacity var(--tp-dur) var(--tp-ease),
+        translate var(--tp-dur) var(--tp-ease),
+        display var(--tp-dur) allow-discrete,
+        overlay var(--tp-dur) allow-discrete;
+    }
+
+    #starlight__sidebar:popover-open {
+      opacity: 1;
+      translate: 0 0;
+    }
+
+    @starting-style {
+      #starlight__sidebar:popover-open {
+        opacity: 0;
+        translate: 0 -0.75rem;
+      }
+    }
+  }
+}
+
+/* --- Media --------------------------------------------------------------- */
+
+.video-lesson {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  margin-block: var(--tp-space-4) var(--tp-space-3);
+  border: 1px solid var(--tp-border);
+  border-radius: var(--tp-radius);
+}
+
+/* --- Header controls ----------------------------------------------------- */
+
+/* The anchor icon is a utility, not a link in the prose: quiet until it is wanted. */
+.sl-heading-wrapper {
+  --sl-anchor-icon-size: 0.5em;
+}
+
+.sl-anchor-link {
+  color: var(--tp-text-muted);
+  transition: color var(--tp-dur-fast) var(--tp-ease);
+}
+
+.sl-anchor-link:hover {
+  color: var(--tp-primary);
+}
+
+.social-icons a {
+  color: var(--tp-text);
+  transition: color var(--tp-dur-fast) var(--tp-ease);
+}
+
+.social-icons a:hover {
+  color: var(--tp-primary);
+}
+
+/* A segmented control: the app's 8px radius on the track, 6px on the selected segment. */
+.lang-toggle {
+  display: inline-flex;
+  align-self: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--tp-border);
+  border-radius: var(--tp-radius);
+  background: var(--tp-sunken);
+}
+
+.lang-toggle__item {
+  padding: 0.15rem 0.7rem;
+  border-radius: var(--tp-radius-sm);
+  color: var(--tp-text-muted);
+  font-size: var(--sl-text-xs);
+  font-weight: 600;
+  line-height: 1.6;
+  text-decoration: none;
+  transition:
+    background var(--tp-dur-fast) var(--tp-ease),
+    color var(--tp-dur-fast) var(--tp-ease);
+}
+
+.lang-toggle__item:hover {
+  background: var(--tp-hover);
+  color: var(--tp-text-high);
+}
+
+.lang-toggle__item[aria-current] {
+  background: var(--tp-primary);
+  color: var(--tp-on-primary);
+  /*
+   * Switching language is a page load, so the highlight cannot simply transition. Naming it lets
+   * the browser carry the same box across the navigation, and it slides from one segment to the
+   * other instead of blinking.
+   */
+  view-transition-name: tp-lang-active;
+}
+
+::view-transition-old(tp-lang-active),
+::view-transition-new(tp-lang-active) {
+  animation-duration: var(--tp-dur-fast);
+  animation-timing-function: var(--tp-ease);
+}
+
+/* The app gives a pressed control the same small give. */

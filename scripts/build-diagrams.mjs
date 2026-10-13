@@ -59,6 +59,10 @@ const themeChanged = modified(THEME);
 mkdirSync(OUTPUT, { recursive: true });
 
 const config = puppeteerConfig();
+
+// Skipping the download is only safe when one of the local browsers was found; without that,
+// letting Puppeteer fetch its own is the whole point of the fallback.
+const skipDownload = config.length > 0 ? { PUPPETEER_SKIP_DOWNLOAD: 'true' } : {};
 let rendered = 0;
 
 for (const name of readdirSync(SOURCE).filter((file) => file.endsWith('.mmd'))) {
@@ -74,7 +78,7 @@ for (const name of readdirSync(SOURCE).filter((file) => file.endsWith('.mmd'))) 
     'npx',
     ['-y', '@mermaid-js/mermaid-cli', '-i', source, '-o', target,
       '-c', THEME, '-b', 'transparent', ...config],
-    { stdio: 'inherit', env: { ...process.env, PUPPETEER_SKIP_DOWNLOAD: 'true' } },
+    { stdio: 'inherit', env: { ...process.env, ...skipDownload } },
   );
 
   fixIntrinsicSize(target);

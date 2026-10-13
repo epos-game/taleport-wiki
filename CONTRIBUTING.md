@@ -47,5 +47,6 @@ deliberate. The help panel inside TalePort fetches the raw Markdown of a page an
 itself, so a fenced ```mermaid block would reach an author as a wall of diagram source. An image
 reaches both surfaces as a picture.
 
-Labels are baked into the SVG, so a translated page needs its own diagram.
+Labels are baked into the SVG. Today there is one set of diagrams with English labels, embedded by
+both languages; a Czech diagram would need its own `.mmd` source and its own file name.
 

@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import logo from '../assets/epos-logo.png';
 
 interface Props {
@@ -13,6 +14,7 @@ const { locale, siteTitleHref } = Astro.locals.starlightRoute;
 ---
 
 <a href={siteTitleHref} class:list={['brand', className]}>
-  <img class="brand__mark" src={logo.src} width={logo.width} height={logo.height} alt="EPOS" />
+  <!-- Shown at most 3.25rem (52px) tall, so a 2x render is enough; the source is 412x152. -->
+  <Image class="brand__mark" src={logo} width={282} height={104} alt="EPOS" loading="eager" decoding="async" />
   {showLabel && <span class="brand__label">{LABELS[locale ?? 'en'] ?? LABELS.en}</span>}
 </a>

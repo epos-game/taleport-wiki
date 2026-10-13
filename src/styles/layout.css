@@ -1,0 +1,84 @@
+/* --- Layout -------------------------------------------------------------- */
+
+/*
+ * On a wide screen Starlight splits the leftover width between the article and the table of
+ * contents, which leaves the contents column several hundred pixels wide and mostly empty. Giving
+ * it a fixed width and centring the article in what is left reads better at every size. Scoping
+ * --sl-sidebar-width to the container keeps the list inside it sized from the same number.
+ */
+@media (min-width: 72rem) {
+  .main-pane {
+    width: calc(100% - var(--tp-toc-w));
+    --sl-content-margin-inline: auto;
+  }
+
+  .right-sidebar-container {
+    --sl-sidebar-width: var(--tp-toc-w);
+    width: var(--tp-toc-w);
+  }
+}
+
+/* --- Table of contents ------------------------------------------------- */
+
+/*
+ * The contents list is a panel like the ones in the app rather than loose text in the margin, so
+ * it reads as a control and not as leftover page. The icon is a CSS mask, which is how Starlight
+ * draws its own, so no component override is needed.
+ */
+/* The column divider is Starlight's; with the panel drawn as a card it is one line too many. */
+.right-sidebar {
+  border-inline-start: 0;
+}
+
+.right-sidebar-panel > .sl-container {
+  padding: var(--tp-space-3);
+  border: 1px solid var(--tp-border);
+  border-radius: var(--tp-radius);
+  background: var(--tp-panel);
+}
+
+.right-sidebar-panel h2 {
+  display: flex;
+  align-items: center;
+  gap: var(--tp-space-2);
+  margin-bottom: var(--tp-space-2);
+  padding-inline: 0.7rem;
+  color: var(--tp-text-high);
+  font-size: var(--sl-text-sm);
+}
+
+.right-sidebar-panel h2::before {
+  content: '';
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  background: var(--tp-primary);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 6h9v2H4zM4 11h16v2H4zM4 16h12v2H4z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* The gap sits in the list item, the same way the sidebar does it, so the highlights never meet. */
+.right-sidebar-panel li {
+  padding-block: 2px;
+}
+
+.right-sidebar-panel a {
+  /* Starlight's own variable, so the indent per heading level keeps working. */
+  --pad-inline: 0.7rem;
+
+  padding-block: 0.35rem;
+  border-radius: var(--tp-radius-sm);
+  transition:
+    background var(--tp-dur-fast) var(--tp-ease),
+    color var(--tp-dur-fast) var(--tp-ease);
+}
+
+.right-sidebar-panel a:hover {
+  background: var(--tp-hover);
+  color: var(--tp-text-high);
+}
+
+.right-sidebar-panel a[aria-current='true'] {
+  background: var(--tp-hover);
+  color: var(--tp-primary);
+  font-weight: 500;
+}

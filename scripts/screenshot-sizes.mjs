@@ -18,6 +18,9 @@ const CAPTURED_AT_1X = new Set([
   'media/ambient-sound-panel.png',
   'media/background-music-panel.png',
   'media/media-conflict-panel.png',
+  'story-editor/choice-node.png',
+  'story-editor/switch-node.png',
+  'story-editor/end-node.png',
 ]);
 
 const size = (file) => {

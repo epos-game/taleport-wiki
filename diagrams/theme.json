@@ -1,0 +1,24 @@
+{
+  "theme": "base",
+  "look": "classic",
+  "htmlLabels": false,
+  "themeVariables": {
+    "darkMode": true,
+    "fontFamily": "Roboto, system-ui, -apple-system, sans-serif",
+    "fontSize": "15px",
+    "primaryColor": "#1e262a",
+    "primaryTextColor": "#e0e0e0",
+    "primaryBorderColor": "#3d4f58",
+    "secondaryColor": "#1e262a",
+    "tertiaryColor": "#1e262a",
+    "lineColor": "#8a9aa3"
+  },
+  "flowchart": {
+    "htmlLabels": false,
+    "curve": "basis",
+    "nodeSpacing": 36,
+    "rankSpacing": 48,
+    "padding": 10
+  },
+  "themeCSS": ".node rect { rx: 8px; ry: 8px; } .node .label { font-weight: 500; } .flowchart-link { stroke-width: 1.4px; } .edgeLabel rect { fill: #182024; } .edgeLabel text { font-size: 13px; fill: #bbbbbb; }"
+}

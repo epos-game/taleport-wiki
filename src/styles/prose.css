@@ -1,0 +1,87 @@
+/* --- Type ---------------------------------------------------------------- */
+
+/*
+ * Starlight lays the heading itself out as an inline box inside .sl-heading-wrapper so the anchor
+ * icon can sit in space the heading reserves. Block treatment therefore belongs on the wrapper:
+ * on the heading a border would only wrap the text run, and vertical padding would do nothing.
+ */
+.sl-markdown-content .sl-heading-wrapper:is(.level-h2, .level-h3) {
+  scroll-margin-top: 5rem;
+}
+
+.sl-markdown-content .sl-heading-wrapper.level-h2 {
+  margin-top: var(--tp-space-5);
+  padding-top: var(--tp-space-4);
+  border-top: 1px solid var(--tp-border);
+}
+
+.sl-markdown-content :is(h1, h2, h3, h4) {
+  letter-spacing: -0.015em;
+}
+
+.sl-markdown-content a {
+  transition: color var(--tp-dur-fast) var(--tp-ease);
+}
+
+.sl-markdown-content a:hover {
+  color: var(--tp-primary-hover);
+}
+
+/* --- Rules --------------------------------------------------------------- */
+
+/*
+ * Rule headings open with their permanent identifier ("CR-I.1 — …"). Only the figures are touched:
+ * the anchor icon's offset is an `em` of the heading's own size, so changing that size moves the
+ * icon onto the text.
+ */
+.sl-markdown-content h3[id^='cr-'] > code {
+  margin-inline-end: 0.45em;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--tp-primary);
+  font-family: var(--tp-font-mono);
+  font-size: 0.78em;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+
+/*
+ * Arriving from a citation like /r/cr-ii-2 is the one moment the reader needs to be told which
+ * heading they were sent to — after that they are reading, and a highlight behind the text is in
+ * the way. So the marker is a rule in the margin, the way a clause is flagged in a printed
+ * document, and the only fill is a brief one on arrival.
+ */
+.sl-markdown-content .sl-heading-wrapper:has(> :target) {
+  position: relative;
+}
+
+.sl-markdown-content .sl-heading-wrapper:has(> :target)::before {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: -0.75rem;
+  width: 3px;
+  border-radius: var(--tp-radius-pill);
+  background: var(--tp-primary);
+}
+
+/* The h2 wrapper carries the section divider's padding; the marker tracks the text, not the gap. */
+.sl-markdown-content .sl-heading-wrapper.level-h2:has(> :target)::before {
+  inset-block: var(--tp-space-4) 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sl-markdown-content .sl-heading-wrapper:has(> :target) {
+    animation: tp-cited 1.6s var(--tp-ease);
+  }
+}
+
+@keyframes tp-cited {
+  from {
+    background: var(--tp-primary-wash-strong);
+  }
+  to {
+    background: transparent;
+  }
+}

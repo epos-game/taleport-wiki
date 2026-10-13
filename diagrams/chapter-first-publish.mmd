@@ -1,0 +1,14 @@
+flowchart TD
+    draft["Draft"]
+    testing["Testing"]
+    review["In review"]
+    published["Published"]
+
+    draft --> testing
+    draft --> review
+    testing -- submitted --> review
+    review -- approved --> published
+    review -- rejected --> draft
+
+    classDef live fill:#2a2018,stroke:#f49c47,stroke-width:1.5px,color:#ffffff;
+    class published live;
