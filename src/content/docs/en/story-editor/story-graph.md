@@ -57,11 +57,11 @@ Right-click a node to:
 
 Right-clicking the empty canvas offers the same node types as the Presets section.
 
-![the full editor: the palette open on the left, the graph on the canvas, the Characters tab open in the bottom panel, and the Components tab of the right panel showing the selected node](/screens/en/story-editor/editor-layout.png)
+![the full editor: the palette with Presets and Components open on the left, the graph on the canvas, the Characters tab open in the bottom panel, and the Components tab of the right panel showing the selected node](/screens/en/story-editor/editor-layout.png)
 
 ## Finding your way around
 
-**Search** (Ctrl/⌘+F) matches a node's name or number. If a validation message points at node 47, you can jump straight to it. Search shows ten hits. When there are more, it says *"Showing first 10 of 34"* above them. It searches only the graph you have open, not the groups inside it.
+**Search** (Ctrl/⌘+F) finds a node by its number, name, text, dialogue or choices. If a validation message points at node 47, you can jump straight to it. Search shows 20 hits. When there are more, it says *"Showing first 20 of 134"* above them. It searches only the graph you have open, not the groups inside it. See [Searching the graph](/en/story-editor/searching-the-graph/).
 
 An unnamed node shows a snippet of its text component. The snippet is at most 40 characters including the three dots, which leaves 37 characters of your text. A node with only dialogue gets no snippet and shows as **Node 47**. You see this label in reviewer comments, in validation messages and in search.
 
@@ -100,7 +100,7 @@ Errors block publishing. Warnings do not. [Story guidelines](/en/publishing/stor
 
 A group appears in the problem list as one entry: *"This group contains content with validation issues."* Open the group to find the error inside. An empty graph reports nothing. The missing-Start-node error appears only once the chapter has at least one node.
 
-Publishing has one more graph requirement. It is checked in the publish dialog. At least one End node reachable from the Start node must have **End of chapter** turned on. Without it, readers can finish a branch but never complete the chapter. That End node must sit on the chapter canvas. An End node inside a group is a group exit, so the check reads it as a link, not an ending.
+Publishing has one more graph requirement. It is checked in the publish dialog. At least one End node reachable from the Start node must have **End of chapter** turned on. Without it, readers can finish a branch but never complete the chapter. That End node must sit on the chapter canvas. An End node inside a group is a group exit, so the check treats it as a group exit, not as the chapter's ending.
 
 :::caution[Structure locks after release]
 Once a chapter is live, the graph **structure** locks. Its **content** stays editable. You can rewrite the text on a node. You cannot add, remove, rewire or rename a node, because a rename counts as a structural edit.

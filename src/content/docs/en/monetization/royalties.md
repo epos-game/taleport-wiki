@@ -12,7 +12,7 @@ A royalty is your share of the real money behind the credits a reader spends on 
 2. Each chapter sale paid from that top-up takes a proportional slice of it.
 3. Your share is taken from the total of those slices.
 
-Keep two numbers apart:
+Don't mix up these two numbers:
 
 - **Net revenue from sales** is the amount after tax and fees, before your share is applied. The statistics page calls it **Estimated earnings**, but it is not money you will receive.
 - **Your royalty** is your share of that net revenue.

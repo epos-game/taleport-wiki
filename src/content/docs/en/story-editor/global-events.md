@@ -22,7 +22,7 @@ You manage them in the **Global Events** tab at the bottom of the editor. You ne
 | --- | --- |
 | Variable, Operator, Value | The condition being watched, for example Health ≤ 0. |
 | After event | What happens to the reader once the event has been shown. |
-| Priority | A whole number. It's 0 unless you change it. |
+| Priority | A whole number. It's 0 unless you change it. It decides the order when several events become true at once (a higher number means a higher priority). |
 | Event Text | Text you can make bold, italic or underlined, up to 2000 characters. |
 | Event Image | One image, up to 1 MB. It's scaled down to fit 1024 px. |
 
@@ -35,7 +35,15 @@ The operators are `=`, `<`, `≤`, `>` and `≥`. For a Yes / No or List of valu
 
 The 2000-character limit also counts formatting codes, so formatted text can be shorter.
 
-![the Global Events tab, each event showing the condition it watches and the behaviour it runs](/screens/en/story-editor/global-event-panel.png)
+Here is an open event. The condition is on the left, the text and image the reader sees are on the right, and **After event** and **Priority** sit under the condition:
+
+![an open global event: the Variable, Operator and Value fields, the After event choices To start, To checkpoint and Continue with To start selected, the Priority field, the Event Text editor with its character counter and the event's artwork field, with Back, Delete and Done at the top](/screens/en/story-editor/global-event-detail.png)
+
+**Done** closes the editor and returns you to the list of events:
+
+![the Global Events tab with the event count, a search field and Add event above a list of events, each showing the condition it watches, the behaviour it runs (here To start) and its priority (P0)](/screens/en/story-editor/global-event-panel.png)
+
+The list shows each event's condition, its **After event** behaviour and its priority, written as **P** and the number. Use the search field to find an event in a long list.
 
 ## After the event
 

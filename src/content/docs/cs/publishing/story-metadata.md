@@ -62,7 +62,7 @@ Tlačítko **Další** zároveň ukládá. Zapíše příběh i kapitolu najedno
 
 ### Krok Přispěvatelé
 
-Tento krok určuje, kdo si po publikování udrží přístup k příběhu. Můžete tu také změnit, za co je který přispěvatel uvedený. Podíly přispěvatele s účtem v Eposu se uloží hned po změně.
+Tento krok určuje, kdo si po publikování udrží přístup k příběhu. Můžete tu také změnit, za co je který přispěvatel uvedený. Činnosti přispěvatele s účtem v Eposu se uloží hned po změně.
 
 V dialogu publikování nejde přidat nového přispěvatele ani změnit činnosti člověka bez účtu v Eposu. Obojí uděláte v sekci Přispěvatelé u příběhu.
 

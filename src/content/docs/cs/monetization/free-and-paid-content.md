@@ -14,10 +14,10 @@ U každé kapitoly zvlášť rozhodujete, jestli bude zdarma, nebo placená. Ka�
 
 ## Musí každý příběh začínat kapitolou zdarma?
 
-Nemusí. U placeného odeslání TalePort kontroluje vaši autorskou fázi a fakturační údaje, ne pořadové číslo kapitoly, takže kvalifikovaný autor si může účtovat i za první kapitolu. Pro získání kvalifikace ale obvykle potřebujete vydat jednu schválenou kapitolu zdarma s alespoň 20 minutami obsahu. Tato kapitola zůstává zdarma, pokud se nedohodneme jinak.
+Nemusí. U placeného odeslání TalePort kontroluje vaši autorskou fázi a fakturační údaje, ne pořadové číslo kapitoly, takže kvalifikovaný autor si může účtovat i za první kapitolu. Pro získání kvalifikace ale obvykle potřebujete vydat jednu schválenou kapitolu zdarma s alespoň 20 minutami obsahu. Tato kapitola zůstává zdarma, pokud se s TalePortem nedohodnete jinak.
 
 :::caution[Kvalifikační kapitola zůstane zdarma]
-Kapitola zdarma, kterou jste se kvalifikovali, musí zůstat zdarma, pokud se s TalePortem nedohodnete jinak. Plyne to z článku V. obchodních podmínek. Dohlédněte na to sami.
+Kapitola zdarma, kterou jste se kvalifikovali, musí zůstat zdarma, pokud se s TalePortem nedohodnete jinak. Plyne to z článku V. obchodních podmínek. Je na vás, abyste to dodrželi.
 :::
 
 ## Nastavení ceny
@@ -44,7 +44,7 @@ V kroku **Předběžný přístup** odpovíte na otázku **Chcete předběžný 
 
 - Když je přepínač vypnutý, žádné datum se nenastaví.
 - Když je zapnutý, kalendář se otevře na nejbližším datu, které lze vybrat, a od něj si kapitolu mohou číst čtenáři s oprávněním k předběžnému přístupu.
-- Nejbližší datum je za 14 dní, protože kontrola může tak dlouho trvat. Kalendář dřívější dny zašedí a bližší datum TalePort při odeslání odmítne.
+- Nejbližší datum je za 14 dní, protože kontrola může tak dlouho trvat. V kalendáři jsou dřívější dny šedé a nejde je vybrat, a dřívější datum TalePort při odeslání odmítne.
 - Když datum nevyplníte, doplní se při schválení okamžikem schválení. Tito čtenáři pak mají kapitolu hned.
 
 Kdo má předběžný přístup: čtenáři, jejichž účet má k němu oprávnění díky crowdfundingové podpoře a uplatněnému kódu. Rozsah oprávnění určuje TalePort a může se lišit podle role a úrovně podpory. Ostatní čtenáři čekají 7 dní.

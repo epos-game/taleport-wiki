@@ -25,7 +25,7 @@ Vedle poznámek recenzenta si můžete psát vlastní. Poznámka může mít nej
 
 ## E-mail o zamítnutí
 
-Recenzent může kapitolu vrátit, až když má aspoň jednu poznámku, která nepřišla od testera. Ke každému rozhodnutí vám přijde e-mail, česky a anglicky v jedné zprávě. E-mail o vrácení obsahuje:
+Recenzent může kapitolu vrátit, až když má aspoň jednu poznámku, která nepřišla od testera. Ke každému rozhodnutí vám přijde e-mail, česky a anglicky v jedné zprávě. E-mail o zamítnutí obsahuje:
 
 - nejvýš pět poznámek recenzenta, od nejstarší a bez formátování
 - celkový počet poznámek a kolik se jich do zprávy nevešlo
@@ -53,7 +53,7 @@ Poznámku recenzenta vyřídíte takto:
 3. U poznámky použijte **Označit jako hotové**.
 4. Kapitolu znovu odešlete. Vrátí se do fronty a recenzent ji přečte znovu.
 
-Nesouhlasíte-li s poznámkou recenzenta, neodstraňujte ji a nesnižujte jí prioritu. Napište podpoře TalePortu, viz [Odvolání proti rozhodnutí](#odvolání-proti-rozhodnutí).
+Pokud s poznámkou recenzenta nesouhlasíte, neodstraňujte ji a nesnižujte jí prioritu. Napište podpoře TalePortu, viz [Odvolání proti rozhodnutí](#odvolání-proti-rozhodnutí).
 
 Editor navíc dovoluje u vlastní kapitoly poznámku znovu otevřít, změnit jí prioritu nebo ji smazat, v jakémkoli stavu kapitoly. Hodí se to hlavně pro vaše vlastní poznámky a poznámky testerů. Recenzent může upravovat jen své poznámky, a jen dokud je kapitola v kontrole.
 

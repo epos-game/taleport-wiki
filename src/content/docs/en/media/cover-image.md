@@ -35,7 +35,7 @@ On the two tiles, the label is **Set up the cover** until a cover exists, then *
 
 The editor opens on its own page, with the canvas on the left and the **Composition** panel on the right.
 
-![the cover editor: on the left a 9:16 canvas with the Covered by the store, Main text, Artwork and May be cropped zones marked, on the right the Composition panel with the Title at the top layout, the background, the layers and the title text settings](/screens/en/media/thumbnail-editor.png)
+![the cover editor: on the left a 9:16 canvas with the Covered by the store, Main text and May be cropped zones marked, on the right the Composition panel with the Title in the middle layout, the background, the layers and the title text settings](/screens/en/media/thumbnail-editor.png)
 
 The first time, **Choose a layout** offers **Title at the top**, **Title in the middle** and **Title at the bottom**. Your choice sets where the title band starts, and you can still move the layer. If you use **Change layout** later, the layer moves into the new band and keeps its position in it.
 

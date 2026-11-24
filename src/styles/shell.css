@@ -32,12 +32,13 @@ header.header {
 
 /*
  * Height drives the drawn size and the intrinsic ratio supplies the width, so the two places the
- * mark appears only have to agree on how tall it is. The source is 152px tall, which is why the
- * masthead stops at 4rem: past that a 2x screen would be upscaling it.
+ * mark appears only have to agree on how tall it is. The soft orange halo is the one the app puts
+ * behind its own logo.
  */
 .brand__mark {
   display: block;
   width: auto;
+  filter: drop-shadow(0 0 14px rgb(244 156 71 / 0.28));
 }
 
 .brand__label {
@@ -47,9 +48,6 @@ header.header {
   transition: color var(--tp-dur-fast) var(--tp-ease);
 }
 
-.brand:hover .brand__label {
-  color: var(--tp-text-high);
-}
 
 /*
  * The masthead: pinned to the top of the rail, centred over the column it heads, and on the
@@ -76,7 +74,7 @@ header.header {
   }
 
   .sidebar__brand .brand__mark {
-    height: 3.25rem;
+    height: 4rem;
   }
 }
 
@@ -86,14 +84,20 @@ header.header {
   align-items: center;
 }
 
-/*
- * Centred on its letters, not on its canvas. The flame rises 42px above the cap line of a 152px
- * image, so centring the box alone leaves EPOS sitting 13.8% of the logo's height low against
- * everything else in the bar. The shift is a percentage of the element, so it tracks the height.
- */
+.header__brand {
+  gap: var(--tp-space-3);
+}
+
 .header__brand .brand__mark {
-  height: 2rem;
-  translate: 0 -13.8%;
+  height: 2.5rem;
+}
+
+/* In the bar the label sits beside the mark, set off by a hairline, instead of under it. */
+.header__brand .brand__label {
+  padding-inline-start: var(--tp-space-3);
+  border-inline-start: 1px solid var(--tp-border-strong);
+  font-size: var(--sl-text-sm);
+  white-space: nowrap;
 }
 
 @media (min-width: 50rem) {
@@ -128,11 +132,29 @@ header.header {
   padding-block: 0.4rem;
   transition:
     background var(--tp-dur-fast) var(--tp-ease),
-    color var(--tp-dur-fast) var(--tp-ease);
+    color var(--tp-dur-fast) var(--tp-ease),
+    padding var(--tp-dur) var(--tp-ease);
 }
 
-.sidebar-content li a:hover {
+/*
+ * Starlight turns a hovered link white, and a hovered current page dark. Neither is wanted: the
+ * wash alone says "this is clickable", and the text keeps its colour so nothing flashes. The row
+ * leans in a couple of pixels, which is the only movement.
+ */
+.sidebar-content li a:hover,
+.sidebar-content li a:focus-visible {
   background: var(--tp-hover);
+  color: var(--tp-text);
+}
+
+.sidebar-content li a[aria-current='page']:is(:hover, :focus-visible) {
+  color: var(--tp-primary);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .sidebar-content li a:hover {
+    padding-inline-start: calc(var(--sl-sidebar-item-padding-inline, 0.75rem) + 3px);
+  }
 }
 
 /* A neutral wash and brand-coloured text, as the app's navigation does. */
@@ -248,6 +270,7 @@ header.header {
  * hashed scope classes, which change on every build.
  */
 .sl-menu-button {
+  padding: 0;
   border: 1px solid var(--tp-border);
   border-radius: var(--tp-radius);
   background: var(--tp-panel);
@@ -260,9 +283,17 @@ header.header {
     scale var(--tp-dur-fast) var(--tp-ease);
 }
 
-.sl-menu-button:hover {
-  border-color: var(--tp-primary);
-  color: var(--tp-text-high);
+@media (max-width: 49.99rem) {
+  .sl-menu-button {
+    display: inline-grid;
+    place-items: center;
+  }
+}
+
+@media (hover: hover) {
+  .sl-menu-button:hover {
+    border-color: var(--tp-primary);
+  }
 }
 
 .sl-menu-button:active {
@@ -374,7 +405,10 @@ header.header {
 
 .lang-toggle__item:hover {
   background: var(--tp-hover);
-  color: var(--tp-text-high);
+}
+
+.lang-toggle__item[aria-current]:hover {
+  background: var(--tp-primary);
 }
 
 .lang-toggle__item[aria-current] {

@@ -83,7 +83,7 @@ Three presets sit beside them:
 - **50%** sets half the recommendation and **Recommended** sets the full recommendation. Each is greyed out if its value is outside your range.
 - **Max** sets 299 EPS, not a multiple of the recommendation. It's never out of range.
 
-The recommendation itself has no ceiling, so on a very long chapter it can be above 299. Then 299 EPS is the most you can ask, and **Recommended** is greyed out.
+The recommendation itself has no ceiling, so on a very long chapter it can be above 299. Then 299 EPS is the most you can charge, and **Recommended** is greyed out.
 
 The field and slider both step by one. TalePort rounds a typed value and pulls it back into the range. A price outside the range is refused when you submit, not only in the dialog. Readers are charged the whole number you submit.
 

@@ -20,7 +20,7 @@ Přechod typu volba dá čtenáři seznam možností. Každá možnost má vlast
 
 ![uzel s volbou na plátně, obě možnosti pojmenované u pravého okraje, každá s vlastním výstupním portem](/screens/cs/story-editor/choice-node.png)
 
-Předvolba Volba založí dvě možnosti, Volba 1 a Volba 2, zatím bez textu na tlačítku. Platí to, ať přetáhnete celý uzel, nebo jen přechod na stávající uzel. Třetí možnost přidáte tlačítkem **Přidat možnost**. Název i text tlačítka bude „Volba 3“.
+Předvolba Volba založí dvě možnosti, Volba 1 a Volba 2, zatím bez textu na tlačítku. Platí to, ať přetáhnete celý uzel, nebo jen přechod na stávající uzel. Třetí možnost přidáte tlačítkem **Přidat možnost**. Název i text tlačítka budou „Volba 3“.
 
 Každá možnost má:
 
@@ -37,7 +37,7 @@ Pořadí možností změníte přetažením. Čtenář je uvidí ve stejném po�
 
 ### Požadavky u voleb
 
-V EPOSu čtenář možnost s nesplněnými požadavky nevybere. V panelu Náhled se taková možnost ukáže jako uzamčená a pro ladění ji můžete obejít.
+V EPOSu čtenář možnost s nesplněnými požadavky nevybere. V záložce Náhled se taková možnost ukáže jako uzamčená a pro ladění ji můžete obejít.
 
 Přepínač **Požadovat** se objeví, jakmile má možnost víc než jeden požadavek. **Všechny** znamená, že musí platit každý. **Libovolný** znamená, že stačí jeden. Nová možnost začíná na Všechny.
 
@@ -51,11 +51,11 @@ Switch větví příběh, aniž by se čtenář rozhodoval. Rozhoduje podle toho
 
 ![uzel switch na plátně, podmínky a výchozí větev pojmenované u pravého okraje](/screens/cs/story-editor/switch-node.png)
 
-Podmínky přeřadíte přetažením. Podmínka, která platí široce, zastíní všechny pod ní, protože na ně už nedojde. Konkrétní podmínku (třeba „Zdraví je nejvýše 0“) proto dejte nad obecnější. Požadavky v jedné podmínce se vždy spojují spojkou A ZÁROVEŇ. Switch nemá přepínač Všechny/Libovolný.
+Podmínky přeřadíte přetažením. Široká podmínka zastíní všechny pod ní, protože na ně už nedojde. Konkrétní podmínku (třeba „Zdraví je nejvýše 0“) proto dejte nad obecnější. Požadavky v jedné podmínce se vždy spojují spojkou A ZÁROVEŇ. Switch nemá přepínač Všechny/Libovolný.
 
 ![karta Switch v pravém panelu, nahoře poznámka o pořadí, jedna podmínka sbalená a další otevřená s požadavkem na vlastnost](/screens/cs/story-editor/switch-panel.png)
 
-Každý switch končí vestavěným výstupem **Výchozí**. Čtenář jím odejde, když nesedí žádná podmínka. Port **Výchozí** připojte vždy. Nepřipojený výstupní port je chyba: „Má výstupní port, který není připojen k žádnému uzlu.“
+Každý switch končí vestavěným výstupem **Výchozí**. Čtenář jím odejde, když žádná podmínka neplatí. Port **Výchozí** připojte vždy. Nepřipojený výstupní port je chyba: „Má výstupní port, který není připojen k žádnému uzlu.“
 
 Nový switch začíná s jednou prázdnou podmínkou, takže se hned ukáže varování. Prázdná podmínka v náhledu zachytí všechny případy, které dojdou až k ní, a podmínky pod ní se nevyhodnotí. Dejte jí požadavek, nebo ji smažte. Pro záložní větev slouží výstup **Výchozí**.
 
@@ -74,7 +74,7 @@ Editor odmítne dva případy:
 
 ## Zamykání
 
-Vydaná kapitola zamkne celou kartu **Výstupy**. Pole zešednou a nemůžete:
+Vydaná kapitola zamkne celou záložku **Výstupy**. Pole zešednou a nemůžete:
 
 - přepsat text tlačítka,
 - přidat ani smazat možnost,

@@ -53,11 +53,11 @@ The tab says *Approximate preview. The final EPOS rendering may differ.* Use it 
 
 **Global events.** The debug panel lists every global event in the story and shows whether it is met. Each has a **Preview** button that shows its overlay without building up the values that fire it. Leaving a node warns you about a global event only when its behaviour is **Return to Start** or **Return to last Checkpoint**. An event set to **Continue** fires without a message, because the nodes after it stay reachable.
 
-![the right-hand Preview tab on a skill check node](/screens/en/story-editor/preview-debug.png)
+![the right-hand Preview tab: the approximate-preview notice, Previous and Continue, and the node playing in a phone frame with its text over the backdrop](/screens/en/story-editor/preview-debug.png)
 
-After a skill check resolves, the panel shows which branch was taken and how it came out. Above that are the debug overrides for the dice roll and every stat.
+After a switch or skill check resolves, the panel shows which branch was taken and how it came out. Under it are the debug overrides, where you can change the values that decided it and see the other branch.
 
-![the Preview panel after a skill check has resolved, showing which branch was taken and the arithmetic behind it, above the debug overrides for the dice roll and every stat](/screens/en/best-practices/debug-overrides.png)
+![the Preview panel on a switch node: each condition with whether it was met and where it leads, the branch that was taken highlighted, and the Variables (debug) overrides underneath, one per variable](/screens/en/best-practices/debug-overrides.png)
 
 ## The test package
 

@@ -69,7 +69,7 @@ You can't nest conditions. There are two workarounds:
 Give every requirement a variable, and give every switch condition at least one requirement:
 
 - A requirement with no variable on a choice or a switch condition counts as unmet, so the choice shows as locked in the Preview panel. On a skill check, an empty requirement raises an error that blocks publishing: *The skill check node has no stat selected.*
-- Give every switch condition at least one requirement. In the preview, an empty condition catches every case that reaches it, so the conditions below it are never evaluated. The editor warns about it. For a fallback branch, use the **Default** output.
+- In the preview, an empty switch condition catches every case that reaches it, so the conditions below it are never evaluated. The editor warns about it. For a fallback branch, use the **Default** output.
 
 ## Tips
 

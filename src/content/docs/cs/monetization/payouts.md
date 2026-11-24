@@ -65,7 +65,6 @@ Země, pro kterou není formát zapsaný, a prázdné nepovinné pole projdou be
 ## Smazání a oprava řádků
 
 - Oba řádky mají tlačítko pro smazání, každé s vlastním potvrzením. Když kterýkoli řádek smažete, o placené publikování znovu přijdete.
-- Pro placené publikování potřebujete jméno majitele účtu, IBAN nebo české číslo účtu, údaj o typu osoby (u firmy i název firmy a DIČ), fakturační e-mail a adresu s ulicí, městem, PSČ a zemí. SWIFT / BIC, název banky a daňové ID jsou nepovinné. Zadané údaje musí projít kontrolou formátu.
 - Pokud řádek vaše údaje ukazuje, ale kontrolní seznam před publikací stále hlásí **Fakturační a výplatní údaje**, uložte řádek znovu. TalePort pak označí chybějící pole.
 
 ## Kdy dostanete zaplaceno

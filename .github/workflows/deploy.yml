@@ -25,21 +25,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run check
-      # Asking Pages where the site will live beats configuring it twice. A project page answers
-      # with /<repo>/, a custom domain or an <owner>.github.io repository answers with /, and the
-      # build follows either without a repository variable to keep in sync.
-      - id: pages
-        uses: actions/configure-pages@v5
-
+      # The site lives at the root of its custom domain, so no base path is needed; SITE_URL
+      # defaults to https://docs.epos.games in astro.config.mjs.
       - run: npm run build
-        env:
-          SITE_URL: ${{ steps.pages.outputs.origin }}
-          SITE_BASE: ${{ steps.pages.outputs.base_path }}
 
-      # Pages keeps the custom domain in its own settings; the file in the artifact is what stops a
-      # deployment from dropping it.
-      - if: vars.SITE_DOMAIN != ''
-        run: echo "${{ vars.SITE_DOMAIN }}" > dist/CNAME
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

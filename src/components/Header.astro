@@ -1,9 +1,9 @@
 ---
-import Search from '@astrojs/starlight/components/Search.astro';
 import SocialIcons from '@astrojs/starlight/components/SocialIcons.astro';
 
 import Brand from './Brand.astro';
 import LanguageSelect from './LanguageSelect.astro';
+import Search from './Search.astro';
 
 // Starlight reaches its own components through `virtual:starlight/components/*`, which applies any
 // override configured for them. This file is the override, so it imports what it renders directly;
@@ -15,7 +15,10 @@ const { hasSidebar } = Astro.locals.starlightRoute;
 ---
 
 <div class:list={['tp-header', { 'tp-header--unrailed': !hasSidebar }]}>
-  <Brand class={hasSidebar ? 'header__brand' : 'header__brand header__brand--unrailed'} />
+  <Brand
+    class={hasSidebar ? 'header__brand' : 'header__brand header__brand--unrailed'}
+    showLabel
+  />
   <div class="header__search print:hidden"><Search /></div>
   <div class="header__actions print:hidden">
     <div class="social-icons"><SocialIcons /></div>
@@ -24,6 +27,8 @@ const { hasSidebar } = Astro.locals.starlightRoute;
 </div>
 
 <script>
+  import '../scripts/interactions';
+
   // A link to the page you are already on still triggers a full reload, which costs a round trip
   // and repaints the window for nothing. Covers the sidebar entry and the language toggle alike.
   document.addEventListener('click', (event) => {

@@ -7,7 +7,7 @@ sidebar:
   order: 1
 ---
 
-A **story** is your whole work. It contains one or more chapters and has a shared title, cover and other details. All its chapters share: title, cover, genre, tags, age recommendation, characters, variables and global events. Every story has at least one **chapter**, and readers buy and read chapters.
+A **story** is your whole work. It has one or more **chapters**, and readers buy and read the chapters. All chapters of a story share the title, cover, genre, tags, age recommendation, characters, variables and global events.
 
 ## Create New Epos
 
@@ -20,7 +20,7 @@ Until you enter a title, **Create Epos** is disabled and the text next to it rea
 
 ![the Create New Epos dialog with an empty title and description. On the right, a What happens next panel: a private draft is created, the story editor opens, and you can add the cover any time before publishing](/screens/en/getting-started/create-story-dialog.png)
 
-The **What happens next** panel on the right summarises what follows: a private draft is created that only you can see until you publish a chapter, the story editor opens, and you can add the cover any time before publishing.
+The **What happens next** panel on the right sums up what happens next: a private draft is created that only you can see until you publish a chapter, the story editor opens, and you can add the cover any time before publishing.
 
 This dialog doesn't set the cover. Use the **Thumbnail** button on the story's detail page. You can't publish a chapter until the story has a cover. See [Cover image](/en/media/cover-image/).
 

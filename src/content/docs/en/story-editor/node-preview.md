@@ -12,7 +12,7 @@ The tab always shows the warning *Approximate preview. The final EPOS rendering 
 
 With no node selected, the tab is empty. On a group node it offers **Open group**, because a group has no content of its own.
 
-![the Preview tab: the approximate-preview notice, Previous and Continue with a page counter, the node playing in a phone frame with the speaker name over the backdrop, and the Variables (debug) panel starting underneath](/screens/en/story-editor/node-preview.png)
+![the Preview tab: the approximate-preview notice, Previous and Continue with a page counter, and the node playing in a phone frame with its text over the backdrop](/screens/en/story-editor/node-preview.png)
 
 ## Walking the graph
 

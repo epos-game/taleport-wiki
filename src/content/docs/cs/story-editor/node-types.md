@@ -13,7 +13,7 @@ Uzel se skládá ze dvou druhů částí:
 
 Obě části jsou na sobě nezávislé. Když přechod vyměníte, komponenty zůstanou.
 
-![panel vlastností uzlu s komponentami Dialog, Událost, Hudba na pozadí a Obrázek na pozadí. Obrázek je zděděný z uzlu Node 34](/screens/cs/story-editor/node-anatomy.png)
+![panel vlastností uzlu s komponentami Dialog, Událost, Hudba na pozadí a Obrázek na pozadí. Pozadí je zděděné z uzlu Node 34](/screens/cs/story-editor/node-anatomy.png)
 
 ## Přechody
 
@@ -25,7 +25,10 @@ V paletě i v pravém panelu se přechody jmenují **Výstupy**.
 | **Jednoduchý** | Jeden vstup, jeden výstup | Příběh pokračuje jedním směrem. |
 | **Volba** | Jeden vstup, jeden výstup na každou možnost | Rozhoduje čtenář. Více v části [Přechody a volby](/cs/story-editor/transitions-and-choices/). |
 | **Ověření dovednosti** | Jeden vstup, Úspěch a Neúspěch | Výsledek závisí na vlastnosti, případně i na hodu kostkou. Více v části [Ověření dovednosti](/cs/story-editor/skill-checks/). |
+| **Souboj** | Jeden vstup, Úspěch a Neúspěch | Souboj mezi nepřítelem a hráčem. Více v části [Souboje](/cs/story-editor/combat/). |
+| **Náhoda** | Jeden vstup, jeden výstup na každou větev | Příběh se větví podle náhody a každá větev nese procenta. Více v části [Náhoda](/cs/story-editor/random/). |
 | **Switch** | Jeden vstup, jeden výstup na každou podmínku a k tomu vestavěný **Výchozí** | Příběh se větví podle toho, co si pamatuje, aniž by čtenář volil. Více v části [Podmínky](/cs/story-editor/conditions/). |
+| **Textový vstup** | Jeden vstup, jeden výstup na každou sadu přijímaných odpovědí a **Výchozí** při omezených pokusech | Čtenář napíše odpověď. Více v části [Textový vstup](/cs/story-editor/text-input/). |
 | **Skupina** | Jeden port na každý uzel Začátek nebo Konec uvnitř skupiny | Uzel obsahuje vlastní graf. Více v části [Skupiny](/cs/story-editor/groups/). |
 | **Konec** | Jeden vstup, žádný výstup | Ukončí aktuální cestu. Se zapnutým přepínačem **Konec kapitoly** také označí kapitolu jako dokončenou. Uvnitř skupiny je to výstup skupiny. Více v části [Koncové uzly](/cs/story-editor/end-nodes/). |
 
@@ -50,7 +53,7 @@ Co je dobré vědět:
 | **Událost** | Změní proměnnou, jakmile čtenář na uzel dojde. Více v části [Proměnné](/cs/story-editor/variables/). |
 | **Kontrolní bod** | Označí místo návratu. Více v části [Kontrolní body](/cs/story-editor/checkpoints/). |
 
-## Pravidla pro komponenty
+## Pravidla pro komponenty {#component-rules}
 
 Stejná pravidla platí při přidávání komponenty i při validaci kapitoly.
 
@@ -78,6 +81,8 @@ Stránka každého kanálu vysvětluje, co ho přenáší dál, co ho ukončí, 
 
 - [Graf příběhu](/cs/story-editor/story-graph/)
 - [Přechody a volby](/cs/story-editor/transitions-and-choices/)
+- [Náhoda](/cs/story-editor/random/)
+- [Textový vstup](/cs/story-editor/text-input/)
 - [Obrázky](/cs/media/images/)
 - [Hudba na pozadí](/cs/media/background-music/)
 - [Okolní zvuk](/cs/media/ambient-sound/)

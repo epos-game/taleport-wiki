@@ -54,6 +54,8 @@ export default defineConfig({
         './src/styles/content.css',
         './src/styles/layout.css',
         './src/styles/shell.css',
+        './src/styles/search.css',
+        './src/styles/interactions.css',
         './src/styles/home.css',
         './src/styles/transitions.css',
         './src/styles/screenshot-sizes.css',
@@ -63,6 +65,7 @@ export default defineConfig({
         // the left column, so the sidebar runs the full height of the window. The logo is the
         // masthead of the navigation rather than one more item in a crowded bar.
         Header: './src/components/Header.astro',
+        Search: './src/components/Search.astro',
         Sidebar: './src/components/Sidebar.astro',
         MobileTableOfContents: './src/components/MobileTableOfContents.astro',
         ThemeSelect: './src/components/ThemeSelect.astro',
@@ -85,6 +88,27 @@ export default defineConfig({
             rel: 'stylesheet',
             href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Roboto+Mono:wght@400&display=swap',
           },
+        },
+        // Pages are static and small, so the browser can render the next one while the pointer is
+        // still over its link. Following it then is close to instant. Browsers without
+        // speculation rules ignore this.
+        {
+          tag: 'script',
+          attrs: { type: 'speculationrules' },
+          content: JSON.stringify({
+            prerender: [
+              {
+                where: {
+                  and: [
+                    { href_matches: '/*' },
+                    { not: { href_matches: '/r/*' } },
+                    { not: { selector_matches: '[target=_blank], [download]' } },
+                  ],
+                },
+                eagerness: 'moderate',
+              },
+            ],
+          }),
         },
       ],
       lastUpdated: true,

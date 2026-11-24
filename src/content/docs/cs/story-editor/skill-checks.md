@@ -10,7 +10,7 @@ sidebar:
 
 ## Nastavení
 
-Na kartě **Výstupy** v pravém panelu nastavíte:
+Na záložce **Výstupy** v pravém panelu nastavíte:
 
 - **Požadavek**: jedna vlastnost, jeden operátor a jedna hodnota, třeba Obratnost je aspoň 12. Seznam podmínek ověření dovednosti nebere. Více v části [Podmínky](/cs/story-editor/conditions/).
 - **Modifikátor kostky**: **Žádný**, **k10**, **k6** nebo **k20**, v tomto pořadí v seznamu.
@@ -28,7 +28,7 @@ Oba porty musí někam vést. Když jeden není připojený, uzel ohlásí: „M
 
 Nabídka ukazuje **vlastnosti**, ne běžné proměnné. Dokud v příběhu žádná není, panel napíše: „Nejsou definovány žádné proměnné vlastností. Přidejte proměnné vlastností pro použití ověření dovedností.“ Ověření bez vybrané vlastnosti je chyba, která blokuje publikování: „Uzel s ověřením dovednosti nemá vybranou vlastnost.“
 
-Vlastnost založte na kartě **Vlastnosti**. Více v části [Postava čtenáře](/cs/story-editor/player-characters/).
+Vlastnost založte na záložce **Vlastnosti**. Více v části [Postava čtenáře](/cs/story-editor/player-characters/).
 
 Pokud má vlastnost minimum a maximum, musí cílové číslo ležet v tomto rozsahu. U vlastnosti omezené na 10 nemůžete chtít součet 15, i když ho vlastnost s kostkou k20 dokáže dát. Rozšiřte rozsah vlastnosti, nebo snižte cílové číslo.
 
@@ -38,7 +38,7 @@ Bez kostky rozhoduje jen vlastnost, takže čtenáři se stejnou hodnotou dopadn
 
 Velikost kostky určuje, jak moc záleží na náhodě. U vlastností od 0 do 10 rozhodne k20 skoro celý výsledek, zatímco k6 vlastnost jen mírně posune.
 
-## Ať záleží na obou výsledcích
+## Ať záleží na obou výsledcích {#make-both-outcomes-matter}
 
 Větev Neúspěch, která se o dva uzly dál vrátí do hlavní linie, nic v příběhu nezmění. Totéž zvládne volba nebo jednoduchý přechod. Nechte neúspěch vést jinam: jinou cestou, zaplacenou cenou nebo něčím, co se úspěšný čtenář nikdy nedozví.
 
@@ -50,8 +50,8 @@ Větev Neúspěch, která se o dva uzly dál vrátí do hlavní linie, nic v př
 
 ## Vyzkoušení ověření
 
-- Panel Náhled hází za vás. Když vyberete uzel s ověřením, hodí kostkou jednou a číslo si podrží. Tlačítko s kostkou hodí znovu.
-- V sekci **Proměnné (ladění)** můžete číslo na kostce zadat ručně a vynutit si tak jednu nebo druhou větev.
+- Záložka **Náhled** hází za vás. Když vyberete uzel s ověřením, hodí kostkou jednou a číslo si podrží. Tlačítko s kostkou hodí znovu.
+- V panelu **Proměnné (ladění)** můžete číslo na kostce zadat ručně a vynutit si tak jednu nebo druhou větev.
 - Projděte obě větve i v testovacím balíčku. Více v části [Testování](/cs/best-practices/testing/).
 
 ## Související

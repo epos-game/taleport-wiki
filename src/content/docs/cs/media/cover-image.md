@@ -20,7 +20,7 @@ Dokud příběh titulní obrázek nemá, žádnou kapitolu nevydáte. Kontroly p
 
 Titulní obrázek je také pozadím první a poslední obrazovky příběhu.
 
-- **První obrazovka:** obrázek je rozmazaný a ztmavený. Ostrá verze je ve čtvercovém panelu nad názvem, pod ním je popis a tlačítko **Začít**. Čtverec ořezává na střed, takže se horní a dolní část obrázku odřízne.
+- **První obrazovka:** obrázek je rozmazaný a ztmavený. Ostrá verze je ve čtvercovém panelu nad názvem, pod ním je popis a tlačítko **Začít**. Čtverec se ořízne na střed, takže se horní a dolní část obrázku odřízne.
 - **Poslední obrazovka:** jen rozmazaná verze s textem „Děkujeme za hraní“.
 
 ## Otevření editoru
@@ -35,7 +35,7 @@ Na obou dlaždicích stojí **Nastavit obálku**, dokud obálka není, a potom *
 
 Editor se otevře na samostatné stránce. Vlevo je plátno, vpravo panel **Složení**.
 
-![editor obálky: vlevo plátno 9:16 s vyznačenými pruhy Překryto obchodem, Hlavní text, Obrázek a Může být oříznuto, vpravo panel Složení s rozvržením Název nahoře, pozadím, vrstvami a nastavením textu názvu](/screens/cs/media/thumbnail-editor.png)
+![editor obálky: vlevo plátno 9:16 s vyznačenými pruhy Překryto obchodem, Hlavní text a Může být oříznuto, vpravo panel Složení s rozvržením Název uprostřed, pozadím, vrstvami a nastavením textu názvu](/screens/cs/media/thumbnail-editor.png)
 
 Poprvé v **Vyberte rozvržení** zvolíte **Název nahoře**, **Název uprostřed** nebo **Název dole**. Volba určuje, kde začíná pruh pro název, a vrstvu můžete dál posouvat. Když později použijete **Změnit rozvržení**, vrstva se přesune do pruhu nového rozvržení a zachová v něm svou polohu.
 
@@ -89,15 +89,15 @@ Obrázky níže ukazují tytéž pruhy přes hotový titulní obrázek pro každ
 
 U rozvržení **Název nahoře** leží modrý pruh názvu nad zeleným pruhem pro obrázek.
 
-![zóny na obrázku s názvem nahoře](/screens/cs/media/cover-zones-top.png)
+![zóny na obálce s názvem nahoře](/screens/cs/media/cover-zones-top.png)
 
 U rozvržení **Název uprostřed** zabírá modrá střed plochy a zelený pruh tam není.
 
-![zóny na obrázku s názvem uprostřed](/screens/cs/media/cover-zones-middle.png)
+![zóny na obálce s názvem uprostřed](/screens/cs/media/cover-zones-middle.png)
 
 U rozvržení **Název dole** leží zelený pruh pro obrázek nad modrým pruhem názvu.
 
-![zóny na obrázku s názvem dole](/screens/cs/media/cover-zones-bottom.png)
+![zóny na obálce s názvem dole](/screens/cs/media/cover-zones-bottom.png)
 
 ## Náhled
 
@@ -108,7 +108,7 @@ U rozvržení **Název dole** leží zelený pruh pro obrázek nad modrým pruhe
 
 **Zpět k úpravám** vás vrátí.
 
-![detail příběhu, kde je titulní obrázek ve velikosti, v jaké ho většina čtenářů uvidí](/screens/cs/media/cover-thumbnail-test.png)
+![detail příběhu, kde je obálka ve velikosti, v jaké ji většina čtenářů uvidí](/screens/cs/media/cover-thumbnail-test.png)
 
 ## Uložení
 

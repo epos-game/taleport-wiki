@@ -46,7 +46,7 @@ V příběhu je něco, na co editor upozorňuje. Každé varování vypisují [Z
 
 Tenhle případ se k recenzentovi nedostane. Soubor, který příběh používá, ale už ho nemá, se projeví až při zpracování po odeslání. Zpracování selže a kapitola se vrátí bez verdiktu. Viz [Co odeslání neblokuje](/cs/publishing/publishing-requirements/#co-odeslání-neblokuje).
 
-Soubory z dialogu **Chybějící mediální soubory** nahrajte znovu nebo odeberte a publikujte znovu.
+Soubory z dialogu **Chybějící mediální soubory** nahrajte znovu nebo je odeberte a pak publikujte znovu.
 
 ## Chybějící nebo špatné obsahové štítky
 
@@ -54,7 +54,7 @@ Obsahový štítek chybí nebo je špatně, nejčastěji *Citlivá témata*. Viz
 
 ## Zakázaný obsah
 
-Váš obsah obsahuje něco z [článku I](/cs/publishing/content-rules/#cr-i). Náročné téma je povolené jako součást vyprávění. Zakázané je tam, kde ho obsah propaguje, učí ho nebo existuje kvůli požitku. Měřítkem je samotné pravidlo, ne tento souhrn.
+Váš obsah zahrnuje něco z [článku I](/cs/publishing/content-rules/#cr-i). Náročné téma je povolené jako součást vyprávění. Zakázané je tam, kde ho obsah propaguje, učí ho nebo existuje kvůli požitku. Měřítkem je samotné pravidlo, ne tento souhrn.
 
 ## Po zamítnutí
 

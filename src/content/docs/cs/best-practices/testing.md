@@ -25,12 +25,12 @@ Obojí najdete v plném rozsahu v [Zásadách pro příběhy](/cs/publishing/sto
 **Skupiny.**
 
 - Každý uzel skupiny dostane jedinou značku, **Obsahuje chyby** nebo **Obsahuje varování**. Jednotlivé nálezy uvidíte, až skupinu otevřete.
-- Dialog publikování vypíše všechny chyby z nitra skupiny, ale bez názvu uzlu před zprávou. Uzel najdete tak, že skupinu otevřete, protože **Přejít na uzel** přeskakuje jen po úrovni plátna, kterou máte otevřenou.
+- Dialog publikování vypíše všechny chyby zevnitř skupiny, ale bez názvu uzlu před zprávou. Uzel najdete tak, že skupinu otevřete, protože **Přejít na uzel** přeskakuje jen po úrovni plátna, kterou máte otevřenou.
 - Uvnitř skupiny se nekontrolují tři věci: nedosažitelný Konec, Konec bez příchozího propojení a víc než jeden Začátek. Ověřte je sami.
 
 **Co zkontrolovat sami.** Validace ohlásí jen ověření dovednosti bez vlastnosti a globální událost, která sleduje smazanou proměnnou. Ostatní zkontrolujte sami.
 
-- Až smažete proměnnou, projděte volby a podmínky Switche, které ji používaly. Požadavek, který o proměnnou přišel, má místo jména `?`.
+- Když smažete proměnnou, projděte volby a podmínky Switche, které ji používaly. Požadavek, který o proměnnou přišel, má místo jména `?`.
 - Chybějící soubory médií se ukážou, až publikování selže. Dialog pojmenuje každý soubor i místo, kde se používá.
 - Zkontrolujte každý uzel, kde se potkají dva zdroje médií. Více najdete v [Práci s médii](/cs/best-practices/media-usage/).
 
@@ -53,11 +53,11 @@ Karta uvádí: *Přibližný náhled. Finální vykreslení v EPOS se může li�
 
 **Globální události.** Ladicí panel vypíše všechny globální události příběhu a u každé ukáže, jestli je splněná. U každé je tlačítko **Náhled**, které zobrazí překryv bez skládání hodnot, které událost spustí. Při odchodu z uzlu vás editor na globální událost upozorní jen tehdy, když má chování **Vrátit se na začátek** nebo **Vrátit se na poslední kontrolní bod**. Událost s chováním **Pokračovat** se spustí bez hlášky, protože uzly za ní zůstávají dosažitelné.
 
-![pravá karta Náhled na uzlu s ověřením dovednosti](/screens/cs/story-editor/preview-debug.png)
+![pravá karta Náhled: upozornění na přibližnost, tlačítka Předchozí a Pokračovat a uzel přehrávaný v rámu telefonu s textem přes pozadí](/screens/cs/story-editor/preview-debug.png)
 
 Po vyhodnocení ověření dovednosti panel ukáže, která větev se použila a jak to vyšlo. Nad tím jsou ladicí přepisy hodu kostkou a všech vlastností.
 
-![panel Náhled po vyhodnocení ověření dovednosti: která větev se použila a jak to vyšlo, nad tím ladicí přepisy hodu kostkou a všech vlastností](/screens/cs/best-practices/debug-overrides.png)
+![panel Náhled u uzlu typu Switch: každá podmínka s informací, zda byla splněna, a kam vede, použitá větev zvýrazněná a pod tím přepisy Proměnné (ladění), jeden pro každou proměnnou](/screens/cs/best-practices/debug-overrides.png)
 
 ## Testovací balíček
 
@@ -82,7 +82,7 @@ Přispěvatel, který čte váš testovací balíček, píše poznámky ke kapit
 
 Přispěvatel může psát jen tehdy, když je kapitola v testování nebo u recenzenta. Jakmile ji vrátíte do stavu Návrh, tato možnost se zavře.
 
-Upravujte na počítači. V čtecí aplikaci na telefonu editor hlásí *Editor potřebuje větší obrazovku* a kapitolu si tam můžete jen přečíst.
+Upravujte na počítači. Ve čtecí aplikaci na telefonu editor hlásí *Editor potřebuje větší obrazovku* a kapitolu si tam můžete jen přečíst.
 
 ## Co vyzkoušet
 

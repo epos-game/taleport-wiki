@@ -14,7 +14,7 @@ Do proměnné zapisuje komponenta **Událost** na uzlu. Čtou ji podmínky u vol
 
 Proměnné jsou dvou druhů: vlastnosti a obyčejné proměnné. Druh určuje záložka, ve které ji založíte, **Vlastnosti** nebo **Proměnné**. Druh volíte při vytvoření a později proměnnou do druhé záložky přesunout nejde.
 
-![záložka Proměnné, každý řádek nese název proměnné a pod ním výchozí hodnotu](/screens/cs/story-editor/variables-panel.png)
+![záložka Proměnné: počet proměnných, pole pro hledání a tlačítko Přidat nad seznamem proměnných, každý řádek nese název proměnné a pod ním její typ](/screens/cs/story-editor/variables-panel.png)
 
 Druh se projeví na dvou místech:
 
@@ -64,20 +64,20 @@ Každý řádek určuje proměnnou, operaci a hodnotu. Má také vlastní název
 | Operace | Čte se jako | Dostupná u |
 | --- | --- | --- |
 | **=** | nastavit na | každého typu |
-| **+** | zvýšit o | jen typ Číslo |
-| **-** | snížit o | jen typ Číslo |
+| **+** | přičíst | jen typ Číslo |
+| **-** | odečíst | jen typ Číslo |
 
 Proměnné typu Ano / Ne a Seznam hodnot jde jen nastavit. Když na ně událost zamíří, operace se přepne na **nastavit na** a hodnota se vrátí na výchozí. U Ano / Ne je to Ne, u seznamu jeho první popisek.
 
 :::caution[Události meze ignorují]
-Zvýšení a snížení meze nezohledňují. Min a Max se kontrolují u výchozí hodnoty a u hodnoty zadané v podmínce, výsledek události ale neomezují. Číslo s maximem 10 na hodnotě 9 skočí po přičtení 3 na 12. Chcete-li hodnotu udržet pod stropem, zařaďte před událost podmínku.
+Přičtení a odečtení meze nezohledňují. Min a Max se kontrolují u výchozí hodnoty a u hodnoty zadané v podmínce, výsledek události ale neomezují. Číslo s maximem 10 na hodnotě 9 skočí po přičtení 3 na 12. Chcete-li hodnotu udržet pod stropem, zařaďte před událost podmínku.
 :::
 
-Řádky událostí se s publikováním kapitoly uzavřou. V publikované kapitole je komponenta jen seznam ke čtení, bez tlačítka **Přidat událost**, tužky, koše a přetahování. Každý řádek si ponechá proměnnou, operaci i hodnotu. Čísla před publikováním kapitoly ukáže karta **Náhled**.
+Řádky událostí se s publikováním kapitoly uzavřou. V publikované kapitole je komponenta jen seznam ke čtení, bez tlačítka **Přidat událost**, tužky, koše a přetahování. Každý řádek si ponechá proměnnou, operaci i hodnotu. Čísla před publikováním kapitoly ukáže záložka **Náhled**.
 
 ## Zamykání
 
-Proměnná se zamkne, jakmile ji použije vydaná kapitola. Zamčenou proměnnou nejde přejmenovat, změnit jí typ ani meze, ani ji smazat. Její editace se neotevře.
+Proměnná se zamkne, jakmile ji použije vydaná kapitola. Zamčenou proměnnou nejde přejmenovat, změnit jí typ ani meze, ani ji smazat. Její editor se neotevře.
 
 V řádku se zobrazí zámek. Jeho popisek zní „Používá ho publikovaná kapitola: {0}. Odemkne se, jakmile ho žádná publikovaná kapitola nebude používat. Můžete přidat novou položku.“ Za {0} se dosadí kapitoly, které zámek drží, každá jako pořadové číslo a název, oddělené čárkami. Pokud žádná kapitola zámek nedrží, popisek zní „Uzamčeno publikovaným příběhem. Můžete přidat novou položku.“
 

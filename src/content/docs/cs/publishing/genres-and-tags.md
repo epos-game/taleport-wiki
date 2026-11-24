@@ -15,6 +15,8 @@ Dokud příběh nemá obojí, nemůžete odeslat kapitolu.
 - **V dialogu publikování:** krok **Metadata** má pole **Žánr** a **Štítky**. Tady je povinný i aspoň jeden štítek.
 - **V kontrolním seznamu Validace:** řádky se jmenují *Vybraný žánr* a *Alespoň jeden štítek*.
 
+![krok Metadata dialogu publikování: vlevo náhled obálky, vpravo název příběhu, editor popisu, pole Žánr nastavené na Horor a pole Štítky se třemi štítky a počítadlem +4](/screens/cs/publishing/metadata-step.png)
+
 ## Žánr
 
 Vyberte právě jeden z patnácti žánrů: **Fantasy**, **Sci-fi**, **Horor**, **Thriller**, **Krimi**, **Romance**, **Dobrodružný**, **Drama**, **Komedie**, **Historický**, **Mysteriózní**, **Válečný**, **Western**, **Poezie** a **Naučný**.

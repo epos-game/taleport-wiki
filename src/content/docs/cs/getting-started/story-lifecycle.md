@@ -36,9 +36,9 @@ Znovu odeslaná vydaná kapitola má štítek **Ke kontrole** a stejnou barvu ja
 
 V **Přehledu**:
 
-- Karta **Publikováno** vypisuje všechny vydané kapitoly.
-- Karta **V kontrole** vypisuje všechny kapitoly, které jsou v kontrole.
-- Kapitola na obou kartách je vydaná a má ve frontě novou verzi.
+- Záložka **Publikováno** vypisuje všechny vydané kapitoly.
+- Záložka **V kontrole** vypisuje všechny kapitoly, které jsou v kontrole.
+- Kapitola na obou záložkách je vydaná a má ve frontě novou verzi.
 
 Přispěvatelé jsou výjimkou z toho, co vidí čtenáři. Člen týmu otevře kteroukoli vaši kapitolu, která není Návrh.
 
@@ -86,7 +86,7 @@ Kde kapitola skončí, záleží na tom, jestli už byla vydaná:
 - **Nikdy nevydaná:** vrátí se jako plně upravitelný **Návrh**.
 - **Už vydaná:** vrátí se jako **Publikováno · v úpravách**. Čtenáři ji dál mají a graf zůstává uzamčený. Opravíte obsah a odešlete znovu.
 
-Kapitola se objeví v **Přehledu** na kartě **Vyžaduje pozornost** s odkazem na zpětnou vazbu recenzenta.
+Kapitola se objeví v **Přehledu** na záložce **Vyžaduje pozornost** s odkazem na zpětnou vazbu recenzenta.
 
 Poznámky s prioritou **Vysoká** blokují schválení. Odblokujete je sami: v editoru otevřete **Poznámky** a u každé použijete **Označit jako hotové**. Ostatní poznámky jsou doporučení. Více v článku [Práce se zpětnou vazbou z kontroly](/cs/publishing/review-feedback/).
 
@@ -96,7 +96,7 @@ Poznámky s prioritou **Vysoká** blokují schválení. Odblokujete je sami: v e
 
 - v seznamu kapitol
 - v rozbalovací nabídce u tlačítka **Publikovat** v editoru
-- v **Přehledu** na kartě **V kontrole**
+- v **Přehledu** na záložce **V kontrole**
 
 **Zrušit testování** vrátí testovanou kapitolu do stavu Návrh a smaže testovací balíček. Obsah příběhu zůstane. Tohle tlačítko v seznamu kapitol není. Otevřete dialog publikování a zvolte **Nejprve otestovat s přispěvateli**, tlačítko je na tom panelu.
 

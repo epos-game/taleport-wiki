@@ -10,9 +10,9 @@ Hráčskou postavu si skládáte sami. Tvoří ji vlastnosti, které nadefinujet
 
 ## Stavba hlavní postavy
 
-Vlastnosti najdete na kartě **Vlastnosti** dole v editoru.
+Vlastnosti najdete na záložce **Vlastnosti** dole v editoru.
 
-1. Klikněte na **Přidat vlastnost**. Vytvoří se vlastnost s názvem ve tvaru „Proměnná 1“ a otevře se v seznamu. Číslo se počítá přes všechny proměnné příběhu, ne jen přes ty na této kartě.
+1. Klikněte na **Přidat vlastnost**. Vytvoří se vlastnost s názvem ve tvaru „Proměnná 1“ a otevře se v seznamu. Číslo se počítá přes všechny proměnné příběhu, ne jen přes ty na této záložce.
 2. Chcete-li, přejmenujte ji v seznamu.
 3. Nechte typ **Číslo**.
 4. Podle potřeby nastavte rozsah.
@@ -22,7 +22,7 @@ Pro rozsah platí dvě pravidla:
 - Minimum a maximum se ukládají společně. Když vyplníte jen jedno, zahodí se obě.
 - Výchozí hodnota musí ležet v rozsahu. S ní začíná každý čtenář.
 
-Druh (vlastnost, nebo proměnná) určuje karta, ve které kliknete na Přidat. Vlastnost vytvoří i tlačítko **Vytvořit proměnnou** uvnitř komponenty Událost.
+Druh (vlastnost, nebo proměnná) určuje záložka, ve které kliknete na Přidat. Vlastnost vytvoří i tlačítko **Vytvořit proměnnou** uvnitř komponenty Událost.
 
 ## Jak si čtenář postavu utváří
 
@@ -49,7 +49,7 @@ Minimum a maximum platí pro hodnoty, které zadáváte v editoru. Události je 
 
 ## Vlastnosti a postavy příběhu
 
-Lidé, které čtenář potkává, jsou [postavy](/cs/story-editor/characters-and-dialogue/). Mají vlastní seznam a každá má jméno, popis a avatar. Podle něj vybíráte mluvčího replik dialogu. Vlastnosti, které nadefinujete na kartě **Vlastnosti**, patří příběhu a sdílí je celý příběh. Vlastnosti navázané na konkrétní postavu v editoru postavy zatím nenastavujete. Pokud je u postavy uvidíte, platí pro ně stejné zamykání po vydání jako pro ostatní vlastnosti.
+Lidé, které čtenář potkává, jsou [postavy](/cs/story-editor/characters-and-dialogue/). Mají vlastní seznam a každá má jméno, popis a avatar. Z tohoto seznamu vybíráte mluvčího replik dialogu. Vlastnosti, které nadefinujete na záložce **Vlastnosti**, patří příběhu a sdílí je celý příběh. Vlastnosti navázané na konkrétní postavu v editoru postavy zatím nenastavujete. Pokud je u postavy uvidíte, platí pro ně stejné zamykání po vydání jako pro ostatní vlastnosti.
 
 Vztah k postavě sledujte proměnnou příběhu, kterou pojmenujete podle toho, co měří. Takovou proměnnou můžete testovat všude kromě ověření dovednosti.
 

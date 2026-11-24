@@ -13,7 +13,7 @@ A node is built from two kinds of parts:
 
 The two are independent. When you swap the transition, the components stay.
 
-![the node properties panel with the Dialogue, Event, Background Music and Background Image components. The image is inherited from Node 34](/screens/en/story-editor/node-anatomy.png)
+![the node properties panel with the Dialogue, Event, Background Music and Background components. The background is inherited from Node 34](/screens/en/story-editor/node-anatomy.png)
 
 ## Transitions
 
@@ -25,7 +25,10 @@ The palette and the right-hand panel call transitions **Outputs**.
 | **Simple** | One in, one out | The story continues in one direction. |
 | **Choice** | One in, one out per option | The reader picks. See [Transitions and choices](/en/story-editor/transitions-and-choices/). |
 | **Skill Check** | One in, Success and Fail | The outcome depends on a stat, optionally with a dice roll. See [Skill checks](/en/story-editor/skill-checks/). |
+| **Combat** | One in, **Success** and **Fail** | A fight between an enemy and the player. See [Combat](/en/story-editor/combat/). |
+| **Random** | One in, one out per branch | The story branches by chance, with each branch carrying a percentage. See [Random](/en/story-editor/random/). |
 | **Switch** | One in, one out per condition, plus a built-in **Default** | The story branches on what it remembers, without the reader choosing. See [Conditions](/en/story-editor/conditions/). |
+| **Text input** | One in, one out per set of accepted answers, plus **Default** when attempts are limited | The reader types an answer. See [Text input](/en/story-editor/text-input/). |
 | **Group** | One port per Start or End node inside the group | The node contains a graph of its own. See [Groups](/en/story-editor/groups/). |
 | **End** | One in, no outputs | Ends the current path. With the **End of chapter** switch on, it also marks the chapter as completed. Inside a group it is an output of the group. See [End nodes](/en/story-editor/end-nodes/). |
 
@@ -78,6 +81,8 @@ Each channel's page explains what carries it forward, what ends it, what an inhe
 
 - [The story graph](/en/story-editor/story-graph/)
 - [Transitions and choices](/en/story-editor/transitions-and-choices/)
+- [Random](/en/story-editor/random/)
+- [Text input](/en/story-editor/text-input/)
 - [Images](/en/media/images/)
 - [Background music](/en/media/background-music/)
 - [Ambient sound](/en/media/ambient-sound/)

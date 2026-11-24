@@ -27,7 +27,7 @@ Most failing rows have a button that takes you to the fix: **Open profile**, **O
 
 When *No graph errors* fails, it is replaced by one row per error. A row offers **Go to node** when the error belongs to a node.
 
-![the Validation step of the publish dialog, Ready to publish?: all eight checks (author name, bio and avatar, billing details, playable content, reachable ending, earlier chapters, no graph errors) pass and sit under the Ready heading. Failing rows would appear above them under Needs attention](/screens/en/publishing/validation-step.png)
+![the Validation step of the publish dialog, Ready to publish?: all nine checks shown (author name, bio and avatar, billing details, playable content, reachable ending, fightable characters, earlier chapters, no graph errors) pass and sit under the Ready heading. Failing rows would appear above them under Needs attention](/screens/en/publishing/validation-step.png)
 
 ## Your author profile
 
@@ -57,6 +57,7 @@ Once any chapter is live, you can raise the rating but not lower it. You cannot 
 - At least one ending that a reader can reach from the start and that is marked **End of chapter**. A chapter can have many [end nodes](/en/story-editor/end-nodes/), but one reachable ending is enough.
 - **No graph errors.** Warnings do not block. Errors do, and each error gets its own row. A row offers **Go to node** only when the error belongs to a node. A missing Start node, or an End node nothing connects to, shows as a failing row with no link. See [Story guidelines](/en/publishing/story-guidelines/).
 - *Story graph has playable content.* TalePort calculates the price from the longest route a reader can take. That route must last longer than zero minutes. An almost empty chapter fails here.
+- *Fightable characters have complete combat stats.* A character you can fight must have all of its combat stats filled in. See [Combat](/en/story-editor/combat/).
 - *Earlier chapters are ready for review.* Every chapter before this one must be live or in review.
 
 Four of these rows stop you on the first step: the reachable ending, graph errors, playable content and chapter order. You can fix the chapter description, story metadata and billing details in a later step. The age recommendation has no row, because the **Classification** step enforces it.

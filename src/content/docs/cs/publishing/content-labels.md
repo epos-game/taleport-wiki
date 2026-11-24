@@ -25,6 +25,8 @@ Aplikace u štítku ukáže jen název. Popisy níže pocházejí z této wiki.
 | Sexualita | Sexuální témata, nahotu, sexuální odkazy |
 | Citlivá témata | Sebevraždu, sebepoškozování, zneužívání, závislost, závažné psychické obtíže a podobně |
 
+![řádek Tagy obsahu v kroku Klasifikace s vybranými tagy Krev a Horor a čtyřmi nevybranými, nad volbami obsahu generovaného AI](/screens/cs/publishing/classification-age-row.png)
+
 ## Přidávání a odebírání
 
 - Štítky můžete **přidávat** kdykoli.

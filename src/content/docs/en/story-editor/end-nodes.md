@@ -6,7 +6,7 @@ status: published
 sidebar:
   order: 12
 ---
-An **end node** stops the reader's path. It has one input and no outputs. It ends the current path. It has one switch, **End of chapter**, that says whether the chapter is also marked as completed or only the current playthrough ends.
+An **end node** stops the reader's path. It has one input and no outputs. It has one switch, **End of chapter**, that says whether the chapter is also marked as completed or only the current playthrough ends.
 
 A chapter can have any number of end nodes. A reader reaches only one of them.
 

@@ -29,6 +29,65 @@
   animation-timing-function: var(--tp-ease);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(tp-main) {
+    animation-name: tp-out;
+    animation-duration: var(--tp-dur-fast);
+  }
+
+  ::view-transition-new(tp-main) {
+    animation-name: tp-in;
+    animation-duration: 0.32s;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@keyframes tp-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes tp-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .sl-markdown-content :is(img, .starlight-aside, table, pre, figure) {
+      animation: tp-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+}
+
+@keyframes tp-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sidebar-content a {
+    transition:
+      background-color var(--tp-dur-fast) var(--tp-ease),
+      color var(--tp-dur-fast) var(--tp-ease),
+      transform var(--tp-dur-fast) var(--tp-ease);
+  }
+
+  .sidebar-content a:active {
+    transform: scale(0.98);
+  }
+}
+
 .lang-toggle__item:active {
   transform: scale(0.96);
 }

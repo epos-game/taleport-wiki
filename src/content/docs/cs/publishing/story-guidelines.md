@@ -23,7 +23,7 @@ Kapitolu s některou z těchto chyb odeslat nejde.
 
 Každá chyba má v kontrolním seznamu kroku **Validace** vlastní řádek s názvem uzlu, na kterém je. Kliknutím na **Přejít na uzel** se k němu dostanete. Chyba, která se týká celého grafu, je jen řádek textu bez odkazu.
 
-Tvar grafu:
+Struktura grafu:
 
 - V grafu chybí uzel Začátek, nebo uzel Konec.
 - Do uzlu Začátek vede propojení.
@@ -75,7 +75,7 @@ Podmínka bez požadavků v náhledu zachytí všechny případy, které dojdou 
 
 Tato upozornění odeslání nezastaví. V kontrolním seznamu kroku **Validace** se neobjeví.
 
-- Uzel není dosažitelný z uzlu Začátek. Uzly, na které cílí globální událost, jsou vyjmuté.
+- Uzel není dosažitelný z uzlu Začátek. Uzly, na které cílí globální událost, se nekontrolují.
 - Uzel nemá žádný obsah.
 - Textová komponenta nemá text.
 - Komponenta Dialog nemá žádnou repliku, nebo replika nemá přiřazenou postavu či text.
@@ -94,7 +94,7 @@ Nic z následujícího editor nekontroluje. Recenzent může posuzovat pravidla,
 
 Kapitola potřebuje začátek, prostřední část a konec. Volby, které končí na prázdném uzlu, jsou jen upozornění.
 
-Provizorní obsah odstraňte sami, než kapitolu odešlete. Jde například o lorem ipsum, `TODO` zapomenuté v replice nebo dočasnou grafiku. Recenzent si ho všímá.
+Provizorní obsah odstraňte sami, než kapitolu odešlete. Jde například o lorem ipsum, `TODO` zapomenuté v replice nebo dočasnou grafiku. Recenzent ho hledá.
 
 ### Jazyk a podoba textu
 
@@ -112,7 +112,7 @@ Ke každému nahranému obrázku, skladbě, nahrávce a klipu musíte mít práv
 
 ### Klasifikace
 
-Věkové doporučení musí odpovídat nejextrémnějšímu obsahu kdekoli v příběhu, ne průměru ([CR-IV](/cs/publishing/content-rules/#cr-iv)). Obsahové štítky musí odpovídat obsahu příběhu.
+Věkové doporučení musí odpovídat nejsilnějšímu obsahu kdekoli v příběhu, ne průměru ([CR-IV](/cs/publishing/content-rules/#cr-iv)). Obsahové štítky musí odpovídat obsahu příběhu.
 
 Obojí patří k příběhu, ne ke kapitole, a od vydání první kapitoly se to zamyká. Doporučení můžete zvýšit, ale ne snížit. Štítek, který na příběhu jednou je, odebrat nejde. Viz [Obsahové štítky](/cs/publishing/content-labels/).
 

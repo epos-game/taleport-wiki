@@ -37,7 +37,7 @@ Drag options to reorder them. The reader sees them in the same order. Deleting a
 
 ### Requirements on choices
 
-In EPOS, the reader cannot pick an option whose requirements are not met. In the Preview panel such an option shows as locked, and you can bypass it for debugging.
+In EPOS, the reader cannot pick an option whose requirements are not met. In the **Preview** tab such an option shows as locked, and you can bypass it for debugging.
 
 The **Require** selector appears once an option has more than one requirement. **All** means every requirement must hold. **Any** means one is enough. New options start on All.
 

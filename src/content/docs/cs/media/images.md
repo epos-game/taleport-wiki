@@ -62,7 +62,7 @@ Stejný obrázek na dvaceti uzlech čtenáře nic nestojí, protože shodné sou
 
 Uzel, který pozadí zdědí, má vlastní kartu. Nad obrázkem je **Zděděno z** a jméno zdrojového uzlu. Kliknutím na jméno na ten uzel skočíte.
 
-![karta zděděného pozadí s nadpisem Obrázek na pozadí, nad obrázkem a jeho rozměry stojí Zděděno z a jméno uzlu, ze kterého se pozadí dědí, tady Node 6](/screens/cs/story-editor/inherited-image-panel.png)
+![karta zděděného pozadí s nadpisem Obrázek na pozadí, nad náhledem a jeho rozměry stojí Zděděno z a jméno uzlu, ze kterého se pozadí dědí, tady Node 6](/screens/cs/story-editor/inherited-image-panel.png)
 
 Média uzlů patří kapitole, ve které jste je nahráli. Stejný obrázek v jiné kapitole nahrajete znovu.
 
@@ -81,7 +81,7 @@ Přenášené pozadí vstoupí do skupiny jejím vstupem a vyjde jejími výstup
 
 ### Konflikt zdrojů
 
-Vyhrává nejbližší zdroj, vzdálenost se počítá na propojení. Když do jednoho uzlu dorazí dvě pozadí z různých směrů a jsou stejně daleko, uzel ohlásí konflikt a vypíše uzly, odkud přišla. Dokud se nerozhodnete, nezobrazí se nic.
+Vyhrává nejbližší zdroj, vzdálenost se počítá v propojeních. Když do jednoho uzlu dorazí dvě pozadí z různých směrů a jsou stejně daleko, uzel ohlásí konflikt a vypíše uzly, odkud přišla. Dokud se nerozhodnete, nezobrazí se nic.
 
 - Klikněte na jeden z vypsaných zdrojů. Jeho obrázek se zkopíruje na tento uzel s už zapnutým **Pokračovat v zobrazování** a řetěz pokračuje odsud.
 - Kliknutím na **Přidat vlastní** dáte uzlu místo toho prázdnou komponentu pozadí.

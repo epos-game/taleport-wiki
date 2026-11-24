@@ -48,7 +48,7 @@ Characters, variables and global events lock too. The lock covers the whole item
 - **Variable:** locks when a live chapter changes it in an event or checks it in a requirement. The stat variables of a locked character lock with it.
 - **Global event:** every one in the story locks once any chapter is live, even events that chapter doesn't fire. The variable each event targets locks too.
 
-You can add new variables later too. Before the first release, though, plan the values the first chapter has to set, because you cannot add new events to a chapter that is live. See [Published content restrictions](/en/publishing/published-content-restrictions/).
+You can add new variables later too. Before the first release, though, plan the values the first chapter has to set, because you cannot add new events to the nodes of a chapter that is live. See [Published content restrictions](/en/publishing/published-content-restrictions/).
 
 ## Length
 

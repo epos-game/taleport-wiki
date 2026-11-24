@@ -40,7 +40,7 @@ Samotné rozvětvení a opětovné spojení je bezpečné. Dědění si pamatuje
 
 Konflikt vzniká, až když jsou zdroje dva oddělené: jedno pozadí je uvnitř levé větve, druhé uvnitř pravé a obě dorazí do místa spojení stejně daleko.
 
-Karta média na tom uzlu konflikt ukáže. U každého zdroje nabídne **Přejít na zdrojový uzel**, a navíc **Přidat vlastní**. Konflikt publikování nezastaví. Když nastavíte média uvnitř obou větví, zkontrolujte místo, kde se sbíhají. Kanál obnovíte přes **Přidat vlastní**, nebo médium nastavte už před rozvětvením.
+Karta média na tom uzlu konflikt ukáže. U každého zdroje nabídne **Přejít na zdrojový uzel**, a navíc **Přidat vlastní**. Konflikt publikování nezastaví. Když nastavíte média uvnitř obou větví, zkontrolujte místo, kde se sbíhají. Kanál obnovíte přes **Přidat vlastní**, nebo nastavte médium už před rozvětvením.
 
 Kopie vytvořená z panelu konfliktu nebo přes **Použít vlastní médium** má přepínač přenosu dál už zapnutý.
 
@@ -48,7 +48,7 @@ Kopie vytvořená z panelu konfliktu nebo přes **Použít vlastní médium** m�
 
 ## Výměna pozadí
 
-Pozadí se přenáší dál, dokud ho něco nenahradí. Chcete-li ho změnit, nastavte nové na uzlu, kde se má změna projevit.
+Pozadí se přenáší dál, dokud ho něco nenahradí. Pokud ho chcete změnit, nastavte nové na uzlu, kde se má změna projevit.
 
 ## Zastavení kanálu
 
@@ -72,7 +72,7 @@ Uzel Konec nepřijme žádnou obsahovou komponentu, ani pozadí. Poslední obraz
 - **Filmová sekvence** zabere celý uzel. Vedle ní smí být jen kontrolní bod a značka zastavení. Uzel musí mít jednoduchý přechod. Text, dialog ani volbu na stejné obrazovce mít nemůže.
 - **Video pozadí** zabírá místo pozadí, takže ten uzel nemůže mít obrázek na pozadí.
 
-Délku kapitoly nezvyšuje ani jedno příliš. Délka se počítá hlavně z textu, 1000 znaků na minutu.
+Ani jedno z toho délku kapitoly příliš nezvyšuje. Délka se počítá hlavně z textu, 1000 znaků na minutu.
 
 - Čas filmové sekvence se přičte jen na uzlu bez textu a bez dabingu.
 - Video pozadí se nepočítá nikdy, ať je přepínač **Smyčka** zapnutý, nebo vypnutý.
@@ -82,11 +82,11 @@ Délku kapitoly nezvyšuje ani jedno příliš. Délka se počítá hlavně z te
 
 Při publikování TalePort vypíše média, na která se příběh odkazuje, ale už je nenašel. U každého uvede, kde se používá: v uzlu, jako avatar postavy, jako titulní obrázek příběhu nebo u globální události. Můžete je nahrát znovu, odebrat, nebo zvolit **Publikovat bez těchto souborů**.
 
-**Chybějící soubor odeslání neblokuje.** Čtenář ho pak mít nebude.
+**Chybějící soubor první pokus zastaví, ale můžete pokračovat bez něj.** Čtenáři pak tento soubor mít nebudou.
 
 ## Záznamy o právech
 
-Zapisujte si, odkud každý soubor je a pod jakou licencí, už když ho přidáváte.
+Zapisujte si, odkud každý soubor pochází a pod jakou licencí, už když ho přidáváte.
 
 Za práva ke všemu, co odešlete, odpovídáte vy. TalePort může požádat o licenci, souhlas nebo doklad o vlastnictví práv ([CR-II.3](/cs/publishing/content-rules/#cr-ii-3)). Média může zamítnout nebo odstranit, pokud je důvodné podezření, že porušují práva třetích stran.
 

@@ -9,7 +9,7 @@ sidebar:
 
 EPS je měna v aplikaci. Čtenáři si ji kupují za skutečné peníze a platí jí za odemčení kapitol. V EPS zadáváte i každou cenu. Pro orientaci při stanovení ceny počítejte s tím, že 1 EPS odpovídá přibližně 1 Kč (asi 0,04 €). Skutečná cena kreditů pro čtenáře závisí na balíčku a obchodu, ve kterém je kupuje.
 
-Čtenář si koupí kredity a postupně je utrácí za kapitoly. TalePort eviduje skutečné peníze za každým nákupem kreditů a z nich počítá čistý výnos z vašich prodejů.
+Čtenář si koupí kredity a postupně je utratí za kapitoly. TalePort eviduje skutečné peníze za každým nákupem kreditů a z nich počítá čistý výnos z vašich prodejů.
 
 ## Odkud se kredity berou
 
@@ -24,7 +24,7 @@ Z hrubé částky se odečte daň, provize obchodu a poplatek za zpracování pl
 
 TalePort vede každé dobití zvlášť, spolu s penězi, které čtenář zaplatil, a měnou, ve které platil. Nákup vyčerpá nejstarší dobití a pak přejde na další. Jeden prodej vaší kapitoly tak může čerpat ze dvou i tří dobití a každé z nich přidá svůj díl čistého výnosu.
 
-Orientačně se 1 EPS rovná 1 Kč, ale skutečná peněžní hodnota kreditu je pro vás proměnná. Závisí na tom, kde se dobíjelo, jaká daň se na dobití uplatnila a kolik si vzal obchod.
+Orientačně se 1 EPS rovná 1 Kč, ale skutečná peněžní hodnota kreditu se může lišit. Závisí na tom, kde se dobíjelo, jaká daň se na dobití uplatnila a kolik si vzal obchod.
 
 Pokud byly všechny související platby ve stejné měně a příběh už kredity vydělal, stránka statistik ukazuje řádek **Průměrná hodnota kreditu**. Podrobnosti najdete ve [Statistikách příběhu](/cs/monetization/statistics/).
 

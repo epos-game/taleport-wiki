@@ -41,6 +41,8 @@ details {
   border: 1px solid var(--tp-border);
   border-collapse: separate;
   border-spacing: 0;
+  /* The rows sit a hair above the page, and the heading band one step further, so the table reads as a surface. */
+  background: color-mix(in srgb, var(--tp-surface) 35%, var(--tp-bg));
 }
 
 .sl-markdown-content :is(th, td) {
@@ -56,9 +58,13 @@ details {
 }
 
 .sl-markdown-content th {
-  background: var(--tp-panel);
   color: var(--tp-text-high);
   font-weight: 600;
+}
+
+.sl-markdown-content thead th {
+  border-bottom-color: var(--tp-border-strong);
+  background: var(--tp-surface);
 }
 
 .sl-markdown-content thead tr:first-child th:first-child {
@@ -78,7 +84,7 @@ details {
 }
 
 .sl-markdown-content tbody tr:hover :is(th, td) {
-  background: var(--tp-hover);
+  background: color-mix(in srgb, var(--tp-text) 3.5%, transparent);
 }
 
 /*
@@ -106,6 +112,9 @@ details {
  */
 .sl-markdown-content img {
   display: block;
+  /* Width and height attributes reserve the box before the file arrives; the width is pinned in
+     screenshot-sizes.css, so the height has to follow it rather than stay at the pixel count. */
+  height: auto;
   margin-inline: auto;
 }
 

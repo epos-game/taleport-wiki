@@ -13,7 +13,7 @@ Honorář je váš podíl ze skutečných peněz, které stojí za kredity utrac
 2. Každý prodej kapitoly zaplacený z tohoto dobití si z té částky vezme poměrnou část.
 3. Váš podíl se počítá z celkového součtu těchto částí.
 
-Dvě čísla je potřeba držet od sebe:
+Tato dvě čísla nezaměňujte:
 
 - **Čistý výnos z prodejů** je částka po odečtení daní a poplatků, ještě před uplatněním vašeho podílu. Na stránce statistik se jmenuje **Odhadovaný výdělek**, ale nejsou to peníze, které dostanete.
 - **Váš honorář** je váš podíl z čistého výnosu.

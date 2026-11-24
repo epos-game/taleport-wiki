@@ -50,7 +50,7 @@ Inside a node:
   - two of the same kind
   - a background image with a background video
   - media on a channel beside the inheritance stop marker for that same channel. Each of the three channels has its own stop. Background music beside the music stop is the same error as a backdrop beside the backdrop stop.
-- A cutscene breaks its own stricter rules. Only a checkpoint or an inheritance stop marker may sit beside it. The node's transition must be a **Simple Transition**, not a choice, switch or skill check. With any other transition the editor shows *A cutscene can only be placed on a node with a simple transition.*
+- A cutscene has stricter rules. Only a checkpoint or an inheritance stop marker may sit beside it. The node's transition must be a **Simple Transition**, not a choice, switch or skill check. With any other transition the editor shows *A cutscene can only be placed on a node with a simple transition.*
 
 The editor checks global events against their chapter. So these three errors belong to the graph, not to a node:
 

@@ -14,7 +14,7 @@ Příběh je celé dílo, které vydáváte pod jedním autorským profilem. Skl
 | Úroveň | Co to je | Co z toho vidí čtenář |
 | --- | --- | --- |
 | **Příběh** | Vydané dílo. Patří mu titulní obrázek, žánr, štítky, věkové doporučení, obsahové štítky, postavy, proměnné a globální události. | Jedna položka v EPOSu. |
-| **Kapitola** | Jedna vydatelná část příběhu. Má vlastní graf, popis, cenu a kontrolu. | Jedna část, kterou si kupuje a stahuje. |
+| **Kapitola** | Jedna část příběhu, kterou lze vydat. Má vlastní graf, popis, cenu a kontrolu. | Jedna část, kterou si kupuje a stahuje. |
 | **Uzel** | Jedna obrazovka: text, média a dialog, plus jediný přechod, který určuje, co bude dál. | Jeden krok při čtení. |
 
 Věkové doporučení, obsahové štítky a prohlášení o AI patří **příběhu**. Nastavujete je v kroku **Klasifikace** v průvodci publikováním kterékoli kapitoly a platí pro všechny kapitoly. Jakmile je některá kapitola vydaná, můžete věkové doporučení už jen zvýšit. Obsahový štítek, který jste uvedli, odebrat nejde.
@@ -27,9 +27,9 @@ Každá kapitola se kontroluje, oceňuje a vydává zvlášť. Proto na její d�
 - Každá pozdější oprava vydané kapitoly pošle do kontroly celou kapitolu, i když opravíte jediné špatné jméno. Čím delší kapitola, tím víc se kontroluje.
 - Placené kapitoly můžete vydat až po jedné schválené kapitole zdarma, která má aspoň 20 minut unikátního obsahu. Čtyři pětiminutové kapitoly se nesečtou.
 
-## Pořadí vydávání
+## Pořadí vydávání {#release-order}
 
-Kapitoly se vydávají postupně od první. Kapitola 4 se ke čtenářům nedostane, dokud je kapitola 3 ve stavu Návrh. Panel **Kapitoly** to uvádí: „Kapitoly se kontrolují a publikují v tomto pořadí. Publikované kapitoly a kapitoly v kontrole jsou uzamčené; přesouvat lze pouze koncepty.“
+Kapitoly se vydávají postupně od první. Kapitola 4 se ke čtenářům nedostane, dokud je kapitola 3 ve stavu Návrh. Dialog **Kapitoly** to uvádí: „Přetažením změníte pořadí konceptů. Publikované kapitoly a kapitoly v kontrole zůstávají na místě.“
 
 Každá akce má podmínku na kapitoly před ní:
 
@@ -39,11 +39,11 @@ Každá akce má podmínku na kapitoly před ní:
 
 Když dřívější kapitolu stáhnete zpět do stavu **Návrh**, znovu zablokuje všechny kapitoly za sebou.
 
-Vydané kapitoly, kapitoly v kontrole a kapitoly v testování jsou ve svém pořadí ukotvené a zůstávají před kapitolami ve stavu Návrh. Návrh před ně přetáhnout nejde. Ukotvená kapitola má místo úchytu k přetažení špendlík. První neukotvená kapitola má odznak **Další k publikování**.
+Vydané kapitoly, kapitoly v kontrole a kapitoly v testování jsou ve svém pořadí ukotvené a zůstávají před kapitolami ve stavu Návrh. Návrh před ně přetáhnout nejde. Ukotvená kapitola má místo úchytu k přetažení zámek. První neukotvená kapitola má odznak **Další k publikování**.
 
-## Přidávání, přejmenování a mazání kapitol
+## Přidávání, přejmenování a mazání kapitol {#adding-renaming-and-deleting-chapters}
 
-Kapitoly najdete v editoru pod položkou **Kapitoly**. Stejný seznam otevřete i tlačítkem **Spravovat** na kartě kapitol v detailu příběhu. **Přidat kapitolu** zařadí novou kapitolu na konec.
+Kapitoly najdete v editoru pod položkou **Kapitoly**. Stejný seznam otevřete i tlačítkem **Spravovat** na kartě Kapitoly v detailu příběhu. **Přidat kapitolu** zařadí novou kapitolu na konec.
 
 Tlačítko **Vytvořit** je nedostupné, dokud kapitola nemá název (až 200 znaků) a popis (až 1000 znaků). Nové pořadí se uloží, jakmile kapitolu pustíte na nové místo.
 
@@ -71,6 +71,7 @@ Zámek se uvolní, až když kapitola, která ho drží, přestane být vydaná.
 
 ## Související
 
+- [Správa kapitol](/cs/getting-started/managing-chapters/)
 - [Graf příběhu](/cs/story-editor/story-graph/)
 - [Proměnné](/cs/story-editor/variables/)
 - [Životní cyklus příběhu](/cs/getting-started/story-lifecycle/)

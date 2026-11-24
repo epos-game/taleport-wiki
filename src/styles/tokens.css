@@ -21,7 +21,7 @@
   --tp-surface-2: #1e262a;
   --tp-surface-sunken: #101518;
 
-  --tp-text-high: #ffffff;
+  --tp-text-high: #ececec;
   --tp-text: #e0e0e0;
   --tp-text-muted: #bbbbbb;
   --tp-link: #f49c47;
@@ -101,6 +101,7 @@
   --sl-sidebar-width: var(--tp-sidebar-w);
   --sl-content-width: 42rem;
   --sl-nav-height: 3.75rem;
+  --sl-menu-button-size: 2.5rem;
   /* The mobile contents bar is overridden away, so the frame should not reserve its strip. */
   --sl-mobile-toc-height: 0rem;
 

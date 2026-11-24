@@ -20,7 +20,7 @@ U každé lekce v panelu najdete odkaz **Přehrát na YouTube**.
 ## Lekce 1: Založení příběhu
 
 <iframe class="video-lesson" src="https://www.youtube-nocookie.com/embed/DE5AgeGlwso?rel=0"
-        title="Lekce 1: Založení příběhu" loading="lazy" allowfullscreen
+        title="Lekce 1: Založení příběhu" loading="eager" allowfullscreen
         allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"></iframe>
 
 Příběh vytvoříte s názvem, popisem, titulním obrázkem, žánrem, štítky a aspoň jednou kapitolou. Lekce ukazuje starší verzi dialogu **Vytvořit nový Epos** o dvou krocích, **Základy** a **Podrobnosti**. Dnes má dialog jediný krok a povinný je v něm jen název, viz [Založení příběhu](/cs/getting-started/creating-a-story/). Lekce končí v editoru, v prázdné **Kapitole 1**.
@@ -39,7 +39,7 @@ Editor zobrazuje graf jedné kapitoly.
 - Vybraný uzel se otevře vpravo na kartách **Komponenty**, **Výstupy**, **Náhled** a **Poznámky**.
 - Spodní panel obsahuje to, co sdílí celý příběh: **Postavy**, **Proměnné**, **Vlastnosti** a **Globální události**.
 
-Editor potřebuje počítač nebo tablet položený na šířku. Dvanáctikrokového průvodce si v něm kdykoli znovu pustíte z nabídky **Nápověda** volbou **Zobrazit průvodce editorem**.
+Editor potřebuje počítač nebo tablet položený na šířku. Průvodce o dvanácti krocích si v něm kdykoli znovu pustíte z nabídky **Nápověda** volbou **Zobrazit průvodce editorem**.
 
 [Přehrát na YouTube](https://youtu.be/_SXjc4tCP_I) · [Více: Graf příběhu](/cs/story-editor/story-graph/)
 

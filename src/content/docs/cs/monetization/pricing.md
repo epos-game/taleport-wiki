@@ -58,7 +58,7 @@ Cena závisí na tom, jak médium vzniklo. Nastavíte to štítky v kroku **Klas
 Když štítek vypnete, nárokujete si lidskou sazbu. Je to pravidlo obsahu ([CR-III.2](/cs/publishing/content-rules/#cr-iii-2)) a nepravdivé prohlášení je vážné porušení ([CR-III.4](/cs/publishing/content-rules/#cr-iii-4)).
 :::
 
-K štítkům platí:
+Ke štítkům platí:
 
 - Médium, které příběh neobsahuje, nic nepřidá. Jeho štítek je nedostupný s poznámkou „Váš příběh tento druh média neobsahuje.“
 - TalePort kontroluje celý příběh. Počítají se kapitoly v jakémkoli stavu, avataři postav a obrázky globálních událostí. Titulní obrázek se nepočítá. Štítek proto může být aktivní kvůli tomu, že médium používá jiná kapitola.
@@ -80,12 +80,12 @@ Krok **Cena** nabízí pole a posuvník mezi dolní a horní hranicí:
 
 Vedle jsou tři předvolby:
 
-- **50 %** nastaví polovinu doporučené ceny a **Doporučeno** celou doporučenou cenu. Když hodnota padne mimo váš rozsah, tlačítko zašedne.
+- **50 %** nastaví polovinu doporučené ceny a **Doporučeno** celou doporučenou cenu. Když hodnota padne mimo váš rozsah, tlačítko zešedne.
 - **Max** nastaví 299 EPS, ne násobek doporučené ceny. Mimo rozsah nepadne nikdy.
 
-Doporučená cena sama strop nemá. U hodně dlouhé kapitoly může vyjít nad 299. Pak je 299 EPS nejvíc, co můžete žádat, a **Doporučeno** zašedne.
+Doporučená cena sama strop nemá. U hodně dlouhé kapitoly může vyjít nad 299. Pak je 299 EPS nejvíc, co můžete účtovat, a **Doporučeno** zešedne.
 
-Pole i posuvník se posouvají po jedné. Zadanou hodnotu TalePort zaokrouhlí a vrátí do rozsahu. Cena mimo rozsah se odmítne při odeslání, ne jen v dialogu. Čtenáři se účtuje přesně to celé číslo, které jste odeslali.
+Pole i posuvník se posouvají po jedné. Zadanou hodnotu TalePort zaokrouhlí a vrátí do rozsahu. Cena mimo rozsah se odmítne při odeslání, ne jen v dialogu. Čtenáři se strhne přesně ta celá částka, kterou jste odeslali.
 
 ![krok Cena dialogu publikování u placené kapitoly: přepínač zpoplatnění, doporučená cena, posuvník mezi dolní a horní hranicí a tři předvolby](/screens/cs/monetization/pricing-step.png)
 

@@ -74,7 +74,10 @@
 
 .right-sidebar-panel a:hover {
   background: var(--tp-hover);
-  color: var(--tp-text-high);
+}
+
+.right-sidebar-panel a[aria-current='true']:hover {
+  color: var(--tp-primary);
 }
 
 .right-sidebar-panel a[aria-current='true'] {

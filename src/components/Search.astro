@@ -1,0 +1,331 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+
+// Replaces Starlight's modal search. The index is the same Pagefind one Starlight builds; only the
+// surface changes: a Spotlight-style palette that opens over the page, with one compact row per hit.
+const { t } = Astro.locals;
+const { locale } = Astro.locals.starlightRoute;
+
+// Result URLs carry the section as their first segment after the locale. The sidebar already has
+// the translated name of every section, so the badge on a result is read from it.
+const sections: Record<string, string> = {};
+for (const group of Astro.locals.starlightRoute.sidebar) {
+  if (group.type !== 'group') continue;
+  const first = group.entries.find((entry) => entry.type === 'link');
+  if (first?.type !== 'link') continue;
+  const segments = new URL(first.href, 'https://x').pathname.split('/').filter(Boolean);
+  const at = segments.indexOf(locale ?? 'en');
+  const key = segments[at + 1];
+  if (key) sections[key] = group.label;
+}
+
+// With nothing typed the palette lists every page, grouped like the sidebar. It comes from the
+// sidebar rather than the search index, so it is there before the index has loaded.
+type Entry = (typeof Astro.locals.starlightRoute.sidebar)[number];
+const flatten = (entries: Entry[]): { title: string; url: string }[] =>
+  entries.flatMap((entry) =>
+    entry.type === 'link' ? [{ title: entry.label, url: entry.href }] : flatten(entry.entries),
+  );
+const browse = Astro.locals.starlightRoute.sidebar
+  .filter((entry) => entry.type === 'group')
+  .map((group) => ({ section: group.label, items: flatten(group.entries) }));
+
+const strings = {
+  none: locale === 'cs' ? 'Nic nenalezeno pro' : 'No results for',
+  found: locale === 'cs' ? 'Počet výsledků:' : 'Results:',
+  unavailable: locale === 'cs' ? 'Vyhledávání se nepodařilo načíst.' : 'Search could not be loaded.',
+  hint: locale === 'cs' ? 'Začněte psát' : 'Start typing to search',
+  dev: t('search.devWarning'),
+  navigate: locale === 'cs' ? 'procházet' : 'navigate',
+  open: locale === 'cs' ? 'otevřít' : 'open',
+  close: locale === 'cs' ? 'zavřít' : 'close',
+};
+---
+
+<site-search
+  class={Astro.props.class}
+  data-sections={JSON.stringify(sections)}
+  data-strings={JSON.stringify(strings)}
+  data-browse={JSON.stringify(browse)}
+>
+  <button type="button" class="search__trigger" aria-keyshortcuts="Control+K">
+    <Icon name="magnifier" class="search__icon" />
+    <span class="search__label">{t('search.label')}</span>
+    <kbd class="search__kbd" aria-hidden="true"><kbd>Ctrl</kbd><kbd>K</kbd></kbd>
+  </button>
+
+  <dialog class="search__dialog" aria-label={t('search.label')}>
+    <div class="search__bar" role="search">
+      <Icon name="magnifier" class="search__icon" />
+      <input
+        type="search"
+        class="search__input"
+        placeholder={t('search.label')}
+        aria-label={t('search.label')}
+        role="combobox"
+        aria-expanded="true"
+        aria-controls="tp-search-results"
+        aria-autocomplete="list"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <kbd class="search__esc" aria-hidden="true">esc</kbd>
+      <button type="button" class="search__dismiss" aria-label={t('search.cancelLabel')}>
+        <Icon name="close" />
+      </button>
+    </div>
+    <div id="tp-search-results" class="search__panel" role="listbox"></div>
+    <div class="search__status" role="status"></div>
+    <div class="search__foot" aria-hidden="true">
+      <span><kbd>↑</kbd><kbd>↓</kbd> {strings.navigate}</span>
+      <span><kbd>↵</kbd> {strings.open}</span>
+      <span><kbd>esc</kbd> {strings.close}</span>
+    </div>
+  </dialog>
+</site-search>
+
+<script>
+  type Sub = { title: string; url: string; excerpt: string };
+  type Data = {
+    url: string;
+    meta: { title?: string };
+    excerpt: string;
+    sub_results: Sub[];
+  };
+
+  const MAX_PAGES = 8;
+  const MAX_SUBS = 2;
+
+  class SiteSearch extends HTMLElement {
+    private dialog!: HTMLDialogElement;
+    private input!: HTMLInputElement;
+    private panel!: HTMLElement;
+    private status!: HTMLElement;
+    private pagefind?: any;
+    private run = 0;
+    private sections: Record<string, string> = {};
+    private strings: Record<string, string> = {};
+    private browse: { section: string; items: { title: string; url: string }[] }[] = [];
+
+    connectedCallback() {
+      this.dialog = this.querySelector('.search__dialog')!;
+      this.input = this.querySelector('.search__input')!;
+      this.panel = this.querySelector('.search__panel')!;
+      this.status = this.querySelector('.search__status')!;
+      try {
+        this.sections = JSON.parse(this.dataset.sections || '{}');
+        this.strings = JSON.parse(this.dataset.strings || '{}');
+        this.browse = JSON.parse(this.dataset.browse || '[]');
+      } catch {}
+
+      if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+        const key = this.querySelector('.search__kbd kbd');
+        if (key) key.textContent = '⌘';
+      }
+
+      this.querySelector('.search__trigger')!.addEventListener('click', () => this.open());
+      this.querySelector('.search__dismiss')!.addEventListener('click', () => this.dialog.close());
+      this.input.addEventListener('input', () => this.search());
+      this.input.addEventListener('keydown', (e) => this.onKey(e));
+      // A click on the backdrop lands on the dialog element itself, outside its card.
+      this.dialog.addEventListener('pointerdown', (e) => {
+        if (e.target === this.dialog) this.dialog.close();
+      });
+      window.addEventListener('keydown', (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+          e.preventDefault();
+          this.dialog.open ? this.dialog.close() : this.open();
+        }
+      });
+    }
+
+    private open() {
+      this.dialog.showModal();
+      this.input.select();
+      this.hint();
+      this.search();
+      this.load();
+    }
+
+    private async load() {
+      if (this.pagefind || import.meta.env.DEV) return;
+      const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+      try {
+        // A variable keeps the bundler from resolving a file that only exists once Pagefind has run.
+        const url = `${base}/pagefind/pagefind.js`;
+        this.pagefind = await import(/* @vite-ignore */ url);
+        await this.pagefind.options({ baseUrl: `${base}/` });
+        await this.pagefind.init();
+      } catch {
+        this.pagefind = undefined;
+      }
+    }
+
+    private message(text: string) {
+      this.panel.replaceChildren();
+      const p = document.createElement('p');
+      p.className = 'search__message';
+      p.textContent = text;
+      // The status region announces it; the visible copy would be read twice.
+      p.setAttribute('aria-hidden', 'true');
+      this.panel.append(p);
+      this.status.textContent = text;
+      this.input.removeAttribute('aria-activedescendant');
+    }
+
+    private hint() {
+      if (this.input.value.trim()) return;
+      this.run++;
+      this.panel.replaceChildren();
+      let n = 0;
+      for (const { section, items } of this.browse) {
+        const heading = document.createElement('div');
+        heading.className = 'search__heading';
+        heading.setAttribute('role', 'presentation');
+        heading.textContent = section;
+        this.panel.append(heading);
+        for (const item of items) {
+          this.panel.append(this.row(`tp-hit-${n++}`, item.url, item.title, '', undefined, false));
+        }
+      }
+      this.panel.scrollTop = 0;
+      this.activate(0);
+    }
+
+    private async search() {
+      const query = this.input.value.trim();
+      if (!query) return this.hint();
+
+      if (import.meta.env.DEV) return this.message(this.strings.dev ?? '');
+
+      // The token is taken before the first await, so a later keystroke, or clearing the field,
+      // cancels this call however slow the index is to load.
+      const run = ++this.run;
+      await this.load();
+      if (run !== this.run) return;
+      if (!this.pagefind) return this.message(this.strings.unavailable ?? '');
+
+      try {
+        const found = await this.pagefind.debouncedSearch(query, {}, 100);
+        // `null` means a newer keystroke superseded this call.
+        if (found === null || run !== this.run) return;
+
+        const pages: Data[] = await Promise.all(
+          found.results.slice(0, MAX_PAGES).map((r: { data(): Promise<Data> }) => r.data()),
+        );
+        if (run !== this.run) return;
+        if (!pages.length) return this.message(`${this.strings.none} “${query}”`);
+        this.render(pages);
+      } catch {
+        if (run === this.run) this.message(this.strings.unavailable ?? '');
+      }
+    }
+
+    private render(pages: Data[]) {
+      this.panel.replaceChildren();
+      let n = 0;
+      const lang = document.documentElement.lang.split('-')[0];
+
+      for (const page of pages) {
+        const segments = new URL(page.url, location.origin).pathname.split('/').filter(Boolean);
+        const section = this.sections[segments[segments.indexOf(lang) + 1] ?? ''];
+        const title = page.meta.title ?? page.url;
+
+        this.panel.append(this.row(`tp-hit-${n++}`, page.url, title, page.excerpt, section, false));
+
+        // The first heading often is the page itself, so a heading only earns a row of its own when
+        // it says something the page title does not.
+        const seen = new Set([title]);
+        const subs = page.sub_results.filter((sub) => {
+          if (!sub.url.includes('#') || seen.has(sub.title)) return false;
+          seen.add(sub.title);
+          return true;
+        });
+        for (const sub of subs.slice(0, MAX_SUBS)) {
+          this.panel.append(this.row(`tp-hit-${n++}`, sub.url, sub.title, '', title, true));
+        }
+      }
+
+      this.panel.scrollTop = 0;
+      this.activate(0);
+      this.status.textContent = `${this.strings.found} ${pages.length}`;
+    }
+
+    private row(
+      id: string,
+      href: string,
+      title: string,
+      excerpt: string,
+      aside: string | undefined,
+      sub: boolean,
+    ) {
+      const a = document.createElement('a');
+      a.id = id;
+      a.href = href;
+      a.className = sub ? 'search__hit search__hit--sub' : 'search__hit';
+      a.setAttribute('role', 'option');
+      a.tabIndex = -1;
+
+      if (sub) {
+        const mark = document.createElement('span');
+        mark.className = 'search__glyph';
+        mark.textContent = '#';
+        a.append(mark);
+      }
+
+      const body = document.createElement('span');
+      body.className = 'search__body';
+      const head = document.createElement('span');
+      head.className = 'search__title';
+      head.textContent = title;
+      body.append(head);
+      if (excerpt) {
+        // Pagefind escapes the excerpt and wraps matches in <mark>, so it is safe as HTML.
+        const text = document.createElement('span');
+        text.className = 'search__excerpt';
+        text.innerHTML = excerpt;
+        body.append(text);
+      }
+      a.append(body);
+
+      if (aside) {
+        const chip = document.createElement('span');
+        chip.className = 'search__aside';
+        chip.textContent = aside;
+        a.append(chip);
+      }
+
+      a.addEventListener('pointermove', () => this.activate(this.hits().indexOf(a), false));
+      return a;
+    }
+
+    private hits() {
+      return [...this.panel.querySelectorAll<HTMLAnchorElement>('.search__hit')];
+    }
+
+    private activate(index: number, scroll = true) {
+      const hits = this.hits();
+      if (!hits.length) return;
+      const next = (index + hits.length) % hits.length;
+      hits.forEach((h, i) => h.setAttribute('aria-selected', String(i === next)));
+      this.input.setAttribute('aria-activedescendant', hits[next].id);
+      if (scroll) hits[next].scrollIntoView({ block: 'nearest' });
+    }
+
+    private onKey(e: KeyboardEvent) {
+      const hits = this.hits();
+      const current = hits.findIndex((h) => h.getAttribute('aria-selected') === 'true');
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        if (!hits.length) return;
+        e.preventDefault();
+        this.activate(current + (e.key === 'ArrowDown' ? 1 : -1));
+      } else if (e.key === 'Enter' && current >= 0) {
+        e.preventDefault();
+        this.dialog.close();
+        location.href = hits[current].href;
+      }
+    }
+  }
+
+  customElements.define('site-search', SiteSearch);
+</script>

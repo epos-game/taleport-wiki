@@ -8,7 +8,7 @@ sidebar:
 ---
 V TalePortu jsou dva druhy videa:
 
-| | Filmová sekvence | Video pozadí |
+| Vlastnost | Filmová sekvence | Video pozadí |
 | --- | --- | --- |
 | Co to je | Samotný uzel | Klip na místě pozadí |
 | Jak se přehrává | Vyplní obrazovku a hraje sama | Hraje ve smyčce za textem a volbami |
@@ -25,7 +25,7 @@ Nahrát jde jen mp4.
 ### Tvar a rozlišení
 
 - Odmítne se jen video na šířku, a to se zprávou: „Toto video je na šířku. Nahrajte prosím svislé video (na výšku, 9:16).“
-- Poměr nemusí být přesně 9:16. Čtvercový klip 1080 × 1080 projde, i když ho telefon zobrazí v pruhu.
+- Poměr nemusí být přesně 9:16. Čtvercový klip 1080 × 1080 projde, i když ho telefon zobrazí s pruhy po stranách.
 - Každá strana se kontroluje zvlášť. Klip na výšku širší než 1080 nebo vyšší než 1920 se odmítne: „Rozlišení videa je příliš vysoké (1440x2560); maximum je 1080x1920.“
 - Obě kontroly běží ve vašem prohlížeči. Když prohlížeč soubor nepřečte do deseti sekund, dostanete „Toto video se nepodařilo načíst. Nahrajte prosím soubor H.264 mp4.“
 
@@ -44,7 +44,7 @@ Délka omezená není, jen velikost. Aby se video pozadí vešlo do 1 MB, musí 
 Filmová sekvence je výhradní obsah a na uzlu nesmí sdílet místo s jinými komponentami. Vedle ní smí být jen [kontrolní bod](/cs/story-editor/checkpoints/) a značka zastavení dědění. Uzel musí mít jednoduchý přechod.
 
 - Text, dialog, volby, obrázkové pozadí, video pozadí, hudba i okolní zvuk se odmítnou se zprávou: „Tento uzel obsahuje hlavní obsah (například video), který nelze sdílet s dalšími komponentami. Vedle něj lze přidat pouze kontrolní bod.“
-- Opačně je to stejné. Když filmovou sekvenci položíte na uzel, který už něco obsahuje, dostanete „Toto je hlavní obsah (například video) a nelze jej kombinovat s ostatními komponentami uzlu. Nejprve uzel vyprázdněte, kontrolní bod může zůstat.“
+- Platí to i obráceně. Když filmovou sekvenci položíte na uzel, který už něco obsahuje, dostanete „Toto je hlavní obsah (například video) a nelze jej kombinovat s ostatními komponentami uzlu. Nejprve uzel vyprázdněte, kontrolní bod může zůstat.“
 - Přechod takového uzlu nezměníte, dokud klip neodeberete.
 
 Dokud sekvence hraje, zděděné pozadí, hudba a okolní zvuk se skryjí. Na dalších uzlech se vrátí.
@@ -67,7 +67,7 @@ Jedno zastavení dědění kanálu **Pozadí** ukončí obojí, protože obráze
 
 Uzel, který pozadí zdědí, má na něj jedinou kartu s textem **Zděděno z** a jménem zdrojového uzlu. Zdrojem může být obrázek i video. Níže je příklad s obrázkem.
 
-![karta zděděného pozadí s nadpisem Obrázek na pozadí, nad obrázkem a jeho rozměry stojí Zděděno z a jméno uzlu, ze kterého se pozadí dědí, tady Node 6](/screens/cs/story-editor/inherited-image-panel.png)
+![karta zděděného pozadí s nadpisem Obrázek na pozadí, nad náhledem a jeho rozměry stojí Zděděno z a jméno uzlu, ze kterého se pozadí dědí, tady Node 6](/screens/cs/story-editor/inherited-image-panel.png)
 
 U náhledu jsou dva přepínače:
 

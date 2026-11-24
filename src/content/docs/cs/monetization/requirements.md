@@ -39,11 +39,11 @@ Z toho plyne:
 
 ## Výplatní a fakturační údaje
 
-Kvalifikace nestačí. Dokud nejsou fakturační údaje úplné, placené odeslání se odmítne. Potřebujete obě části: bankovní účet a daňové a fakturační údaje.
+Kvalifikace nestačí. Dokud nejsou fakturační údaje úplné, TalePort placené odeslání odmítne. Potřebujete obě části: bankovní účet a daňové a fakturační údaje.
 
 Každou část můžete ze stejné stránky i smazat. Smazáním části ale o placené publikování znovu přijdete. Podrobnosti najdete v článku [Výplaty](/cs/monetization/payouts/).
 
-Kontrolní seznam před publikováním má vždy řádek **Fakturační a výplatní údaje** s tlačítkem **Otevřít fakturační nastavení**. Dokud nejsou hotové obě části, zůstává tento řádek mezi položkami k vyřešení, bez ohledu na cenu kapitoly. Kapitolu zdarma odešlete i tak, zastaví se jen placená.
+Kontrolní seznam před publikováním má vždy řádek **Fakturační a výplatní údaje** s tlačítkem **Otevřít fakturační nastavení**. Dokud nejsou hotové obě části, zůstává tento řádek mezi položkami k vyřešení, bez ohledu na cenu kapitoly. Kapitolu zdarma můžete odeslat i tak, zastaví se jen placená.
 
 ## Žádost o kvalifikaci
 
@@ -53,7 +53,7 @@ Kapitola zdarma je obvyklá cesta, ne jediná. V kroku **Cena** je odkaz na supp
 
 TalePort si vede fázi, ve které autor je. Kontrola placeného publikování se dívá právě na ni. Sami ji nenastavujete.
 
-Krok **Cena** říká, že „zpoplatnění kapitol bude dostupné, jakmile se stanete kvalifikovaným autorem“. TalePort ověří podmínky také při odeslání. Placené odeslání, které je nesplňuje, se vrátí s hláškou „Než budete moci publikovat placený obsah, musíte být kvalifikovaným autorem.“
+Krok **Cena** říká, že „zpoplatnění kapitol bude dostupné, jakmile se stanete kvalifikovaným autorem“. Placené odeslání, které je nesplňuje, se vrátí s hláškou „Než budete moci publikovat placený obsah, musíte být kvalifikovaným autorem.“
 
 | Fáze | Jak se do ní dostanete |
 | --- | --- |
@@ -67,7 +67,7 @@ Krok **Cena** říká, že „zpoplatnění kapitol bude dostupné, jakmile se s
 
 ## Trvání kvalifikace
 
-Splněná podmínka s kapitolou zdarma vám nedává trvalé právo prodávat. Článek V.4 obchodních podmínek říká, že TalePort může monetizaci nezpřístupnit, pozastavit nebo odejmout, zejména při porušení podmínek, pravidel obsahu, práv třetích osob, právních předpisů nebo pravidel distribučních platforem. V aplikaci je to fáze Ukončeno. Ta kontrolou placeného publikování neprojde, stejně jako Registrován. Kapitol zdarma se to netýká.
+Splněná podmínka s kapitolou zdarma vám nedává trvalé právo prodávat. Článek V.4 obchodních podmínek říká, že TalePort může monetizaci nezpřístupnit, pozastavit nebo odejmout, zejména při porušení podmínek, pravidel obsahu, práv třetích osob, právních předpisů nebo pravidel distribučních platforem. V aplikaci je to fáze Ukončeno. S ní kontrolou placeného publikování neprojdete, stejně jako ve fázi Registrován. Kapitol zdarma se to netýká.
 
 ## Nekvalifikující kapitola
 

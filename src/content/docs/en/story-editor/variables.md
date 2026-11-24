@@ -14,7 +14,7 @@ An **Event** component on a node writes to a variable. Conditions on choices, sw
 
 Variables come in two kinds: stats and plain variables. The kind depends on the tab where you create it, **Stats** or **Variables**. You choose the kind when you create the variable, and you can't move it to the other tab later.
 
-![the Variables tab, each row naming a variable with its default value under it](/screens/en/story-editor/variables-panel.png)
+![the Variables tab, with the variable count, a search field and Add above a list of variables, each row naming a variable with its type under it](/screens/en/story-editor/variables-panel.png)
 
 The kind matters in two places:
 
