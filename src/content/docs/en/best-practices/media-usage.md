@@ -82,7 +82,7 @@ Neither adds much length. Chapter length comes mostly from text, at 1000 charact
 
 When you publish, TalePort lists any media the story references but can no longer find. For each one it says where it is used: in a node, on a character avatar, as the story cover, or on a global event. You can re-upload it, remove it, or choose **Publish without these files**.
 
-**A missing file doesn't block the submission.** Readers won't have it.
+**A missing file stops the first attempt, but you can go on without it.** Readers then won't have that file.
 
 ## Records of your rights
 

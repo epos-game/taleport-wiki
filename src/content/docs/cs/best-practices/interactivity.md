@@ -1,6 +1,6 @@
 ---
 title: Interaktivita
-description: Volby, Switch a ověření dovednosti a o čem rozhoduje které z nich.
+description: Volby, Switch a ověření dovednosti a o čem každé z nich rozhoduje.
 helpKey: best-practices.interactivity
 status: published
 sidebar:
@@ -43,7 +43,7 @@ S požadavky se možnost otevře jen čtenáři, jehož proměnné je splňují.
 
 **V EPOSu** čtenář možnost s nesplněnými požadavky nevybere. Jak přesně se nedostupná volba ve čtenářské aplikaci zobrazí, ověřte při testování příběhu v EPOSu.
 
-Až smažete proměnnou, zkontrolujte požadavky, které ji používaly. Poznáte je podle `?` na místě jména proměnné.
+Když smažete proměnnou, zkontrolujte požadavky, které ji používaly. Poznáte je podle `?` na místě jména proměnné.
 
 Více najdete v [Podmínkách](/cs/story-editor/conditions/).
 
@@ -51,7 +51,7 @@ Více najdete v [Podmínkách](/cs/story-editor/conditions/).
 
 Switch čte podmínky shora a jde tou první, která platí. Na pořadí proto záleží. Obecná podmínka nahoře platí dřív než každá konkrétnější pod ní. Pořadí změníte přetažením.
 
-- Výstup **Výchozí** je vždy. Jde jím všechno, co neodpovídá žádné podmínce, takže záchytnou podmínku nepřidáváte.
+- Výstup **Výchozí** je k dispozici vždy. Jde jím všechno, co neodpovídá žádné podmínce, takže záchytnou podmínku nepřidáváte.
 - Požadavky jedné podmínky Switche musí platit všechny zároveň (A). Pro větev „buď, anebo“ napište dvě podmínky, nebo nastavte pomocnou proměnnou a testujte ji.
 - Každé podmínce přidejte alespoň jeden požadavek. Prázdná podmínka v náhledu zachytí všechny případy, které dojdou až k ní, a podmínky pod ní se nevyhodnotí. Panel Problémy na ni upozorní varováním, které publikování neblokuje, ale podmínku doplňte nebo odeberte. Pro záložní větev použijte výstup **Výchozí**.
 
@@ -88,7 +88,7 @@ Na jednom uzlu se spustí jen jedna událost. Když se na něm nově splní dvě
 
 Volbu nepotřebuje každý uzel, ale každá volba potřebuje následek.
 
-Hustota rozhodnutí ovlivňuje i doporučenou cenu. Bonus se počítá za rozhodovací body, tedy uzly s více než jednou cestou ven. Platí jen tehdy, když mimo nejdelší cestu je obsah, o který může čtenář přijít. Bonus je zastropovaný. Více najdete v [Cenách](/cs/monetization/pricing/).
+Hustota rozhodnutí ovlivňuje i doporučenou cenu. Bonus se počítá za rozhodovací body, tedy uzly s více než jednou cestou ven. Platí jen tehdy, když je mimo nejdelší cestu obsah, o který může čtenář přijít. Bonus má horní hranici. Více najdete v [Cenách](/cs/monetization/pricing/).
 
 ## Související
 

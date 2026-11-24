@@ -56,7 +56,7 @@ The bar compares the row's count to chapter 1's count and stops at 100%, so it s
 
 The note under the list mentions bundle purchases. They don't apply to you, because every purchase is for exactly one chapter.
 
-![the Chapters list on a story's detail page: each chapter has a sequence number, title, status (Published), a short description, a row of figures (plays, nodes, branches, pages, durations) and a row with the price or Free, dates and an Unpublished changes badge](/screens/en/monetization/chapter-list.png)
+![the Chapters list on a story's detail page: each chapter has a title, a status (Draft or Testing) and a price or Free, a short description, and a row of figures (plays, nodes, branches, duration, share of voiced content) with the dates on the right, beside the Manage button](/screens/en/monetization/chapter-list.png)
 
 ## Reading the numbers
 

@@ -65,7 +65,6 @@ A country with no format on file, or an empty optional field, isn't checked.
 ## Deleting and fixing the rows
 
 - Both rows have a delete button, each with its own confirmation. If you delete either row, you lose paid publishing again.
-- Paid publishing needs the account holder's name, an IBAN or Czech account number, whether you are an individual or a company (for a company also the company name and VAT ID), a billing email, and an address with street, city, postal code and country. SWIFT / BIC, bank name and Tax ID are optional. The format checks must pass.
 - If the row shows your details but the publish checklist still lists **Billing and payout information**, save the row again. TalePort then marks the missing fields.
 
 ## When you get paid

@@ -15,7 +15,7 @@ Uzel ukazuje čtenáři jednu obrazovku. Obsahuje:
 - **přechod**, který rozhoduje, jak čtenář uzel opustí,
 - libovolný počet **komponent**: text, dialog, obrázky, hudbu, zvuk, filmové sekvence, události a kontrolní body.
 
-Každý uzel má právě jeden přechod. Nový uzel už přichází s jednoduchým.
+Každý uzel má právě jeden přechod. Nový uzel začíná s jednoduchým přechodem.
 
 ## Spojení a porty
 
@@ -57,11 +57,11 @@ Pravým tlačítkem na uzel můžete:
 
 Pravé tlačítko na prázdném plátně nabídne stejné typy uzlů jako část Předvolby.
 
-![celý editor: paleta otevřená vlevo, graf na plátně, dolní panel otevřený na kartě Postavy a v pravém panelu karta Komponenty s vybraným uzlem](/screens/cs/story-editor/editor-layout.png)
+![celý editor: paleta s Předvolbami a Komponentami otevřená vlevo, graf na plátně, dolní panel otevřený na záložce Postavy a v pravém panelu karta Komponenty s vybraným uzlem](/screens/cs/story-editor/editor-layout.png)
 
 ## Orientace v grafu
 
-**Hledání** (Ctrl/⌘+F) najde uzel podle názvu i podle čísla. Když validace ukáže na uzel 47, skočíte rovnou na něj. Hledání zobrazí deset výsledků. Při větším počtu nad nimi stojí *„Zobrazeno prvních 10 z 34“*. Prohledává jen graf, který máte právě otevřený, ne skupiny v něm.
+**Hledání** (Ctrl/⌘+F) najde uzel podle čísla, názvu, textu, dialogu nebo voleb. Když validace ukáže na uzel 47, skočíte rovnou na něj. Hledání zobrazí 20 výsledků. Při větším počtu nad nimi stojí *„Zobrazeno prvních 20 z 134“*. Prohledává jen graf, který máte právě otevřený, ne skupiny v něm. Více v části [Hledání v grafu](/cs/story-editor/searching-the-graph/).
 
 Nepojmenovaný uzel ukazuje úryvek ze své textové komponenty. Úryvek má nejvýše 40 znaků včetně tří teček, takže z vašeho textu zbude 37 znaků. Uzel, který má jen dialog, úryvek nedostane a zobrazí se jako **Uzel 47**. Tento popisek uvidíte v poznámkách recenzenta, ve zprávách z validace i při hledání.
 
@@ -76,12 +76,12 @@ Na plátně platí:
 
 Která stránka dokumentace se otevře, závisí na tom, kde jste:
 
-- Karta **Postavy** otevře Postavy a dialogy.
-- Karta **Globální události** otevře Globální události.
-- Karty **Proměnné** i **Vlastnosti** otevřou Proměnné, protože obě používají stejný formulář.
+- Záložka **Postavy** otevře Postavy a dialogy.
+- Záložka **Globální události** otevře Globální události.
+- Záložky **Proměnné** i **Vlastnosti** otevřou Proměnné, protože obě používají stejný formulář.
 - Odjinud se otevře tato stránka.
 
-## Kopírování uzlů
+## Kopírování uzlů {#copying-nodes}
 
 Kopírování a vkládání funguje jen v rámci jedné kapitoly. Uzly do jiné kapitoly nevložíte, takže takto je mezi kapitolami přesouvat nejde.
 
@@ -100,7 +100,7 @@ Chyby publikování blokují, varování ne. Oboje v plném rozsahu uvádějí [
 
 Skupina se v seznamu problémů objeví jako jediná položka: *„Tato skupina obsahuje obsah s chybami ve validaci.“* Chybu uvnitř najdete po otevření skupiny. Prázdný graf nehlásí nic. Chyba o chybějícím uzlu Začátek se objeví, až když má kapitola aspoň jeden uzel.
 
-Publikování má navíc jeden požadavek na graf. Kontroluje se v dialogu publikování. Aspoň jeden uzel Konec dosažitelný z uzlu Začátek musí mít zapnutý **Konec kapitoly**. Bez něj čtenář dohraje větev, ale kapitolu nikdy nedokončí. Takový uzel musí ležet na plátně kapitoly. Uzel Konec uvnitř skupiny je výstupem skupiny, takže ho kontrola čte jako spojení, ne jako konec.
+Publikování má navíc jeden požadavek na graf. Kontroluje se v dialogu publikování. Aspoň jeden uzel Konec dosažitelný z uzlu Začátek musí mít zapnutý **Konec kapitoly**. Bez něj čtenář dohraje větev, ale kapitolu nikdy nedokončí. Takový uzel musí ležet na plátně kapitoly. Uzel Konec uvnitř skupiny je výstupem skupiny, takže ho kontrola bere jako výstup skupiny, ne jako konec kapitoly.
 
 :::caution[Po vydání se struktura zamkne]
 Jakmile je kapitola vydaná, **struktura** grafu se zamkne. **Obsah** zůstane upravitelný. Text v uzlu přepsat můžete. Uzel přidat, odebrat, přepojit ani přejmenovat nemůžete, protože přejmenování se počítá jako zásah do struktury.

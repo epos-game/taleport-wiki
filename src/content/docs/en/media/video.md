@@ -8,7 +8,7 @@ sidebar:
 ---
 TalePort has two kinds of video:
 
-| | Cutscene | Background video |
+| Feature | Cutscene | Background video |
 | --- | --- | --- |
 | What it is | The node itself | A clip in the backdrop slot |
 | How it plays | Fills the screen and plays alone | Loops behind the text and choices |
@@ -67,7 +67,7 @@ One **Background** inheritance stop ends both, because image and video share one
 
 A node that inherits the backdrop shows one card with **Inherited from** and the source node's name. The source can be an image or a video. The example below shows an image.
 
-![an inherited backdrop card, headed Background Image, reading Inherited from Node 6 above the picture and its dimensions](/screens/en/story-editor/inherited-image-panel.png)
+![an inherited backdrop card, headed Background, reading Inherited from Node 6 above a thumbnail and its dimensions](/screens/en/story-editor/inherited-image-panel.png)
 
 Two toggles sit beside the preview:
 

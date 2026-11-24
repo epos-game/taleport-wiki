@@ -27,7 +27,7 @@ Soubor se připojuje ikonou mikrofonu u konkrétní repliky. Přetažení soubor
 
 Vyberte soubor MP3, WAV, OGG, AAC, M4A nebo FLAC. Prohlížeč ho převede na MP3 do 96 kbps s horní hranicí 44,1 kHz. Čtenáři slyší převedený soubor, takže limit 20 MB se měří na MP3, ne na souboru, který jste vybrali.
 
-TalePort také vyrovná hlasitost. Cílem je -20 dB RMS a špičky zůstanou pod -4 dBFS. Mění se jen hlasitost: ruch místnosti, mlaskání i ořez zůstanou a zesílí se spolu se vším ostatním.
+TalePort také vyrovná hlasitost. Cílem je -20 dB RMS a špičky zůstanou pod -4 dBFS. Mění se jen hlasitost: ruch místnosti, mlaskání i zkreslení zůstanou a zesílí se spolu se vším ostatním.
 
 ## Pokrytí
 
@@ -61,7 +61,7 @@ Syntetický hlas i hlas generovaný AI se počítá jako médium, ne jako text. 
 - Jde zapnout, jakmile má kterákoli kapitola příběhu, v jakémkoli stavu, textový blok nebo repliku se zvukem.
 - Vaše odpověď se ukládá k příběhu, takže platí pro všechny vydané kapitoly.
 - Přepínač je od začátku zapnutý a TalePort bere nahrávky jako syntetické, dokud to nezměníte.
-- **Vypnuto** prohlašuje, že nahrávky namluvil(a) člověk, ať jste to vy, nebo někdo jiný.
+- **Vypnuto** prohlašuje, že nahrávky namluvil člověk, ať jste to vy, nebo někdo jiný.
 - **Zapnuto** ukáže čtenářům, že vyprávění je od AI, a dabingová část doporučené ceny klesne.
 
 Platí ještě dvě pravidla:
@@ -71,7 +71,7 @@ Platí ještě dvě pravidla:
 
 ## Praktické rady
 
-- Každá replika má jen vlastní soubor, proto nahrávejte po replikách. Dlouhou nahrávku dodatečně rozdělit je mnohem víc práce.
+- Každá replika má jen vlastní soubor, proto nahrávejte po replikách. Dodatečné dělení dlouhé nahrávky je mnohem pracnější.
 - Dabing ovlivňuje doporučenou cenu podílem textu, který má nahrávku. Podrobnosti jsou v kapitole [Ceny](/cs/monetization/pricing/).
 
 ## Související

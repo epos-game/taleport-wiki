@@ -56,7 +56,7 @@ Pruh porovnává počet v řádku s počtem u první kapitoly a končí na 100 %
 
 Poznámka pod seznamem zmiňuje nákupy balíčků. Ty se vás netýkají, protože každý nákup je právě na jednu kapitolu.
 
-![seznam Kapitoly na detailu příběhu: každá kapitola má pořadové číslo, název, stav (Publikováno), krátký popis, řádek s čísly (přehrání, uzly, větve, strany, délky) a řádek s cenou nebo „Zdarma“, daty a štítkem Nepublikované změny](/screens/cs/monetization/chapter-list.png)
+![seznam Kapitoly na detailu příběhu: každá kapitola má název, stav (Návrh nebo Testování) a cenu nebo „Zdarma“, krátký popis a řádek s čísly (přehrání, uzly, větve, délka, podíl mluveného slova), vpravo data a nahoře tlačítko Spravovat](/screens/cs/monetization/chapter-list.png)
 
 ## Jak čísla číst
 

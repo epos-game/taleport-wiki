@@ -1,6 +1,6 @@
 ---
 title: Globální události
-description: Jak nastavit celopříběhové reakce na změny proměnných (např. smrt hrdiny nebo vypršení času).
+description: Jak nastavit reakce na změny proměnných pro celý příběh (např. smrt hrdiny nebo vypršení času).
 helpKey: editor.global-events
 status: published
 sidebar:
@@ -35,7 +35,15 @@ Operátory jsou `=`, `<`, `≤`, `>` a `≥`. U proměnné typu Ano / Ne nebo Se
 
 Limit 2000 znaků počítá i skryté formátovací kódy, takže formátovaný text může být kratší.
 
-![karta Globální události, u každé události je vidět sledovaná podmínka a chování, které spustí](/screens/cs/story-editor/global-event-panel.png)
+Tady je otevřená událost. Vlevo je podmínka, vpravo text a obrázek, které čtenář uvidí, a pod podmínkou **Po události** a **Priorita**:
+
+![otevřená globální událost: pole Proměnná, Operátor a Hodnota, volby Po události Na začátek, Na kontrolní bod a Pokračovat s vybraným Na začátek, pole Priorita, editor Textu události s počítadlem znaků a Obrázek události, nahoře Zpět, Smazat a Hotovo](/screens/cs/story-editor/global-event-detail.png)
+
+Tlačítko **Hotovo** zavře editor a vrátí vás na seznam událostí:
+
+![záložka Globální události s počtem událostí, polem pro hledání a tlačítkem Přidat událost nad seznamem událostí, u každé je vidět sledovaná podmínka, chování, které spustí (zde Na začátek), a priorita (P0)](/screens/cs/story-editor/global-event-panel.png)
+
+Seznam ukazuje u každé události podmínku, chování z pole **Po události** a prioritu zapsanou jako **P** a číslo. Událost v dlouhém seznamu najdete polem pro hledání.
 
 ## Po události
 
@@ -62,7 +70,7 @@ Uvnitř skupiny kontroly běží nad grafem, který máte otevřený. Pro publik
 
 ## Náhled události
 
-Karta **Náhled** vypisuje globální události příběhu od nejvyšší priority. U každé je tlačítko Náhled, které ukáže text a obrázek tak, jak je uvidí čtenář.
+Záložka **Náhled** vypisuje globální události příběhu od nejvyšší priority. U každé je tlačítko Náhled, které ukáže text a obrázek tak, jak je uvidí čtenář.
 
 Když události na uzlu přepnou proměnnou tak, že podmínka začne platit, náhled tu globální událost otevře sám. Pokud jich začne platit víc zároveň, otevře tu s nejvyšší prioritou.
 

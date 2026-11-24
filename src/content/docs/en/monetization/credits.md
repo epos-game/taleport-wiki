@@ -23,7 +23,7 @@ Tax, the store's commission and the payment processing fee come off the gross am
 
 TalePort tracks each top-up separately, with the money paid and the currency. A purchase uses the oldest top-up first, then the next one. One sale of your chapter can draw on two or three top-ups, and each adds its own share of net revenue.
 
-As a guide, 1 EPS is 1 CZK, but the real money value of a credit is not fixed for you. It depends on where the top-up was bought, what tax applied and what the store took.
+As a guide, 1 EPS is 1 CZK, but the real money value of a credit can differ. It depends on where the top-up was bought, what tax applied and what the store took.
 
 If all related payments were in the same currency and the story has earned credits, the statistics page shows an **Average credit value** row. See [Story statistics](/en/monetization/statistics/).
 

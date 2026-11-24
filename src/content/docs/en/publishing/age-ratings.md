@@ -26,7 +26,7 @@ The strongest content in the story sets the rating. It is not an average. One sc
 - Once a chapter is live, lower options are greyed out. The tooltip says *The age recommendation can't be lowered once a chapter is live.*
 - A live chapter that is back under review still counts as live.
 
-![the Age recommendation row in the Classification step of the publish dialog, with the four age chips and the note under the selected one](/screens/en/publishing/classification-age-row.png)
+![the Classification step of the publish dialog: the Age recommendation row with the four age chips and the note under the selected one, then the content tags, the AI-generated content options and the human-authorship checkbox](/screens/en/publishing/classification-age-row.png)
 
 ## Checking and saving
 

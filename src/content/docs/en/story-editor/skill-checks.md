@@ -48,8 +48,8 @@ A Fail branch that rejoins the main line two nodes later changes nothing in the 
 
 ## Testing a check
 
-- The Preview panel rolls for you. When you select a skill-check node, it rolls the die once and keeps the number. The dice button rolls again.
-- Under **Variables (debug)** you can type a face by hand to force either branch.
+- The **Preview** tab rolls for you. When you select a skill-check node, it rolls the die once and keeps the number. The dice button rolls again.
+- In the **Variables (debug)** panel you can type a face by hand to force either branch.
 - Walk both branches in a test package too. See [Testing](/en/best-practices/testing/).
 
 ## Related

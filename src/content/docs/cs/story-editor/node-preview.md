@@ -6,13 +6,13 @@ status: published
 sidebar:
   order: 14
 ---
-Karta **Náhled** v pravém panelu přehraje vybraný uzel v rámečku ve tvaru telefonu. Ukáže pozadí, přehraje hudbu a nabídne dialog a volby, které by dostal čtenář. Náhled platí pro jeden uzel, ne pro celou kapitolu. Nic z toho, co tu uděláte, se neuloží.
+Záložka **Náhled** v pravém panelu přehraje vybraný uzel v rámečku ve tvaru telefonu. Ukáže pozadí, přehraje hudbu a nabídne dialog a volby, které by dostal čtenář. Náhled platí pro jeden uzel, ne pro celou kapitolu. Nic z toho, co tu uděláte, se neuloží.
 
-Karta stále ukazuje upozornění *Přibližný náhled. Finální vykreslení v EPOS se může lišit.*
+Záložka vždy ukazuje upozornění *Přibližný náhled. Finální vykreslení v EPOS se může lišit.*
 
-Bez vybraného uzlu je karta prázdná. U uzlu skupiny nabídne **Otevřít skupinu**, protože skupina nemá vlastní obsah.
+Bez vybraného uzlu je záložka prázdná. U uzlu skupiny nabídne **Otevřít skupinu**, protože skupina nemá vlastní obsah.
 
-![karta Náhled: upozornění na přibližnost, tlačítka Předchozí a Pokračovat s počítadlem stránek, uzel přehrávaný v rámu telefonu se jménem mluvčího přes pozadí a pod tím začátek panelu Proměnné (ladění)](/screens/cs/story-editor/node-preview.png)
+![záložka Náhled: upozornění na přibližnost, tlačítka Předchozí a Pokračovat s počítadlem stránek, a uzel přehrávaný v rámu telefonu s textem přes pozadí](/screens/cs/story-editor/node-preview.png)
 
 ## Procházení grafu
 

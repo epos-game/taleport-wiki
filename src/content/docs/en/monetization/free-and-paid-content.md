@@ -14,10 +14,10 @@ You choose free or paid for each chapter. Every chapter is sold on its own. Tale
 
 ## Must every story start with a free chapter?
 
-No. A paid submission checks your author stage and billing details, not chapter numbers, so a qualified author can charge for chapter one. To qualify, though, you usually need to publish one approved free chapter with at least 20 minutes of content. That chapter stays free unless we agree otherwise.
+No. A paid submission checks your author stage and billing details, not chapter numbers, so a qualified author can charge for chapter one. To qualify, though, you usually need to publish one approved free chapter with at least 20 minutes of content. That chapter stays free unless you agree otherwise with TalePort.
 
 :::caution[Qualifying chapter stays free]
-The free chapter you qualified with must stay free, unless you agree otherwise with TalePort. This comes from Article V of the Terms and Conditions. Make sure you keep to it yourself.
+The free chapter you qualified with must stay free, unless you agree otherwise with TalePort. This comes from Article V of the Terms and Conditions. It is up to you to keep to it.
 :::
 
 ## Set a price

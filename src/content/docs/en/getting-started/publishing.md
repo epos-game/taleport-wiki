@@ -114,7 +114,7 @@ Readers with early-access permission can read a chapter 7 days before everyone e
 - **You pick nothing:** the date is the moment of approval, again with a 7-day gap.
 - A date you pick must be at least 14 days ahead, because a review can take that long.
 
-![the Early access step: the toggle Do you want to start early access at a specific time?, a calendar for October 2026 with earlier days greyed out and the 29th selected, and a Heads up panel on the right explaining the 7-day gap and the 14-day minimum](/screens/en/publishing/early-access-step.png)
+![the Early access step: the toggle Do you want to start early access at a specific time?, a calendar for December 2026 with the 3rd selected, and a Heads up panel on the right explaining that backers read from the chosen date, other readers 7 days later, and what happens with no scheduled date](/screens/en/publishing/early-access-step.png)
 
 Early-access permission comes from crowdfunding support and a redeemed pledge code. Which pledge tiers include it is decided by TalePort, not by you. Do not assume every backer has it.
 

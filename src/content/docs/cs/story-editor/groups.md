@@ -64,7 +64,7 @@ Skupinu otevřete třemi způsoby:
 
 - **Otevřít skupinu** v kontextové nabídce uzlu,
 - tlačítko **Otevřít podgraf** v pravém panelu,
-- **Otevřít skupinu** na kartě Náhled.
+- **Otevřít skupinu** na záložce Náhled.
 
 Uvnitř je v levém horním rohu plátna cesta nadřazenými grafy. Zpátky se dostanete kliknutím na dřívější položku nebo přes **Přejít na nadřazený graf**.
 

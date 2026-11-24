@@ -48,7 +48,7 @@ Zamknou se i postavy, proměnné a globální události. Zámek platí pro celou
 - **Proměnná:** zamkne se, jakmile ji vydaná kapitola mění v události nebo kontroluje v podmínce. Proměnné vlastností zamčené postavy se zamknou s ní.
 - **Globální událost:** všechny události příběhu se zamknou, jakmile je vydaná jakákoli kapitola, i ty, které tato kapitola nespouští. Zamkne se také proměnná, na kterou událost cílí.
 
-Nové proměnné můžete přidat i později. Před prvním vydáním si však naplánujte hodnoty, které musí nastavovat už první kapitola, protože do vydané kapitoly nepřidáte nové události. Podrobnosti najdete v článku [Omezení vydaného obsahu](/cs/publishing/published-content-restrictions/).
+Nové proměnné můžete přidat i později. Před prvním vydáním si však naplánujte hodnoty, které musí nastavovat už první kapitola, protože do uzlů vydané kapitoly nepřidáte nové události. Podrobnosti najdete v článku [Omezení u vydaného obsahu](/cs/publishing/published-content-restrictions/).
 
 ## Délka
 
@@ -86,4 +86,4 @@ Ukažte čtenáři, že se jeho volba zapsala. Může se na ni později odvolat 
 - [Interaktivita](/cs/best-practices/interactivity/)
 - [Graf příběhu](/cs/story-editor/story-graph/)
 - [Proměnné](/cs/story-editor/variables/)
-- [Omezení vydaného obsahu](/cs/publishing/published-content-restrictions/)
+- [Omezení u vydaného obsahu](/cs/publishing/published-content-restrictions/)

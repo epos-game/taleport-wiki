@@ -27,14 +27,14 @@ U většiny nesplněných řádků je tlačítko, které vás zavede k opravě: 
 
 Když *Bez chyb v grafu* splněný není, nahradí ho jeden řádek za každou chybu. Řádek nabízí **Přejít na uzel**, když chyba patří konkrétnímu uzlu.
 
-![krok Validace dialogu publikování, Připraveno k publikaci?: všech osm kontrol (jméno, životopis a avatar autora, fakturační údaje, přehratelný obsah, dosažitelný konec kapitoly, předchozí kapitoly, graf bez chyb) je splněných pod nadpisem Hotovo. Nesplněné řádky by stály nad nimi pod nadpisem Vyžaduje pozornost](/screens/cs/publishing/validation-step.png)
+![krok Validace dialogu publikování, Připraveno k publikaci?: všech devět zobrazených kontrol (jméno, životopis a avatar autora, fakturační údaje, přehratelný obsah, dosažitelný konec kapitoly, bojové postavy, předchozí kapitoly, graf bez chyb) je splněných pod nadpisem Hotovo. Nesplněné řádky by stály nad nimi pod nadpisem Vyžaduje pozornost](/screens/cs/publishing/validation-step.png)
 
 ## Váš autorský profil
 
 Čtyři řádky kontrolují vás, ne příběh. Tři se týkají profilu a jeden fakturace:
 
 - **Zobrazované jméno autora**, **Životopis autora** a **Avatar autora**. Dokud nejsou splněné, nepustí vás krok Validace dál. Životopis, ve kterém je jen prázdné formátování, se nepočítá.
-- **Fakturační a výplatní údaje**. Řádek hlásí chybu, kdykoli údaje nejsou kompletní, ale zastaví jen placenou kapitolu. Kapitolu zdarma odešlete i tak.
+- **Fakturační a výplatní údaje**. Řádek hlásí chybu, kdykoli údaje nejsou kompletní, ale zastaví jen placenou kapitolu. Kapitolu zdarma můžete odeslat i tak.
 
 ## Příběh
 
@@ -42,7 +42,7 @@ Příběh nastavíte jednou a platí pro všechny jeho kapitoly.
 
 - **Název příběhu**, **popis příběhu** a **titulní obrázek**
 - Právě jeden [žánr](/cs/publishing/genres-and-tags/) a aspoň jeden [štítek](/cs/publishing/genres-and-tags/)
-- [Věkové doporučení](/cs/publishing/age-ratings/), které odpovídá nejextrémnějšímu obsahu kdekoli v příběhu
+- [Věkové doporučení](/cs/publishing/age-ratings/), které odpovídá nejsilnějšímu obsahu kdekoli v příběhu
 - Potvrzené lidské autorství: zaškrtněte políčko, že text příběhu napsal člověk a nevygenerovala ho AI. Viz [CR-III.1](/cs/publishing/content-rules/#cr-iii-1).
 
 Věkové doporučení a potvrzení autorství nemají na kontrolním seznamu řádek. Nastavíte je v kroku **Klasifikace**. Tlačítko **Další** tam zůstane neaktivní, dokud nevyberete věkové doporučení a nezaškrtnete políčko. TalePort obojí při odeslání ověří znovu.
@@ -57,6 +57,7 @@ Jakmile je vydaná kterákoli kapitola příběhu, můžete věkové doporučen�
 - Aspoň jeden konec, ke kterému se čtenář dostane od začátku a který je označený jako **Konec kapitoly**. Kapitola může mít víc [uzlů Konec](/cs/story-editor/end-nodes/), ale stačí jeden dosažitelný.
 - **Bez chyb v grafu.** Upozornění vydání neblokují, chyby ano. Každá chyba má vlastní řádek. **Přejít na uzel** řádek nabízí jen u chyb, které patří konkrétnímu uzlu. Chybějící uzel Začátek nebo uzel Konec, na který nic nenavazuje, proto uvidíte jako nesplněný řádek bez odkazu. Viz [Zásady pro příběhy](/cs/publishing/story-guidelines/).
 - *Graf příběhu obsahuje přehratelný obsah.* TalePort počítá cenu podle nejdelší cesty, kterou čtenář projde. Ta musí trvat déle než nula minut. Téměř prázdná kapitola tu neprojde.
+- *Bojové postavy mají kompletní bojové vlastnosti.* Postava, se kterou se dá bojovat, musí mít vyplněné všechny bojové vlastnosti. Více v části [Souboje](/cs/story-editor/combat/).
 - *Předchozí kapitoly jsou připravené ke kontrole.* Každá kapitola před touto musí být vydaná nebo v kontrole.
 
 Na prvním kroku vás drží čtyři z těchto řádků: dosažitelný konec, chyby v grafu, přehratelný obsah a pořadí kapitol. Popis kapitoly, metadata příběhu a fakturační údaje můžete doplnit až v dalším kroku. Věkové doporučení řádek nemá, hlídá ho krok **Klasifikace**.
@@ -79,7 +80,7 @@ Soubor, který příběh používá a který už neexistuje, se ukáže až při
 
 Dialog se ukáže jednou, v okamžiku selhání zpracování, a jen když máte editor otevřený.
 
-**Publikovat bez těchto souborů** znovu otevře dialog publikování, takže projdete sedm kroků podruhé. Sestavení pak ty soubory vynechá. Scéna se přehraje bez pozadí a postava zůstane bez avatara.
+**Publikovat bez těchto souborů** znovu otevře dialog publikování, takže projdete sedm kroků podruhé. Sestavení pak ty soubory vynechá. Scéna se přehraje bez pozadí a postava zůstane bez avataru.
 
 ## Prohlášení v dialogu
 

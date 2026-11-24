@@ -35,7 +35,7 @@ Tlačítka **Sestavit testovací balíček** a **Zrušit testování** může po
 Tým příběhu tvoříte vy a účty, které přidáte. Spravujete ho přes **Spravovat** na detailu příběhu. Dialog nabízí dva druhy záznamů:
 
 - **Účty v Eposu.** Vyhledáte je podle uživatele. Dostanou přístup k příběhu a mohou psát zpětnou vazbu. Testování je určené jim.
-- **Člověk mimo Epos** a **Organizace.** Uvedení lidí a studií, kteří v TalePortu nepracují. Zobrazují se jen v titulcích. Nemají přístup ani zpětnou vazbu a nejde na ně nastavit fakturace.
+- **Člověk mimo Epos** a **Organizace.** Slouží k uvedení lidí a studií, kteří v TalePortu nepracují. Zobrazují se jen v titulcích. Nemají přístup, nemohou psát zpětnou vazbu a nejde na ně nastavit fakturace.
 
 Uvádějte i ty, kdo nakreslili pozadí nebo namluvili vyprávění. Tím dokládáte práva podle pravidla [CR-II.1](/cs/publishing/content-rules/#cr-ii-1).
 
@@ -49,7 +49,7 @@ U každého záznamu vedete volný seznam toho, co udělal. K dispozici je šest
 - jméno do 100 znaků
 - u každého až 12 činností po nejvýše 50 znacích
 
-Při více než 30 lidech se uložení odmítne a hláška uvede limit. Při více než 10 organizacích hláška říká jen „Spolupracovníky se nepodařilo uložit.“ Pokud na ni narazíte, zkontrolujte počet organizací. Seznam podílů se neodmítne, jen se při uložení upraví: duplicity zmizí, co je delší než 50 znaků, se zkrátí, a co je za dvanáctým, se zahodí.
+Při více než 30 lidech se uložení odmítne a hláška uvede limit. Při více než 10 organizacích hláška říká jen „Spolupracovníky se nepodařilo uložit.“ Pokud na ni narazíte, zkontrolujte počet organizací. Seznam činností se neodmítne, jen se při uložení upraví: duplicity zmizí, co je delší než 50 znaků, se zkrátí, a co je za dvanáctým, se zahodí.
 
 Kdo u příběhu zůstane, rozhodujete znovu při publikování. Krok **Přispěvatelé** v dialogu publikování vypisuje vaše účty. Kdo tam zůstane odznačený, ztratí přístup k dalším verzím. Jeho dřívější zpětná vazba zůstane zachovaná.
 

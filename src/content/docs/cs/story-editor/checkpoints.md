@@ -26,7 +26,7 @@ Uzel jen s kontrolním bodem je platný. Editor značku bere jako obsah, takže 
 
 - Uzel může mít jen jeden kontrolní bod. Druhý editor odmítne hlášením „Tento uzel už tuto komponentu obsahuje.“
 - Uzly Začátek, Konec a Skupina kontrolní bod nést nemohou: „Tento typ uzlu nemůže obsahovat obsahové komponenty.“ Použijte první skutečný uzel za začátkem.
-- Filmová sekvence z uzlu vytlačí všechny ostatní komponenty, kromě kontrolního bodu a značky, která zastavuje dědění médií.
+- Filmová sekvence z uzlu odstraní všechny ostatní komponenty, kromě kontrolního bodu a značky, která zastavuje dědění médií.
 - Přidání i odebrání kontrolního bodu je strukturální úprava. Jakmile je kapitola vydaná, editor ji odmítne.
 
 ## Kontrolní body ve skupinách

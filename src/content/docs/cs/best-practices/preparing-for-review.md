@@ -28,7 +28,7 @@ První dvě skupiny kontroluje TalePort. Zbytek je to, kvůli čemu recenzent ka
 
 **Co můžete minout a vyřešit na kroku, kam to patří**
 
-- **Fakturační a výplatní údaje:** Placenou kapitolu zdrží na kroku **Ceny** a při odeslání, na Validaci nikdy. Kapitola zdarma se odešle i bez nich.
+- **Fakturační a výplatní údaje:** Placenou kapitolu zdrží na kroku **Cena** a při odeslání, na Validaci nikdy. Kapitola zdarma se odešle i bez nich.
 - **Údaje o příběhu a kapitole:** Všechno je na kroku **Metadata**: název příběhu, popis příběhu, [žánr](/cs/publishing/genres-and-tags/) (právě jeden), aspoň jeden štítek a popis kapitoly. [Titulní obrázek](/cs/media/cover-image/) tam není políčko, ale dlaždice. Dokud ho nemáte, jmenuje se **Nastavit obálku** a kliknutím na ni otevřete editor miniatury.
 - **Věkové doporučení a potvrzení lidského autorství:** Ani jedno není řádek kontrolního seznamu. Obojí je na kroku **Klasifikace**, který kontroluje věkové doporučení a potvrzení autorství.
   - Tlačítko **Další** je neaktivní s popiskem „Před pokračováním vyberte věkové doporučení a potvrďte lidské autorství.“
@@ -38,7 +38,7 @@ První dvě skupiny kontroluje TalePort. Zbytek je to, kvůli čemu recenzent ka
 **Varování, která ukáže jen editor**
 
 - Varování zobrazuje panel **Problémy** v editoru, dialog publikování je nevypisuje. Kapitola, jejíž jediné problémy jsou varování, se odešle a vydá tak, jak je, a recenzent ji čte stejně jako čtenář. Jak se chyba liší od varování, popisují [Zásady pro příběhy](/cs/publishing/story-guidelines/).
-- Zkontrolujte uzly, do kterých ze stejné vzdálenosti přicházejí dvě různá pozadí nebo dvě různé stopy. Kanál tam nenese nic. Více najdete v [Práci s médii](/cs/best-practices/media-usage/).
+- Zkontrolujte uzly, do kterých ze stejné vzdálenosti přicházejí dvě různá pozadí nebo dvě různé skladby. Kanál tam nenese nic. Více najdete v [Práci s médii](/cs/best-practices/media-usage/).
 
 **Klasifikace, která jde jen jedním směrem**
 
@@ -46,7 +46,7 @@ První dvě skupiny kontroluje TalePort. Zbytek je to, kvůli čemu recenzent ka
 Jakmile je vydaná kterákoli kapitola, můžete věkové doporučení zvýšit, ale nikdy snížit. Štítek, který už na příběhu je, odebrat nelze.
 :::
 
-- Věkové doporučení odpovídá nejvyhrocenějšímu obsahu v příběhu, ne průměru.
+- Věkové doporučení odpovídá nejsilnějšímu obsahu v příběhu, ne průměru.
 - Obsahové štítky pokrývají všechno, co v příběhu je, včetně **Citlivých témat**.
 - Klasifikace patří příběhu, ne první kapitole. Nižší možnosti jsou zašedlé s popiskem „Věkové doporučení nelze snížit, když je kapitola vydaná.“
 - Po vydání může čtenář příběh také nahlásit jako **Nesprávně klasifikováno**. Více najdete ve [Věkovém doporučení](/cs/publishing/age-ratings/) a v [Obsahových štítcích](/cs/publishing/content-labels/).
@@ -66,7 +66,7 @@ Když krok přeskočíte, prohlásíte ručně vytvořenou grafiku, hudbu a naml
 
 **Práva**
 
-- Každý obrázek, stopa, nahrávka i klip je váš, nebo k němu máte licenci. Jde o pravidlo [CR-II.1](/cs/publishing/content-rules/#cr-ii-1).
+- Každý obrázek, skladba, nahrávka i klip je váš, nebo k němu máte licenci. Jde o pravidlo [CR-II.1](/cs/publishing/content-rules/#cr-ii-1).
 - Licenci umíte doložit, když o to někdo požádá. Jde o pravidlo [CR-II.3](/cs/publishing/content-rules/#cr-ii-3).
 - Nic tam není jen proto, že se to dalo najít na internetu. Jde o pravidlo [CR-II.2](/cs/publishing/content-rules/#cr-ii-2).
 
@@ -83,10 +83,10 @@ Když krok přeskočíte, prohlásíte ručně vytvořenou grafiku, hudbu a naml
 - Uzly, o kterých bude recenzent mluvit, jsou pojmenované. Nepojmenovaný uzel se v panelu Problémy, v dialogu publikování i v poznámkách recenzenta objeví jako „Uzel 14“. Více najdete ve [Struktuře příběhu](/cs/best-practices/story-structure/).
 - Kapitolu přečetl aspoň jeden další člověk. Více najdete v [Testování](/cs/best-practices/testing/).
 
-**Detaily k vydání**
+**Podrobnosti k vydání**
 
 - Kapitola je zdarma, nebo placená. Abyste mohli prodávat, musí být vaše autorská fáze Kvalifikován nebo Aktivní partner a fakturační i výplatní údaje musí být kompletní. Více najdete v [Podmínkách zpeněžení](/cs/monetization/requirements/).
-- U placené kapitoly leží cena v pásmu, které krok Ceny nabízí. Více najdete v [Cenách](/cs/monetization/pricing/).
+- U placené kapitoly leží cena v pásmu, které krok Cena nabízí. Více najdete v [Cenách](/cs/monetization/pricing/).
 - Předběžný přístup naplánujte nejméně 14 dní dopředu, protože kontrola může tak dlouho trvat. Od zvoleného data čtou čtenáři s předběžným přístupem, všichni ostatní o 7 dní později. Více najdete v části [Předběžný přístup](/cs/getting-started/publishing/#předběžný-přístup).
 - Přispěvatelé jsou uvedení a na kroku **Přispěvatelé** jsou zaškrtnutí správní lidé. Krok říká: „Nevybraní přispěvatelé ztratí přístup k dalším verzím; jejich dřívější zpětná vazba zůstane zachována.“
 

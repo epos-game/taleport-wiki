@@ -12,7 +12,7 @@ Hudba na pozadí hraje pod scénou. Přidáte ji takto:
 2. Nahrajte soubor.
 3. Zapněte **Pokračovat v přehrávání**, aby skladba zněla i na navazujících uzlech.
 
-Hudba je jeden ze tří mediálních kanálů. Každý kanál se na uzlu vyhodnocuje zvlášť, takže hudba hraje dál, i když se mění pozadí a okolní zvuk.
+Hudba je jeden ze tří mediálních kanálů. Každý kanál funguje na uzlu zvlášť, takže hudba hraje dál, i když se mění pozadí a okolní zvuk.
 
 ## Dědění hudby
 
@@ -66,10 +66,10 @@ Nahrát můžete soubory MP3, WAV, OGG, AAC, M4A a FLAC.
 
 TalePort každý nahraný soubor změří a upraví jeho hlasitost, aby skladby z různých zdrojů mezi scénami neskákaly.
 
-- Cíl je průměr -20 dB RMS, tedy hlasitost, na kterou se masterují audioknihy.
+- Cílem je průměr -20 dB RMS, tedy hlasitost, na kterou se obvykle upravují audioknihy.
 - Nejhlasitější místa zůstanou pod -4 dBFS, kousek pod úrovní, kde se zvuk začne zkreslovat.
 
-Vyrovnání opravuje jen hlasitost. Šum, ruch místnosti a ořez, které už v souboru jsou, se zesílí spolu se zbytkem.
+Vyrovnání opravuje jen hlasitost. Šum, ruch místnosti a zkreslení, které už v souboru jsou, se zesílí spolu se zbytkem.
 
 ## Oddělené kanály
 

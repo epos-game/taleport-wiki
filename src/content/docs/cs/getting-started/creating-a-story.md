@@ -7,7 +7,7 @@ sidebar:
   order: 1
 ---
 
-**Příběh** je celé vaše dílo. Obsahuje jednu nebo více kapitol a má společný název, obálku a další údaje. Společné jsou všem kapitolám: název, titulní obrázek, žánr, štítky, věkové doporučení, postavy, proměnné a globální události. Každý příběh má aspoň jednu **kapitolu** a čtenáři kapitoly kupují a čtou.
+**Příběh** je celé vaše dílo. Skládá se z jedné nebo více **kapitol** a čtenáři kapitoly kupují a čtou. Všechny kapitoly příběhu sdílejí název, titulní obrázek, žánr, štítky, věkové doporučení, postavy, proměnné a globální události.
 
 ## Vytvořit nový Epos
 

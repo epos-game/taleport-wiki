@@ -6,7 +6,7 @@ status: published
 sidebar:
   order: 12
 ---
-**Koncový uzel** zastavuje čtenářovu cestu. Má jeden vstup a žádný výstup. Ukončí aktuální cestu. Má jediný přepínač, **Konec kapitoly**, který určuje, jestli se kapitola zároveň označí jako dokončená, nebo jen skončí aktuální průchod.
+**Koncový uzel** zastavuje čtenářovu cestu. Má jeden vstup a žádný výstup. Má jediný přepínač, **Konec kapitoly**, který určuje, jestli se kapitola zároveň označí jako dokončená, nebo jen skončí aktuální průchod.
 
 Kapitola může mít libovolný počet koncových uzlů. Čtenář dojde vždy jen k jednomu z nich.
 
@@ -16,7 +16,7 @@ Koncový uzel nemůže nést obsah. Když na něj přetáhnete text, dialog, obr
 
 ## Konec kapitoly
 
-Vyberte koncový uzel. Přepínač je na kartě **Výstupy** a pod ním je popsáno, co udělá.
+Vyberte koncový uzel. Přepínač je na záložce **Výstupy** a pod ním je popsáno, co udělá.
 
 - Zapnutý: „Dokončí aktuální kapitolu a pokračuje na další kapitolu, pokud je k dispozici.“
 - Vypnutý: „Ukončí pouze aktuální průběh příběhu a umožní čtenáři přehrát tuto kapitolu znovu.“
@@ -40,7 +40,7 @@ Testování konec s přepínačem **Konec kapitoly** nevyžaduje. Odeslání kap
 - chyby v grafu,
 - předchozí kapitola, která v testování ještě není.
 
-Kapitola, ve které žádný konec nemá **Konec kapitoly** zapnutý, je tedy v testování hratelná, ale při publikování ji systém odmítne.
+Kapitola, ve které žádný konec nemá **Konec kapitoly** zapnutý, je tedy v testování hratelná, ale při odeslání ke kontrole ji systém odmítne.
 
 Kapitola v testování zůstává celá upravitelná, včetně struktury. Testování je poslední chvíle, kdy můžete přesunout uzel, přepojit větev nebo zapnout **Konec kapitoly**. Po odeslání ke kontrole je kapitola jen pro čtení. Po schválení můžete dál upravovat text a média v existujících komponentách. Struktura grafu zůstává zamčená.
 
@@ -48,7 +48,7 @@ Kapitola v testování zůstává celá upravitelná, včetně struktury. Testov
 
 Vstup koncového uzlu přijme libovolný počet spojení. Větve, které končí stejně, se mohou sejít na jednom konci. Větve, které končí jinak, dostanou každá svůj konec.
 
-- **Záznam o tom, který konec nastal.** Proměnné patří příběhu, ne kapitole. Komponenta **Událost** na uzlu před koncem může nastavit [proměnnou](/cs/story-editor/variables/), kterou si přečte další kapitola. Událost musí být na uzlu před koncem, protože koncový uzel žádné komponenty nenese.
+- **Záznam o tom, který konec nastal.** Proměnné patří příběhu, ne kapitole. Komponenta **Událost** na uzlu před koncem může nastavit [proměnnou](/cs/story-editor/variables/), kterou si přečte další kapitola.
 - **Konec po neúspěchu.** Je to běžný koncový uzel. Cesta do něj může mít vlastní obsah.
 
 ## Pravidla validace

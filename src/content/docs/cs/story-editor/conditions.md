@@ -10,7 +10,7 @@ sidebar:
 
 - U volby rozhodují, jestli se čtenáři daná volba nabídne.
 - U podmínky switche rozhodují, kterou větví čtenář půjde.
-- U ověření dovednosti určují test. Ověření dovednosti má jediný požadavek: vlastnost, operátor a číslo, které je potřeba přebít.
+- U ověření dovednosti určují test. Ověření dovednosti má jediný požadavek: vlastnost, operátor a číslo, které je potřeba překonat.
 
 ![karta Ověření dovednosti v pravém panelu, jediný požadavek složený z vlastnosti, operátoru nejméně a hodnoty 16, pod ním kostka](/screens/cs/story-editor/skill-check-panel.png)
 
@@ -69,7 +69,7 @@ Podmínky nejde zanořovat. Máte dvě možnosti:
 U každého požadavku vyberte proměnnou a každá podmínka switche ať má aspoň jeden požadavek:
 
 - Požadavek bez proměnné se u volby i u podmínky switche považuje za nesplněný, takže se volba v panelu Náhled zobrazí jako zamčená. U ověření dovednosti prázdný požadavek vyvolá chybu, která blokuje publikování: *Uzel s ověřením dovednosti nemá vybranou vlastnost.*
-- Každé podmínce switche přidejte alespoň jeden požadavek. Prázdná podmínka v náhledu zachytí všechny případy, které dojdou až k ní, a podmínky pod ní se nevyhodnotí. Editor na ni upozorní varováním. Pro záložní větev použijte výstup **Výchozí**.
+- Prázdná podmínka switche v náhledu zachytí všechny případy, které dojdou až k ní, a podmínky pod ní se nevyhodnotí. Editor na ni upozorní varováním. Pro záložní větev použijte výstup **Výchozí**.
 
 ## Rady
 

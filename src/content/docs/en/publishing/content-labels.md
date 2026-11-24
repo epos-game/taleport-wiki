@@ -25,6 +25,8 @@ The app shows only the label name. The descriptions below come from this wiki.
 | Sexuality | Sexual themes, nudity, sexual references |
 | Sensitive topics | Suicide, self-harm, abuse, addiction, serious mental distress and similar |
 
+![the Content tags row of the Classification step with Blood and Horror selected and the other four tags clear, above the AI-generated content options](/screens/en/publishing/classification-age-row.png)
+
 ## Adding and removing
 
 - **Add** tags at any time.
@@ -41,7 +43,7 @@ The **Classification** step saves when you press **Next**, not when you submit. 
 - A tag says what is in the story. One scene is enough.
 - The age recommendation says how old a reader should be. Tags say what the content is.
 - Use **Sensitive topics** for suicide, self-harm and abuse, even if the story treats them only briefly. [CR-I.6](/en/publishing/content-rules/#cr-i-6) allows handling these subjects responsibly. The tag warns readers first.
-- Do not mix these up with the story tags in the [Metadata](/en/publishing/story-metadata/) step. Those say what the story is about and help readers find it. A story can have both.
+- Don't confuse these with the story tags in the [Metadata](/en/publishing/story-metadata/) step. Those say what the story is about and help readers find it. A story can have both.
 
 ## Keeping tags accurate
 

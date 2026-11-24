@@ -58,11 +58,11 @@ A backdrop applies only to its own node until you switch on **Keep displaying**,
 
 The same image on twenty nodes costs readers nothing, because identical files are stored once. For you, though, it means twenty uploads, and twenty places to change if the art changes.
 
-![the Background Image card in the properties panel, the Keep displaying toggle under the file details, with Replace and Remove beneath it](/screens/en/media/background-image-panel.png)
+![the Background card in the properties panel, the Keep displaying toggle under the file details, with Replace and Remove beneath it](/screens/en/media/background-image-panel.png)
 
 A node that inherits the backdrop shows **Inherited from** and the source node's name above the picture. Click the name to jump to that node.
 
-![an inherited backdrop card, headed Background Image, reading Inherited from Node 6 above the picture and its dimensions](/screens/en/story-editor/inherited-image-panel.png)
+![an inherited backdrop card, headed Background, reading Inherited from Node 6 above a thumbnail and its dimensions](/screens/en/story-editor/inherited-image-panel.png)
 
 Node media belongs to the chapter you uploaded it in, so upload the same image again for another chapter.
 

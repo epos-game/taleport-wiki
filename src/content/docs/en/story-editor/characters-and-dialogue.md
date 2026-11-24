@@ -17,6 +17,7 @@ Each character has:
 - A name. It's required and can be up to 200 characters.
 - A description. It's optional and can be up to 2000 characters.
 - An avatar. It's optional and can be up to 0.5 MB. TalePort resizes it to 512 × 512 px.
+- A type, **Normal** or **Fightable**. See [Fightable characters](#fightable).
 
 The fields don't show a character count, so keep an eye on the length yourself. Text over the limit isn't saved.
 
@@ -24,7 +25,27 @@ To track something about a character, use a [variable](/en/story-editor/variable
 
 You can delete a character who has lines. The editor first tells you how many lines are affected: *"This character appears in 12 dialogue line(s). Deleting it will clear those references."* The lines keep their text but lose their speaker.
 
-![the Characters tab at the bottom of the editor, listing each character with its avatar beside Add Character](/screens/en/story-editor/characters-panel.png)
+![the Characters tab at the bottom of the editor, with the character count, a search field and Add Character above a list of characters, each with its avatar and role (Normal or Fightable)](/screens/en/story-editor/characters-panel.png)
+
+## Fightable characters {#fightable}
+
+A **Normal** character only speaks. A **Fightable** character can also be an opponent in a [combat](/en/story-editor/combat/) node. Switch the **Character type** in the character's form to **Fightable** and a **Combat stats** section appears.
+
+![the character form with the type set to Fightable: the name, the Normal and Fightable choice and a description on the left, and on the right the Combat stats table with Health, Attack and Defence, each tied to a variable with a default value and a range, and the Stats section underneath](/screens/en/story-editor/fightable-character.png)
+
+Every fightable character needs all three combat stats:
+
+- **Health**, **Attack** and **Defence**. Each row is a slot, and you tie it to a variable.
+- The **Variable** must be a number. Pick one from the list. You can also create a new variable for the slot, which is made as a stat and tied to the slot right away.
+- **Default** is the value the character starts with.
+- **Range** is a minimum and a maximum, and both are required. During play, the value always stays between them.
+- The broken-link icon at the end of a row disconnects the variable from the slot.
+
+"All three are required, each with a min and max." A character with a slot missing, a variable that isn't a number, or no minimum or maximum shows an error, and the publish checklist fails on *Fightable characters have complete combat stats*. See [Publishing requirements](/en/publishing/publishing-requirements/).
+
+Below the combat stats, the **Stats** section lists other stats for the character. **Add stat** adds an existing stat and **New stat** creates one. "This character keeps its own value for each stat", so two characters can share a stat and still hold different values.
+
+A normal character can't be used in combat. The combat node says so and offers two ways out: switch the character to Fightable, or use **Custom** fighters on the node.
 
 ## Dialogue
 

@@ -46,7 +46,7 @@ TalePort checks the first two groups. A reviewer sends chapters back for the res
 Once any chapter is live, you can raise the age recommendation but never lower it. You can never remove a tag already on the story.
 :::
 
-- The age recommendation matches the most extreme content anywhere in the story, not the average.
+- The age recommendation matches the strongest content anywhere in the story, not the average.
 - Content tags cover everything in the story, **Sensitive topics** included.
 - Classification belongs to the story, not to chapter one. Lower options are greyed out with the tooltip "The age recommendation can't be lowered once a chapter is live."
 - After publication, a reader can also report the story as **Misclassified**. See [Age recommendation](/en/publishing/age-ratings/) and [Content labels](/en/publishing/content-labels/).

@@ -26,7 +26,7 @@ Doporučení se řídí nejsilnějším obsahem kdekoli v příběhu, ne průmě
 - Jakmile je kterákoli kapitola vydaná, jde doporučení měnit jen nahoru. Volby pod uloženou hodnotou jsou zešedlé a nápověda u nich říká: *Věkové doporučení nelze snížit, když je kapitola vydaná.*
 - Vydaná kapitola, která se vrátila do kontroly, se pořád počítá jako vydaná.
 
-![řádek Věkové doporučení v kroku Klasifikace dialogu publikování, se čtyřmi věkovými štítky a poznámkou pod vybraným](/screens/cs/publishing/classification-age-row.png)
+![krok Klasifikace dialogu publikování: řádek Věkové doporučení se čtyřmi věkovými štítky a poznámkou pod vybraným, pod ním tagy obsahu, volby pro obsah generovaný AI a zaškrtávací políčko lidského autorství](/screens/cs/publishing/classification-age-row.png)
 
 ## Kontrola a uložení
 
@@ -35,13 +35,13 @@ Věkové doporučení se kontroluje v kroku **Klasifikace**, ne v seznamu **Vali
 - Tlačítko **Další** je neaktivní, dokud nevyberete doporučení a nezaškrtnete potvrzení lidského autorství. Nápověda u něj říká *Před pokračováním vyberte věkové doporučení a potvrďte lidské autorství.*
 - Při odeslání TalePort totéž ověří znovu. Když doporučení chybí, odmítne odeslání hláškou *Před publikováním je nutné zvolit věkové doporučení.*
 - Tlačítko **Další** zároveň ukládá. Doporučení, tagy obsahu i prohlášení o AI se do příběhu zapíšou hned a zavření dialogu je nevrátí.
-- Dokud není venku žádná kapitola, můžete krok otevřít znovu a vybrat jinak. Hodnota uložená ve chvíli, kdy vyjde vaše první kapitola, se stane spodní hranicí.
+- Dokud není vydaná žádná kapitola, můžete krok otevřít znovu a vybrat jinak. Hodnota uložená ve chvíli, kdy vyjde vaše první kapitola, se stane spodní hranicí.
 
 ## Kategorie
 
 Pod vybranou možností aplikace ukáže jednořádkový souhrn. Úplné definice jsou v [článku IV](/cs/publishing/content-rules/#cr-iv) pravidel obsahu. Každé doporučení v tabulce odkazuje na tu svou.
 
-| Doporučení | V aplikaci | Může obsahovat | Ne |
+| Doporučení | V aplikaci | Může obsahovat | Nesmí obsahovat |
 | --- | --- | --- | --- |
 | [7+, pro všechny](/cs/publishing/content-rules/#cr-iv-1) | *Vhodné pro všechny, včetně malých čtenářů.* | Mírné fantasy nebo kreslené násilí, mírné nebezpečí, témata vhodná pro děti, nevinnou náklonnost nebo romantiku | Hrubé výrazy, realistické násilí, sexuální témata, užívání drog nebo jiná témata pro starší čtenáře |
 | [12+, mírná témata](/cs/publishing/content-rules/#cr-iv-2) | *Mírná témata, krátké násilí nebo fantasy nebezpečí.* | Mírnou akci nebo boj, umírněné fantasy násilí, napětí a nebezpečí, příležitostné mírné vulgarismy, romantiku a líbání, mírné odkazy na dospělejší témata | Explicitní sexuální obsah, silně grafické násilí, cokoli určeného výhradně dospělým |

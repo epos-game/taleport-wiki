@@ -20,7 +20,7 @@ Each lesson in the panel has a **Watch on YouTube** link.
 ## Lesson 1: Creating a story
 
 <iframe class="video-lesson" src="https://www.youtube-nocookie.com/embed/DE5AgeGlwso?rel=0"
-        title="Lesson 1: Creating a story" loading="lazy" allowfullscreen
+        title="Lesson 1: Creating a story" loading="eager" allowfullscreen
         allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"></iframe>
 
 You create a story with a title, description, cover, genre, tags and at least one chapter. The lesson shows an older version of the **Create New Epos** dialog with two steps, **The basics** and **Details**. Today the dialog has a single step and only the title is required. See [Creating a story](/en/getting-started/creating-a-story/). The lesson ends in the editor, in an empty **Chapter 1**.

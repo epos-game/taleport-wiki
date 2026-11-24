@@ -29,7 +29,7 @@ Each chapter is reviewed, priced and published on its own. This is why length ma
 
 ## Release order
 
-Chapters are released in order, starting with chapter 1. For example, chapter 4 can't reach readers while chapter 3 is a draft. The **Chapters** panel says so: "Chapters are reviewed and published in this order. Published chapters and chapters in review are pinned; only drafts can be moved."
+Chapters are released in order, starting with chapter 1. For example, chapter 4 can't reach readers while chapter 3 is a draft. The **Chapters** dialog says so: "Drag drafts to reorder. Published chapters and chapters in review stay in place."
 
 Each action has a condition on the chapters before it:
 
@@ -39,7 +39,7 @@ Each action has a condition on the chapters before it:
 
 If you withdraw an earlier chapter back to **Draft**, it blocks every chapter after it again.
 
-Published, in-review and in-testing chapters are pinned in their order, ahead of the drafts. You can't drag a draft above them. A pinned chapter shows a pin where the drag handle would be. The first chapter that isn't pinned has the badge **Next to publish**.
+Published, in-review and in-testing chapters are pinned in their order, ahead of the drafts. You can't drag a draft above them. A pinned chapter shows a lock where the drag handle would be. The first chapter that isn't pinned has the badge **Next to publish**.
 
 ## Adding, renaming and deleting chapters
 
@@ -71,6 +71,7 @@ A lock is released only when the chapter holding it stops being live. That happe
 
 ## Related
 
+- [Managing chapters](/en/getting-started/managing-chapters/)
 - [The story graph](/en/story-editor/story-graph/)
 - [Variables](/en/story-editor/variables/)
 - [Story lifecycle](/en/getting-started/story-lifecycle/)

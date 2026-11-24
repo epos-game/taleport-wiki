@@ -39,9 +39,9 @@ A choice with no requirements is always available. The panel says so: *No requir
 
 With requirements, the option opens only for a reader whose variables meet them. The **Require** setting decides whether **All** requirements must hold or just **Any** one. It appears once the choice has two requirements.
 
-**In the editor preview**, an unmet option is shown with a padlock and the hint *Requirements not met. Click to bypass for debugging*. The padlock exists for debugging, because you can bypass the restriction. Do not treat an unmet option in the preview as a picture of what the reader sees.
+**In the editor preview**, an unmet option is shown with a padlock and the hint *Requirements not met. Click to bypass for debugging*. The padlock exists for debugging, because you can bypass the restriction. Don't assume an unmet option looks the same to the reader as it does in the preview.
 
-**In EPOS**, the reader cannot pick an option whose requirements are not met. How exactly an unavailable choice looks in the reader app, check while testing the story in EPOS.
+**In EPOS**, the reader cannot pick an option whose requirements are not met. Check how an unavailable choice looks in the reader app while you test the story in EPOS.
 
 After you delete a variable, check the requirements that used it. You can recognise them by a `?` where the variable name should be.
 

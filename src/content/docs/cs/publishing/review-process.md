@@ -27,7 +27,7 @@ Dokud je kapitola v kontrole, vydaná, nebo vydaná a v úpravách, jmenuje se t
 
 ## Předmět kontroly
 
-Recenzent čte celou kapitolu proti [pravidlům obsahu](/cs/publishing/content-rules/). Posuzuje také, jestli je kapitola dost hotová pro čtenáře. Měří ji podle [zásad pro příběhy](/cs/publishing/story-guidelines/).
+Recenzent čte celou kapitolu proti [pravidlům obsahu](/cs/publishing/content-rules/). Posuzuje také, jestli je kapitola dost hotová pro čtenáře. Posuzuje ji podle [zásad pro příběhy](/cs/publishing/story-guidelines/).
 
 Chyby v grafu odeslání zablokují, takže se k recenzentovi nedostanou. Upozornění z editoru ale uvidí.
 
@@ -59,7 +59,7 @@ Kapitola tak může projít kontrolou a přesto čekat. Ve frontě je vidět, na
 
 ## Výsledky kontroly
 
-**Schváleno.** Kapitola je vydaná. Postavy, proměnné a globální události, které používá, se zamknou. Kdy ji dostanou čtenáři, určuje část níže.
+**Schváleno.** Kapitola se vydá. Postavy, proměnné a globální události, které používá, se zamknou. Kdy ji dostanou čtenáři, určuje část níže.
 
 **Vráceno k úpravám.** Kapitola musí mít aspoň jednu poznámku, která není od testera. Do té doby je tlačítko **Zamítnout** neaktivní.
 

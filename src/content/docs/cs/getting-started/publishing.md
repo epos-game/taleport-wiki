@@ -114,7 +114,7 @@ Když kapitolu odešlete znovu, TalePort zruší cenu upravenou recenzentem a po
 - **Nezvolíte nic:** datem je okamžik schválení, opět s odstupem 7 dní.
 - Zvolené datum musí být nejméně 14 dní dopředu, protože i kontrola může trvat tak dlouho.
 
-![krok Předběžný přístup: přepínač Chcete předběžný přístup spustit v konkrétním termínu?, kalendář října 2026 s dřívějšími dny zašedlými a vybraným 29., vpravo panel Upozornění se sedmidenním odstupem a minimem 14 dní](/screens/cs/publishing/early-access-step.png)
+![krok Předběžný přístup: přepínač Chcete předběžný přístup spustit v konkrétním termínu?, kalendář prosince 2026 s vybraným 3., vpravo panel Upozornění, který vysvětluje, že podporovatelé čtou od zvoleného data, ostatní čtenáři o 7 dní později, a co se stane bez naplánovaného data](/screens/cs/publishing/early-access-step.png)
 
 Oprávnění k předběžnému přístupu čtenáři vzniká z crowdfundingové podpory a uplatněného kódu. Které úrovně podpory ho zahrnují, určuje TalePort, ne vy. Nespoléhejte na to, že ho mají všichni podporovatelé.
 
@@ -142,7 +142,7 @@ Dokud je kapitola v kontrole, editor se otevře jen pro čtení. **Stáhnout z k
 - První odeslání se vrátí do stavu Návrh.
 - Už vydaná kapitola se vrátí do stavu Publikováno.
 
-Tlačítko najdete v seznamu kapitol, v nabídce u tlačítka **Publikovat** a v **Přehledu** na kartě **V kontrole**.
+Tlačítko najdete v seznamu kapitol, v nabídce u tlačítka **Publikovat** a v **Přehledu** na záložce **V kontrole**.
 
 Rozhodnutí přijde i e-mailem. Schválení obsahuje obě data dostupnosti, zamítnutí poznámky recenzenta. Co recenzent kontroluje a jak dlouho to trvá, popisuje článek [Průběh kontroly](/cs/publishing/review-process/).
 

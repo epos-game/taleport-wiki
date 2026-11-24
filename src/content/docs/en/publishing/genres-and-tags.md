@@ -15,6 +15,8 @@ You can't submit a chapter until the story has both.
 - **In the publish dialog:** the **Metadata** step has the fields **Genre** and **Tags**. Here you need at least one tag too.
 - **In the Validation checklist:** the rows are *Genre selected* and *At least one tag*.
 
+![the Metadata step of the publish dialog: the cover preview on the left, and on the right the story title, the description editor, the Genre field set to Horror and the Tags field showing three chips and a +4 counter](/screens/en/publishing/metadata-step.png)
+
 ## Genre
 
 Pick exactly one of fifteen genres: **Fantasy**, **Science Fiction**, **Horror**, **Thriller**, **Crime**, **Romance**, **Adventure**, **Drama**, **Comedy**, **Historical**, **Mystery**, **War**, **Western**, **Poetry** and **Educational**.
