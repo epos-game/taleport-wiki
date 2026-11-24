@@ -9,18 +9,23 @@
     "build": "npm run assets && astro build",
     "preview": "astro preview",
     "check": "astro check",
+    "audit": "npm run build && node scripts/audit.mjs",
     "diagrams": "node scripts/build-diagrams.mjs",
-    "assets": "npm run diagrams && npm run sizes",
-    "sizes": "node scripts/screenshot-sizes.mjs"
+    "assets": "npm run diagrams && npm run sizes && npm run images",
+    "sizes": "node scripts/screenshot-sizes.mjs",
+    "images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
-    "@astrojs/markdown-satteri": "^0.4.2",
-    "@astrojs/starlight": "^0.42.4",
-    "astro": "^7.3.5",
+    "@astrojs/markdown-satteri": "^0.4.10",
+    "@astrojs/starlight": "^0.43.1",
+    "astro": "^7.4.13",
     "sharp": "^0.35.5"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.4",
+    "@astrojs/check": "^0.9.12",
+    "axe-core": "^4.14.1",
+    "esbuild": "^0.28.2",
+    "puppeteer-core": "^25.18.1",
     "typescript": "^6.0.3"
   },
   "allowScripts": {

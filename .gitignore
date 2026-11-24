@@ -5,6 +5,9 @@ dist/
 # Rendered from diagrams/*.mmd by `npm run diagrams`, which dev and build both run.
 public/diagrams/
 
+# WebP twins of public/screens/**/*.png, written by `npm run images`, which dev and build both run.
+public/screens/**/*.webp
+
 # Measured from public/screens by `npm run sizes`, which dev and build both run.
 src/styles/screenshot-sizes.css
 

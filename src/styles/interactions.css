@@ -1,0 +1,213 @@
+/* --- Interactions -------------------------------------------------------- */
+
+/*
+ * Screenshots. The reveal animation owns `transform` and, running with fill-mode both, would
+ * override a hover that also used it, so the lift is done with `scale` instead.
+ */
+.tp-zoomable {
+  cursor: zoom-in;
+  transition: scale 0.5s var(--tp-ease);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .tp-zoomable:hover {
+    scale: 1.012;
+  }
+}
+
+.tp-zoomable:focus-visible {
+  outline: 2px solid var(--tp-primary);
+  outline-offset: 3px;
+}
+
+.sl-markdown-content table:focus-visible {
+  outline: 2px solid var(--tp-primary);
+  outline-offset: 2px;
+}
+
+.tp-lightbox {
+  /* Fixed to the viewport edges. `100vw` plus padding overflowed by the padding and by the
+     scrollbar, which is what produced the sideways scroll. */
+  position: fixed;
+  inset: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  overflow: hidden;
+  padding: var(--tp-space-5);
+  border: 0;
+  background: transparent;
+  color: var(--tp-text);
+  cursor: zoom-out;
+}
+
+.tp-lightbox[open] {
+  display: grid;
+  place-items: center;
+  animation: tp-lightbox-in var(--tp-dur) var(--tp-ease);
+}
+
+.tp-lightbox::backdrop {
+  background: rgb(8 12 14 / 0.82);
+  backdrop-filter: blur(8px);
+}
+
+
+.tp-lightbox figure {
+  display: grid;
+  min-width: 0;
+  max-width: 100%;
+  gap: var(--tp-space-3);
+  justify-items: center;
+  margin: 0;
+}
+
+.tp-lightbox img {
+  max-width: 100%;
+  max-height: calc(100dvh - 9rem);
+  border-radius: var(--tp-radius);
+  box-shadow: 0 24px 64px rgb(0 0 0 / 0.55);
+  object-fit: contain;
+}
+
+.tp-lightbox figcaption {
+  max-width: 60rem;
+  color: var(--tp-text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.tp-lightbox__close {
+  position: fixed;
+  inset: var(--tp-space-4) var(--tp-space-4) auto auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--tp-border-strong);
+  border-radius: var(--tp-radius-pill);
+  background: var(--tp-surface);
+  color: var(--tp-text-high);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* The page behind stays put while the lightbox is open. */
+html:has(.tp-lightbox[open]) {
+  overflow: hidden;
+}
+
+@media (max-width: 49.99rem) {
+  .tp-lightbox {
+    padding: var(--tp-space-3);
+  }
+
+  /* A long description would push the screenshot up the screen; two lines are enough. */
+  .tp-lightbox figcaption {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 0.8rem;
+  }
+
+  .tp-lightbox img {
+    max-height: calc(100dvh - 7rem);
+  }
+}
+
+@keyframes tp-lightbox-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+}
+
+/* Back to top */
+.tp-top {
+  position: fixed;
+  inset: auto var(--tp-space-5) var(--tp-space-5) auto;
+  z-index: 40;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--tp-border-strong);
+  border-radius: var(--tp-radius-pill);
+  background: var(--tp-surface);
+  box-shadow: var(--tp-shadow-md);
+  color: var(--tp-text-high);
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition:
+    opacity var(--tp-dur) var(--tp-ease),
+    transform var(--tp-dur) var(--tp-ease),
+    background-color var(--tp-dur-fast) var(--tp-ease);
+}
+
+.tp-top[data-visible] {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+.tp-top:hover {
+  background: var(--tp-surface-2);
+  border-color: var(--tp-primary);
+}
+
+.tp-top:active {
+  scale: 0.92;
+}
+
+@media print {
+  .tp-top,
+  .tp-lightbox {
+    display: none;
+  }
+}
+
+/*
+ * Sidebar groups open and close instead of snapping. `::details-content` is the box a <details>
+ * hides, and `interpolate-size` lets its height animate to and from `auto`. Browsers without
+ * either simply keep the old behaviour.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .sidebar-content details {
+    interpolate-size: allow-keywords;
+  }
+
+  .sidebar-content details::details-content {
+    block-size: 0;
+    overflow: clip;
+    opacity: 0;
+    transition:
+      block-size 0.32s var(--tp-ease),
+      opacity 0.24s var(--tp-ease),
+      content-visibility 0.32s allow-discrete;
+  }
+
+  .sidebar-content details[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+  }
+
+  .sidebar-content summary .caret {
+    transition: transform 0.28s var(--tp-ease);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tp-lightbox[open] {
+    animation: none;
+  }
+
+  .tp-top,
+  .tp-zoomable {
+    transition: none;
+  }
+}

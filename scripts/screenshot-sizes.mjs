@@ -21,6 +21,7 @@ const CAPTURED_AT_1X = new Set([
   'story-editor/choice-node.png',
   'story-editor/switch-node.png',
   'story-editor/end-node.png',
+  'publishing/early-access-step.png',
 ]);
 
 const size = (file) => {
